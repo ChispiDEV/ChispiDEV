@@ -7,6 +7,13 @@
 - 👀 I'm a former high school's teacher graduated in biology who's now looking for a change in her life. That's why I'm learning and working on my technological skills to grow in a new environment. With my background, I could tell that I'm a curious girl who's interested in themes as Biochemistry, Data Analysis and Education
 - 🍀 To achieve this change, I'm currently finishing my Data Analysis Bootcamp with IMMUNE Institute. Thanks to this I'm learning Machine Learning and Data.
 
+## Skills:
+
+- Languages: Python, SQL
+- Frameworks: Pandas, NumPy, SciPy, Matplotlib, Pytest, scikit-learn
+- Tools: Jupyter notebook, Google Colab, Git, Anaconda
+- Databases: SQL (MySQL, oracleSQL)
+
 ## Code:
      
 ## Technologies:
