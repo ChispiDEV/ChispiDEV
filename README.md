@@ -9,6 +9,8 @@
 - 📫 How to reach me: 
   - 📧: cristinafg93@hotmail.com
   - ⏩: <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">LinkedIn Profile</a>
+  - 📲: <a href="https://telegram.me/ChispiDEV" target="_blank">Telegram</a> || @ChispiDEV 
+
 - 🌈 Some fun facts about me:
    - 🎮 I love videogames
    - ✈️ I moved to Bulgaria because I get an oportunity as support specialist in Riot Games
