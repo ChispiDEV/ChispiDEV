@@ -22,7 +22,7 @@
 - 🌈 Some fun facts about me:
    - 🎮 I love videogames
    - ✈️ I moved to Bulgaria because I get an oportunity as support specialist in Riot Games
-   - 🦋 I have more than 500 hours played in Stardew Valley
+   - 🦋 I have more than 500 hours played in Stardew Valley (and don't ask how many of them I have in Animal Crossing)
    - 🐶 I'm a dog person, and I have 2 dogs called "Riven" and "Haru"
    - 🎨 I can knit and crochet, and I enjoy it a lot
    - 💅🏻 I can do my own nail art
