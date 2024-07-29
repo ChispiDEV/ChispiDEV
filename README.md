@@ -1,4 +1,4 @@
-# Welcome to my GitHub CV!!
+# Welcome to my GitHub!!
 
 ## Introduction: 
 - 👋 Hi, I'm Cristina (my colleagues call me Chispi), nice to have you over here!!
