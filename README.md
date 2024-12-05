@@ -46,6 +46,8 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 🌍 Studying Japanese to fulfil one of my dreams, to visit Kumamoto, where the One Piece statues are!
 
 ---
+
+---
 # Versión en Español  
 ## Sobre mí:
 👋 Soy Cristina (mis compañeros suelen llamarme Chispi). ¡Bienvenidos a mi GitHub!
@@ -54,7 +56,7 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 
 👩‍🔬 Bióloga y exprofesora desarrollándose en el campo del análisis de datos, apasionada por la tecnología y la solución de desafíos.
 
-🍀 A principios de octubre de 2024 terminé la formación en el Bootcamp de Análisis de Datos en IMMUNE Institute, donde adquirí experiencia práctica en Machine Learning, Visualización de Datos y Análisis Avanzado.
+🍀 A principios de octubre de 2024 terminé la formación en el **Bootcamp de Análisis de Datos en IMMUNE Institute**, donde adquirí experiencia práctica en Machine Learning, Visualización de Datos y Análisis Avanzado.
 
 👀 Mi formación en bioquímica y educación me permite aportar una perspectiva única a los proyectos impulsados por datos.
 
