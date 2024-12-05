@@ -13,6 +13,7 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 🍀 Recently completed a **Data Analysis Bootcamp at IMMUNE Institute**, where I gained hands-on experience in Machine Learning, Data Visualization, and Advanced Analytics. 
 
 👀 My background in biochemistry and education helps me bring a unique perspective to data-driven projects.  
+
 ---
 ## Skills:
 - **Programming Languages:** ![Python](https://img.shields.io/badge/-Python-blue) ![SQL](https://img.shields.io/badge/-SQL-orange)  
@@ -32,6 +33,7 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 ⏩: <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">LinkedIn Profile</a>
 
 📲: <a href="https://telegram.me/ChispiDEV" target="_blank">Telegram</a> || @ChispiDEV 
+
 ---
 ## Fun Facts
 🎮 Gamer with over 500 hours in Stardew Valley  
@@ -39,6 +41,7 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 🐶 Dog mom to "Riven" and "Haru"  
 🎨 Avid knitter and nail artist  
 🌍 Studying Japanese to fulfil one of my dreams, to visit Kumamoto, where the One Piece statues are!
+
 ---
 # Versión en Español  
 ## Sobre mí:
@@ -51,6 +54,7 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 🍀 A principios de octubre de 2024 terminé la formación en el Bootcamp de Análisis de Datos en IMMUNE Institute, donde adquirí experiencia práctica en Machine Learning, Visualización de Datos y Análisis Avanzado.
 
 👀 Mi formación en bioquímica y educación me permite aportar una perspectiva única a los proyectos impulsados por datos.
+
 ---
 ## Habilidades:
 - **Lenguajes de Programación:** ![Python](https://img.shields.io/badge/-Python-blue) ![SQL](https://img.shields.io/badge/-SQL-orange)  
@@ -70,6 +74,7 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 ⏩: <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">LinkedIn Profile</a>
 
 📲: <a href="https://telegram.me/ChispiDEV" target="_blank">Telegram</a> || @ChispiDEV 
+
 ---
 ## Curiosidades:
 🎮 Viciada de los juegos con más de 500 horas jugadas en Stardew Valley.  
