@@ -81,11 +81,14 @@
                 return response.text();
             })
             .then(markdown => {
+                console.log("Fetched Markdown:", markdown); // Debugging: Ver el contenido descargado
                 const converter = new showdown.Converter();
                 const contentDiv = document.getElementById('readme-content');
 
                 // Divide the content into sections
                 const sections = markdown.split(/^# /m); // Splits at each top-level heading
+                console.log("Divided Sections:", sections); // Debugging: see divided sections
+
                 let filteredContent = "";
 
                 if (language === 'english') {
