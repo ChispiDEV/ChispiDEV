@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristina Fuentes - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #f4f4f4;
+            color: #333;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin: 1rem 0;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #007acc;
+        }
+        section {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+            margin-top: 2rem;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cristina Fuentes - Portfolio</h1>
+        <p>Bilingual Profile | Perfil bilingüe</p>
+    </header>
+
+    <nav>
+        <a href="#" onclick="toggleLanguage('english')">English</a> | 
+        <a href="#" onclick="toggleLanguage('spanish')">Español</a>
+    </nav>
+
+    <section id="english">
+        <h2>About Me</h2>
+        <p>👩‍🔬 Former biology teacher turned data analyst with a passion for technology and problem-solving.</p>
+        <p>🍀 Recently completed a <strong>Data Analysis Bootcamp at IMMUNE Institute</strong>.</p>
+        <p>👀 My background in biochemistry and education helps me bring a unique perspective to data-driven projects.</p>
+
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: Python, SQL</li>
+            <li>Frameworks: Pandas, NumPy, SciPy</li>
+            <li>Visualization Tools: Power BI, Tableau</li>
+        </ul>
+
+        <h2>Contact</h2>
+        <p>Email: cristinafg93@hotmail.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">Profile</a></p>
+    </section>
+
+    <section id="spanish" class="hidden">
+        <h2>Sobre Mí</h2>
+        <p>👩‍🔬 Profesora de biología convertida en analista de datos con pasión por la tecnología y la resolución de problemas.</p>
+        <p>🍀 Completé recientemente el <strong>Bootcamp de Análisis de Datos en IMMUNE Institute</strong>.</p>
+        <p>👀 Mi formación en bioquímica y educación me permite aportar una perspectiva única a los proyectos basados en datos.</p>
+
+        <h2>Habilidades</h2>
+        <ul>
+            <li>Lenguajes de Programación: Python, SQL</li>
+            <li>Frameworks: Pandas, NumPy, SciPy</li>
+            <li>Herramientas de Visualización: Power BI, Tableau</li>
+        </ul>
+
+        <h2>Contacto</h2>
+        <p>Email: cristinafg93@hotmail.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">Perfil</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cristina Fuentes</p>
+    </footer>
+
+    <script>
+        function toggleLanguage(language) {
+            document.getElementById('english').classList.toggle('hidden', language !== 'english');
+            document.getElementById('spanish').classList.toggle('hidden', language !== 'spanish');
+        }
+    </script>
+</body>
+</html>
