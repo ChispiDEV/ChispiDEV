@@ -73,36 +73,50 @@
    <script>
         // Toggle between English and Spanish content
         function toggleLanguage(language) {
-            fetch('https://raw.githubusercontent.com/ChispiDEV/ChispiDEV/main/README.md')
-                .then(response => response.text())
-                .then(markdown => {
-                    const converter = new showdown.Converter();
-                    const contentDiv = document.getElementById('readme-content');
-            
-                    // Divide the content by language
-                    const sections = markdown.split(/(?=^# )/m); // Splits at each top-level heading
-                    let filteredContent = "";
-        
-                    if (language === 'english') {
-                        filteredContent = sections.find(section => section.startsWith('# English'));
-                    } else if (language === 'spanish') {
-                        filteredContent = sections.find(section => section.startsWith('# Versión'));
-                    }
+        fetch('https://raw.githubusercontent.com/ChispiDEV/ChispiDEV/main/README.md')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch README.md');
+                }
+                return response.text();
+            })
+            .then(markdown => {
+                const converter = new showdown.Converter();
+                const contentDiv = document.getElementById('readme-content');
 
-                    // Convert markdown to HTML and display
-                    contentDiv.innerHTML = filteredContent ? converter.makeHtml(filteredContent) : '<p>No content available.</p>';
+                // Divide the content into sections
+                const sections = markdown.split(/^# /m); // Splits at each top-level heading
+                let filteredContent = "";
+
+                if (language === 'english') {
+                    filteredContent = sections.find(section => section.trim().startsWith('English Version'));
+                } else if (language === 'spanish') {
+                    filteredContent = sections.find(section => section.trim().startsWith('Versión en Español'));
+                }
+
+                // Check if content was found
+                if (filteredContent) {
+                    contentDiv.innerHTML = converter.makeHtml(`# ${filteredContent}`); // Re-add the top-level heading
+                } else {
+                    contentDiv.innerHTML = '<p>Content not available for the selected language.</p>';
+                }
+
+                // Update navigation highlights
+                document.querySelectorAll('nav a').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.textContent.toLowerCase().includes(language)) {
+                        link.classList.add('active');
+                    }
                 });
-                    // Highlight the selected language in the navigation
-                    document.querySelectorAll('nav a').forEach(link => {
-                        link.classList.remove('active');
-                        if (link.textContent.toLowerCase().includes(language)) {
-                            link.classList.add('active');
-                        }
-                    });
-        }
+            })
+            .catch(error => {
+                console.error('Error fetching or processing README:', error);
+                document.getElementById('readme-content').innerHTML = '<p>Error loading content. Please try again later.</p>';
+            });
     }
-    // Initialize with English content   
+
+    // Initialize with English content
     document.addEventListener('DOMContentLoaded', () => toggleLanguage('english'));
-    </script>
+</script>
 </body>
 </html>
