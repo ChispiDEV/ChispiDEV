@@ -17,7 +17,7 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 
 ---
 ## Skills:
-- **Programming Languages:** ![Python](https://img.shields.io/badge/-Python-blue) ![SQL](https://img.shields.io/badge/-SQL-orange)  
+- **Programming Languages:** ![Python](https://img.shields.io/badge/-Python-blue) ![SQL](https://img.shields.io/badge/-SQL-orange)  ![HTML](https://img.shields.io/badge/-HTML-pink) ![CSS](https://img.shields.io/badge/-CSS-green) 
 - **Frameworks:** Pandas, NumPy, SciPy, Matplotlib, Pytest, scikit-learn  
 - **Visualization Tools:** Power BI, Tableau  
 - **Development Tools:** Jupyter Notebook, Google Colab, Git, Anaconda  
@@ -62,7 +62,7 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 
 ---
 ## Habilidades:
-- **Lenguajes de Programación:** ![Python](https://img.shields.io/badge/-Python-blue) ![SQL](https://img.shields.io/badge/-SQL-orange)  
+- **Lenguajes de Programación:** ![Python](https://img.shields.io/badge/-Python-blue) ![SQL](https://img.shields.io/badge/-SQL-orange) ![HTML](https://img.shields.io/badge/-HTML-pink) ![CSS](https://img.shields.io/badge/-CSS-green)
 - **Frameworks:** Pandas, NumPy, SciPy, Matplotlib, Pytest, scikit-learn  
 - **Herramientas de Visualización:** Power BI, Tableau  
 - **Herramientas de Desarrollo:** Jupyter Notebook, Google Colab, Git, Anaconda  
@@ -89,3 +89,7 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 🐶 Amante de los perros con dos bebotas en casa llamadas "Riven" y "Haru".  
 🎨 Mañosa con las agujas de tejer y diseño de uñas.  
 🌍 Estudiando japonés para cumplir uno de mis sueños, ¡visitar Kumamoto! (Lugar donde se pueden ver las estatuas de One Piece).
+
+---
+
+---
