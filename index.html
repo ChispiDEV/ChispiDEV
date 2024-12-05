@@ -29,6 +29,10 @@
             text-decoration: none;
             color: #007acc;
         }
+        nav a.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
         section {
             padding: 2rem;
             max-width: 800px;
@@ -59,45 +63,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
     <section id="readme-content">
-        <!-- Markdown content will be loaded here -->
-    </section>
-
-    <!-- English Content -->
-    <section id="english" class="hidden">
-        <h2>About Me</h2>
-        <p>👩‍🔬 Former biology teacher turned data analyst with a passion for technology and problem-solving.</p>
-        <p>🍀 Recently completed a <strong>Data Analysis Bootcamp at IMMUNE Institute</strong>.</p>
-        <p>👀 My background in biochemistry and education helps me bring a unique perspective to data-driven projects.</p>
-
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Programming Languages:</strong> Python, SQL</li>
-            <li><strong>Frameworks:</strong> Pandas, NumPy, SciPy</li>
-            <li><strong>Visualization Tools:</strong> Power BI, Tableau</li>
-        </ul>
-
-        <h2>Contact</h2>
-        <p>Email: cristinafg93@hotmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">Profile</a></p>
-    </section>
-
-    <!-- Spanish Content -->
-    <section id="spanish" class="hidden">
-        <h2>Sobre Mí</h2>
-        <p>👩‍🔬 Bióloga y exprofesora desarrollándose en el campo del análisis de datos, apasionada por la tecnología y la solución de desafíos.</p>
-        <p>🍀 Recientemente finalizada la formación en el <strong>Bootcamp de Análisis de Datos en IMMUNE Institute</strong>.</p>
-        <p>👀 Formada en bioquímica y educación, por lo que se permite aportar una perspectiva única a los proyectos basados en datos.</p>
-
-        <h2>Habilidades</h2>
-        <ul>
-            <li><strong>Lenguajes de Programación:</strong> Python, SQL</li>
-            <li><strong>Frameworks:</strong> Pandas, NumPy, SciPy</li>
-            <li><strong>Herramientas de Visualización:</strong> Power BI, Tableau</li>
-        </ul>
-
-        <h2>Contacto</h2>
-        <p>Email: cristinafg93@hotmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">Perfil</a></p>
+        <p>Loading content...</p>
     </section>
 
     <footer>
@@ -105,28 +71,36 @@
     </footer>
 
    <script>
-       // Fetching markdown file content
-        fetch('https://raw.githubusercontent.com/ChispiDEV/ChispiDEV/main/README.md')
-            .then(response => response.text())
-            .then(markdown => {
-                const converter = new showdown.Converter();
-                document.getElementById('readme-content').innerHTML = converter.makeHtml(markdown);
-            });
-
         // Toggle between English and Spanish content
         function toggleLanguage(language) {
-            const englishContent = document.getElementById('english');
-            const spanishContent = document.getElementById('spanish');
+            fetch('https://raw.githubusercontent.com/ChispiDEV/ChispiDEV/main/README.md')
+                .then(response => response.text())
+                .then(markdown => {
+                    const converter = new showdown.Converter();
+                    const contentDiv = document.getElementById('readme-content');
+            
+                    // Divide the content by language
+                    const sections = markdown.split(/(?=^# )/m); // Splits at each top-level heading
+                    let filteredContent = "";
+        
+                    if (language === 'english') {
+                        filteredContent = sections.find(section => section.startsWith('# English Version'));
+                    } else if (language === 'spanish') {
+                        filteredContent = sections.find(section => section.startsWith('# Versión en Español'));
+                    }
 
-            // Show content based on selected language
-            if (language === 'english') {
-                englishContent.classList.remove('hidden');
-                spanishContent.classList.add('hidden');
-            } else if (language === 'spanish') {
-                spanishContent.classList.remove('hidden');
-                englishContent.classList.add('hidden');
-            }
+                    // Convert markdown to HTML and display
+                    contentDiv.innerHTML = filteredContent ? converter.makeHtml(filteredContent) : '<p>No content available.</p>';
+                });
         }
+        // Highlight the selected language in the navigation
+        document.querySelectorAll('nav a').forEach(link => {
+            link.classList.remove('active');
+            if (link.textContent.toLowerCase().includes(language)) {
+                link.classList.add('active');
+            }
+        });
+    }
     </script>
 </body>
 </html>
