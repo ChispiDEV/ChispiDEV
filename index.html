@@ -92,15 +92,17 @@
                     // Convert markdown to HTML and display
                     contentDiv.innerHTML = filteredContent ? converter.makeHtml(filteredContent) : '<p>No content available.</p>';
                 });
+                    // Highlight the selected language in the navigation
+                    document.querySelectorAll('nav a').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.textContent.toLowerCase().includes(language)) {
+                            link.classList.add('active');
+                        }
+                    });
         }
-        // Highlight the selected language in the navigation
-        document.querySelectorAll('nav a').forEach(link => {
-            link.classList.remove('active');
-            if (link.textContent.toLowerCase().includes(language)) {
-                link.classList.add('active');
-            }
-        });
     }
+    // Initialize with English content   
+    document.addEventListener('DOMContentLoaded', () => toggleLanguage('english'));
     </script>
 </body>
 </html>
