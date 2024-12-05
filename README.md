@@ -1,6 +1,7 @@
 # Welcome to Cristina's GitHub!! // ¡¡Bienvenido al GitHub de Cristina!!
 
 Explore my portfolio and projects in detail on my [GitHub Pages website](https://chispidev.github.io/ChispiDEV/). // Puedes ver mi portafolio y los proyectos en detalle en mi [Página de GitHub Pages](https://chispidev.github.io/ChispiDEV/).
+
 ---
 # English Version  
 ## About me:
@@ -21,11 +22,13 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 - **Visualization Tools:** Power BI, Tableau  
 - **Development Tools:** Jupyter Notebook, Google Colab, Git, Anaconda  
 - **Databases:** MySQL, OracleSQL
+
 ---
 ## Featured Projects:
 - **Breaking Bad Analysis** (In Progress): NLP analysis of Walter White's character development using Python and networkx. [View Project](#)  
  
 - **Machine Learning Models** (In Progress): A collection of ML models including classification and regression projects.
+
 ---
 ## Contact:
 📧: cristinafg93@hotmail.com
@@ -62,11 +65,13 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 - **Herramientas de Visualización:** Power BI, Tableau  
 - **Herramientas de Desarrollo:** Jupyter Notebook, Google Colab, Git, Anaconda  
 - **Bases de Datos:** MySQL, OracleSQL
+
 ---
 ## Proyectos Destacados:
 - **Análisis de Breaking Bad** (Incompleto): Análisis NLP de la evolución del personaje Walter White usando Python y networkx.
  
 - **Modelos de Machine Learning** (Incompleto):*Español*: Una colección de modelos de ML que incluye proyectos de clasificación y regresión. [View Repository](#)
+
 ---
 ## Contacto:
 📧: cristinafg93@hotmail.com
