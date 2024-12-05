@@ -26,7 +26,9 @@
 
 ## Contact:
 📧: cristinafg93@hotmail.com
+
 ⏩: <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">LinkedIn Profile</a>
+
 📲: <a href="https://telegram.me/ChispiDEV" target="_blank">Telegram</a> || @ChispiDEV 
 
 ---
