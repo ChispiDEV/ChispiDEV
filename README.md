@@ -9,7 +9,7 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 
 🌸 My pronouns are "She/Her"
 
-👩‍🔬 Former biology teacher turned data analyst with a passion for technology, education, and problem-solving.  
+👩‍🔬 Former **biology teacher** turned data analyst with a passion for technology, education, and problem-solving.  
 
 🍀 Recently completed a **Data Analysis Bootcamp at IMMUNE Institute**, where I gained hands-on experience in Machine Learning, Data Visualization, and Advanced Analytics. 
 
@@ -54,7 +54,7 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 
 🌸 Uso pronombres femeninos (Ella).
 
-👩‍🔬 Bióloga y exprofesora desarrollándose en el campo del análisis de datos, apasionada por la tecnología y la solución de desafíos.
+👩‍🔬 **Bióloga y exprofesora** desarrollándose en el campo del análisis de datos, apasionada por la tecnología y la solución de desafíos.
 
 🍀 A principios de octubre de 2024 terminé la formación en el **Bootcamp de Análisis de Datos en IMMUNE Institute**, donde adquirí experiencia práctica en Machine Learning, Visualización de Datos y Análisis Avanzado.
 
