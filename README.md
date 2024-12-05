@@ -49,7 +49,6 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 🌍 Studying Japanese to fulfil one of my dreams, to visit Kumamoto, where the One Piece statues are!
 
 ---
----
 
 # Versión en Español  
 
