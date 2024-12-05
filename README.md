@@ -1,29 +1,39 @@
-# Welcome to my GitHub!!
+# Welcome to Cristina's GitHub!!
 
-## Introduction: 
-- 👋 Hi, I'm Cristina (my colleagues call me Chispi), nice to have you over here!!
-- 🌸 My pronouns are "She/Her"
-- 👀 I'm a former high school's teacher graduated in biology who's now looking for a change in her life. That's why I'm learning and working on my technological skills to grow in a new environment. With my background, I could tell that I'm a curious girl who's interested in themes as Biochemistry, Data Analysis and Education
-- 🍀 To achieve this change, I'm currently finishing my Data Analysis Bootcamp with IMMUNE Institute. Thanks to this I'm learning Machine Learning and Data.
+## About me: 
+👋 I'm Cristina (often called Chispi by colleagues). Welcome to my GitHub!
+🌸 My pronouns are "She/Her"
+👩‍🔬 Former biology teacher turned data analyst with a passion for technology, education, and problem-solving.  
+🍀 Recently completed a **Data Analysis Bootcamp at IMMUNE Institute**, where I gained hands-on experience in Machine Learning, Data Visualization, and Advanced Analytics. 
+👀 My background in biochemistry and education helps me bring a unique perspective to data-driven projects.  
 
-## Skills:
-- Languages: Python, SQL
-- Frameworks: Pandas, NumPy, SciPy, Matplotlib, Pytest, scikit-learn
-- Tools: Power BI, Tableau, Jupyter notebook, Google Colab, Git, Anaconda
-- Databases: SQL (MySQL, oracleSQL)
+---
+
+## Skills
+- **Programming Languages:** ![Python](https://img.shields.io/badge/-Python-blue) ![SQL](https://img.shields.io/badge/-SQL-orange)  
+- **Frameworks:** Pandas, NumPy, SciPy, Matplotlib, Pytest, scikit-learn  
+- **Visualization Tools:** Power BI, Tableau  
+- **Development Tools:** Jupyter Notebook, Google Colab, Git, Anaconda  
+- **Databases:** MySQL, OracleSQL
+
+---
+
+## Featured Projects
+- **Breaking Bad Analysis** (In Progress): NLP analysis of Walter White's character development using Python and networkx. [View Project](#)  
+- **Machine Learning Models** (In Progress): A collection of ML models including classification and regression projects. [View Repository](#)
+
+---
 
 ## Contact:
-- 📫 How to reach me: 
-  - 📧: cristinafg93@hotmail.com
-  - ⏩: <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">LinkedIn Profile</a>
-  - 📲: <a href="https://telegram.me/ChispiDEV" target="_blank">Telegram</a> || @ChispiDEV 
+📧: cristinafg93@hotmail.com
+⏩: <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">LinkedIn Profile</a>
+📲: <a href="https://telegram.me/ChispiDEV" target="_blank">Telegram</a> || @ChispiDEV 
 
-## Curiosities:
-- 🌈 Some fun facts about me:
-   - 🎮 I love videogames
-   - ✈️ I moved to Bulgaria because I get an oportunity as support specialist in Riot Games
-   - 🦋 I have more than 500 hours played in Stardew Valley (and don't ask how many of them I have in Animal Crossing)
-   - 🐶 I'm a dog person, and I have 2 dogs called "Riven" and "Haru"
-   - 🎨 I can knit and crochet, and I enjoy it a lot
-   - 💅🏻 I can do my own nail art
-   - 🌍 I love travelling and learning languages (I'm studying japanese as I want to travel to Japan some day)
+---
+
+## Fun Facts
+🎮 Gamer with over 500 hours in Stardew Valley  
+✈️ Former support specialist at Riot Games  
+🐶 Dog mom to "Riven" and "Haru"  
+🎨 Avid knitter and nail artist  
+🌍 Learning Japanese with dreams of traveling to Japan  
