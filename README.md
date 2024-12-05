@@ -46,7 +46,7 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 ✈️ Former support specialist at Riot Games  
 🐶 Dog mom to "Riven" and "Haru"  
 🎨 Avid knitter and nail artist  
-🌍 Learning Japanese with dreams of traveling to Japan  
+🌍 Studying Japanese to fulfil one of my dreams, to visit Kumamoto, where the One Piece statues are!
 
 ---
 ---
@@ -56,7 +56,7 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 ## Sobre mí:
 👋 Soy Cristina (mis compañeros suelen llamarme Chispi). ¡Bienvenidos a mi GitHub!
 
-🌸 Mis pronombres son "Ella".</p>
+🌸 Uso pronombres femeninos (Ella).
 
 👩‍🔬 Bióloga y exprofesora desarrollándose en el campo del análisis de datos, apasionada por la tecnología y la solución de desafíos.
 
@@ -96,4 +96,4 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 ✈️ Especialista de soporte en Riot Games.  
 🐶 Amante de los perros con dos bebotas en casa llamadas "Riven" y "Haru".  
 🎨 Mañosa con las agujas de tejer y diseño de uñas.  
-🌍 Estudiando japonés para poder viajar en algún momento a Japón.
+🌍 Estudiando japonés para cumplir uno de mis sueños, ¡visitar Kumamoto! (Lugar donde se pueden ver las estatuas de One Piece).
