@@ -7,7 +7,7 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 ## About me:
 👋 I'm Cristina (often called Chispi by colleagues). Welcome to my GitHub!
 
-🌸 My pronouns are "She/Her"
+🌸 My pronouns are "She/Her".
 
 👩‍🔬 Former **biology teacher** turned data analyst with a passion for technology, education, and problem-solving.  
 
@@ -39,10 +39,10 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 
 ---
 ## Fun Facts
-🎮 Gamer with over 500 hours in Stardew Valley  
-✈️ Former support specialist at Riot Games  
-🐶 Dog mom to "Riven" and "Haru"  
-🎨 Avid knitter and nail artist  
+🎮 Gamer with over 500 hours in Stardew Valley.  
+✈️ Former support specialist at Riot Games.  
+🐶 Dog mom to "Riven" and "Haru".  
+🎨 Avid knitter and nail artist.  
 🌍 Studying Japanese to fulfil one of my dreams, to visit Kumamoto, where the One Piece statues are!
 
 ---
