@@ -84,9 +84,9 @@
                     let filteredContent = "";
         
                     if (language === 'english') {
-                        filteredContent = sections.find(section => section.startsWith('# English Version'));
+                        filteredContent = sections.find(section => section.startsWith('# English'));
                     } else if (language === 'spanish') {
-                        filteredContent = sections.find(section => section.startsWith('# Versión en Español'));
+                        filteredContent = sections.find(section => section.startsWith('# Versión'));
                     }
 
                     // Convert markdown to HTML and display
