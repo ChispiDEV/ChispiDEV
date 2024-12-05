@@ -6,9 +6,13 @@
 
 ## About me:
 👋 I'm Cristina (often called Chispi by colleagues). Welcome to my GitHub!
+
 🌸 My pronouns are "She/Her"
+
 👩‍🔬 Former biology teacher turned data analyst with a passion for technology, education, and problem-solving.  
+
 🍀 Recently completed a **Data Analysis Bootcamp at IMMUNE Institute**, where I gained hands-on experience in Machine Learning, Data Visualization, and Advanced Analytics. 
+
 👀 My background in biochemistry and education helps me bring a unique perspective to data-driven projects.  
 
 ## Skills:
@@ -50,9 +54,13 @@
 
 ## Sobre mí:
 👋 Soy Cristina (mis compañeros suelen llamarme Chispi). ¡Bienvenidos a mi GitHub!
+
 🌸 Mis pronombres son "Ella".</p>
+
 👩‍🔬 Bióloga y exprofesora desarrollándose en el campo del análisis de datos, apasionada por la tecnología y la solución de desafíos.
+
 🍀 Recientemente finalicé la formación en el Bootcamp de Análisis de Datos en IMMUNE Institute, donde adquirí experiencia práctica en Machine Learning, Visualización de Datos y Análisis Avanzado.
+
 👀 Mi formación en bioquímica y educación me permite aportar una perspectiva única a los proyectos impulsados por datos.
 
 ---
