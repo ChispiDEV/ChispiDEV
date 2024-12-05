@@ -57,7 +57,17 @@
         <a href="#" onclick="toggleLanguage('spanish')">Español</a>
     </nav>
 
-    <section id="english">
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+    <section id="readme-content"></section>
+    <script>
+        fetch('https://raw.githubusercontent.com/ChispiDEV/ChispiDEV/main/README.md')
+            .then(response => response.text())
+            .then(markdown => {
+                const converter = new showdown.Converter();
+                document.getElementById('readme-content').innerHTML = converter.makeHtml(markdown);
+            });
+    
+    <section id="english" class="hidden">
         <h2>About Me</h2>
         <p>👩‍🔬 Former biology teacher turned data analyst with a passion for technology and problem-solving.</p>
         <p>🍀 Recently completed a <strong>Data Analysis Bootcamp at IMMUNE Institute</strong>.</p>
@@ -97,15 +107,7 @@
         <p>&copy; 2024 Cristina Fuentes</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
-    <section id="readme-content"></section>
-    <script>
-        fetch('https://raw.githubusercontent.com/ChispiDEV/ChispiDEV/main/README.md')
-            .then(response => response.text())
-            .then(markdown => {
-                const converter = new showdown.Converter();
-                document.getElementById('readme-content').innerHTML = converter.makeHtml(markdown);
-            });
+   <script>
         function toggleLanguage(language) {
             document.getElementById('english').classList.toggle('hidden', language !== 'english');
             document.getElementById('spanish').classList.toggle('hidden', language !== 'spanish');
