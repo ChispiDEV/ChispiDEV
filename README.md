@@ -94,7 +94,7 @@ Revisa mis [Proyectos Destacados](projects.html) para obtener más información 
 ✈️ Especialista de soporte en Riot Games.  
 🐶 Amante de los perros con dos bebotas en casa llamadas "Riven" y "Haru".  
 🎨 Mañosa con las agujas de tejer y diseño de uñas.  
-🌍 Estudiando japonés para cumplir uno de mis sueños, ¡visitar Kumamoto! (Lugar donde se pueden ver las estatuas de One Piece).
+🌍 Estudiando japonés para cumplir uno de mis sueños, ¡visitar Kumamoto! (Donde están las estatuas de One Piece).
 
 ---
 
