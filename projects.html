@@ -20,62 +20,139 @@
             text-align: center;
             padding: 1rem;
         }
-        section {
-            max-width: 800px;
+        nav {
+            text-align: center;
+            margin: 1rem 0;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #007acc;
+        }
+        nav a.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        #projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
             margin: 2rem auto;
             padding: 1rem;
         }
         .project {
             border: 1px solid #ddd;
             border-radius: 8px;
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-            background: #fff;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f9f9f9, #fff);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
         }
         .project h3 {
             margin-top: 0;
             color: #007acc;
+            font-size: 1.5rem;
         }
         .project p a {
             color: #007acc;
             text-decoration: none;
+            font-weight: bold;
         }
         .project p a:hover {
             text-decoration: underline;
+        }
+        .hidden {
+            display: none;
+        }
+        #english-projects {
+            background-color: #f0f8ff; /* Azul claro */
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        #spanish-projects {
+            background-color: #fff7e6; /* Beige */
+            padding: 1rem;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Featured Projects</h1>
-        <p>Explore my data analysis work</p>
+        <h1>Featured Projects | Proyectos Destacados</h1>
+        <p>Explore my data analysis work | Revisa mis trabajos de análisis de datos</p>
     </header>
 
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="#" onclick="toggleLanguage('english')">English</a> | 
+        <a href="#" onclick="toggleLanguage('spanish')">Español</a>
+    </nav>
+
     <section id="projects">
-        <h2>English Version</h2>
-        <div class="project">
-            <h3>Breaking Bad Analysis</h3>
-            <p>🔍 Analyze Walter White's character development using NLP and interpersonal network analysis.</p>
-            <p>
-                📂 <a href="https://github.com/tu-usuario/repositorio-breaking-bad" target="_blank">Repository</a><br>
-                📊 <a href="https://tu-usuario.github.io/repositorio-breaking-bad" target="_blank">Interactive Demo</a>
-            </p>
+        <!-- English Section -->
+        <div id="english-projects">
+            <h2>Featured Projects</h2>
+            <div class="project">
+                <h3>Breaking Bad Analysis</h3>
+                <p>🔍 Analyze Walter White's character development using NLP and interpersonal network analysis.</p>
+                <p>
+                    📂 <a href="https://github.com/tu-usuario/repositorio-breaking-bad" target="_blank">Repository</a><br>
+                    📊 <a href="https://tu-usuario.github.io/repositorio-breaking-bad" target="_blank">Interactive Demo</a>
+                </p>
+            </div>
+            <!-- Add more projects here as needed -->
         </div>
-       <!-- Add more projects here as needed -->
-        <h2>Versión en Español</h2>
-        <div class="project">
-            <h3>Análisis de Breaking Bad</h3>
-            <p>🔍 Analizar el desarrollo del personaje Walter White utilizando NLP y análisis de redes interpersonales.</p>
-            <p>
-                📂 <a href="https://github.com/tu-usuario/repositorio-breaking-bad" target="_blank">Repositorio</a><br>
-                📊 <a href="https://tu-usuario.github.io/repositorio-breaking-bad" target="_blank">Demo interactiva</a>
-            </p>
+
+        <!-- Spanish Section -->
+        <div id="spanish-projects" class="hidden">
+            <h2>Proyectos Destacados</h2>
+            <div class="project">
+                <h3>Análisis de Breaking Bad</h3>
+                <p>🔍 Analizar el desarrollo del personaje Walter White utilizando NLP y análisis de redes interpersonales.</p>
+                <p>
+                    📂 <a href="https://github.com/tu-usuario/repositorio-breaking-bad" target="_blank">Repositorio</a><br>
+                    📊 <a href="https://tu-usuario.github.io/repositorio-breaking-bad" target="_blank">Demo interactiva</a>
+                </p>
+            </div>
+            <!-- Añadir los proyectos aquí según se vayan incorporando -->
         </div>
-        <!-- Añadir los proyectos aquí según se vayan incorporando -->
     </section>
 
     <footer>
-        <p>&copy; 2024 Cristina Fuentes</p>
+        <p>&copy; 2024 Cristina Fuentes | <a href="index.html">Go to Home</a></p>
     </footer>
+
+    <script>
+        // Toggle between English and Spanish projects
+        function toggleLanguage(language) {
+            const englishSection = document.getElementById('english-projects');
+            const spanishSection = document.getElementById('spanish-projects');
+            const links = document.querySelectorAll('nav a');
+
+            if (language === 'english') {
+                englishSection.classList.remove('hidden');
+                spanishSection.classList.add('hidden');
+            } else if (language === 'spanish') {
+                spanishSection.classList.remove('hidden');
+                englishSection.classList.add('hidden');
+            }
+
+            // Update active link in navigation
+            links.forEach(link => {
+                link.classList.remove('active');
+                if (link.textContent.toLowerCase().includes(language)) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Initialize with English content visible
+        document.addEventListener('DOMContentLoaded', () => toggleLanguage('english'));
+    </script>
 </body>
 </html>
