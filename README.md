@@ -31,7 +31,7 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
  
 - **Machine Learning Models** (In Progress): A collection of ML models including classification and regression projects.
 
-[View Featured Projects](https://ChispiDEV.github.io/projects.html)
+Check out my [Featured Projects](projects.html) for more detailed insights into my work.
 
 ---
 ## Contact:
@@ -78,7 +78,7 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
  
 - **Modelos de Machine Learning** (En proceso): Una colección de modelos de ML que incluye proyectos de clasificación y regresión. [Ver Repositorio](#)
 
-[Ver Proyectos Destacados](https://ChispiDEV.github.io/projects.html)
+Revisa mis [Proyectos Destacados](projects.html) para obtener más información sobre mi trabajo.
 
 ---
 ## Contacto:
