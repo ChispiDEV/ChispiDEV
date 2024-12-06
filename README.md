@@ -31,6 +31,8 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
  
 - **Machine Learning Models** (In Progress): A collection of ML models including classification and regression projects.
 
+[View Featured Projects](https://ChispiDEV.github.io/projects.html)
+
 ---
 ## Contact:
 📧: cristinafg93@hotmail.com
@@ -75,6 +77,8 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 - **Análisis de Breaking Bad** (En proceso): Análisis NLP de la evolución del personaje Walter White usando Python y networkx.
  
 - **Modelos de Machine Learning** (En proceso): Una colección de modelos de ML que incluye proyectos de clasificación y regresión. [Ver Repositorio](#)
+
+[Ver Proyectos Destacados](https://ChispiDEV.github.io/projects.html)
 
 ---
 ## Contacto:
