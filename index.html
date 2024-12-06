@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cristina Fuentes - Portfolio</title>
     <style>
+        /* Estilos Base */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -34,9 +35,9 @@
             text-decoration: underline;
         }
         section {
-            padding: 2rem;
-            max-width: 800px;
-            margin: auto;
+            padding: 1rem;
+            max-width: 1000px;
+            margin: 2rem auto;
         }
         footer {
             text-align: center;
@@ -44,6 +45,13 @@
             background: #333;
             color: #fff;
             margin-top: 2rem;
+        }
+        /* Estilos específicos de idioma */
+        #readme-content.english {
+            background-color: #f0f8ff; /* Azul claro */
+        }
+        #readme-content.spanish {
+            background-color: #fff7e6; /* Beige */
         }
         .hidden {
             display: none;
@@ -58,19 +66,18 @@
 
     <nav>
         <a href="#" onclick="toggleLanguage('english')">English</a> | 
-        <a href="#" onclick="toggleLanguage('spanish')">Español</a> |
-        <a href="projects.html" target="_blank">Projects / Proyectos</a>
+        <a href="#" onclick="toggleLanguage('spanish')">Español</a>
     </nav>
-
-    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
-    <section id="readme-content">
+    
+    <section id="readme-content" class="english">
         <p>Loading content...</p>
     </section>
 
     <footer>
         <p>&copy; 2024 Cristina Fuentes</p>
     </footer>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
    <script>
         // Toggle between English and Spanish content
         function toggleLanguage(language) {
@@ -94,8 +101,10 @@
 
                 if (language === 'english') {
                     filteredContent = sections.find(section => section.trim().startsWith('English Version'));
+                    contentDiv.className = "english";
                 } else if (language === 'spanish') {
                     filteredContent = sections.find(section => section.trim().startsWith('Versión en Español'));
+                    contentDiv.className = "spanish";
                 }
 
                 // Check if content was found
