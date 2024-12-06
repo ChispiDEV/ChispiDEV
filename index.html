@@ -48,6 +48,36 @@
         .hidden {
             display: none;
         }
+        #featured-projects {
+            padding: 2rem;
+            background: #f9f9f9;
+            margin-top: 2rem;
+        }
+        .project {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            background: #fff;
+        }
+        .project h3 {
+            margin-top: 0;
+            color: #007acc;
+        }
+        .project ul {
+            list-style: none;
+            padding: 0;
+        }
+        .project ul li {
+            margin: 0.5rem 0;
+        }
+        .project p a {
+            color: #007acc;
+            text-decoration: none;
+        }
+        .project p a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -59,6 +89,7 @@
     <nav>
         <a href="#" onclick="toggleLanguage('english')">English</a> | 
         <a href="#" onclick="toggleLanguage('spanish')">Español</a>
+        <a href="#featured-projects">Proyectos</a>
     </nav>
 
     <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
@@ -66,6 +97,23 @@
         <p>Loading content...</p>
     </section>
 
+    <section id="featured-projects">
+        <h2>Proyectos Destacados</h2>
+        <div class="project">
+            <h3>Breaking Bad Analysis</h3>
+            <p>🔍 Análisis del desarrollo del personaje de Walter White utilizando procesamiento de lenguaje natural (NLP) y grafos de relaciones interpersonales.</p>
+            <ul>
+                <li><strong>Objetivo:</strong> Explorar la evolución del personaje y su relación con el Síndrome de Hubris.</li>
+                <li><strong>Herramientas:</strong> Python (Pandas, NetworkX, Matplotlib), Lexicones de emociones.</li>
+                <li><strong>Resultados:</strong> Visualizaciones y análisis dinámicos.</li>
+            </ul>
+            <p>
+                📂 <a href="https://github.com/tu-usuario/repositorio-breaking-bad" target="_blank">Repositorio del proyecto</a><br>
+                📊 <a href="https://tu-usuario.github.io/repositorio-breaking-bad" target="_blank">Demo interactiva</a>
+            </p>
+        </div>
+    </section>
+    
     <footer>
         <p>&copy; 2024 Cristina Fuentes</p>
     </footer>
