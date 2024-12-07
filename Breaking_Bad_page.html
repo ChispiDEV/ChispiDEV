@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Breaking Bad Evil Analysis">
+    <meta name="author" content="Cristina Fuentes">
+    <meta name="keywords" content="Breaking Bad, Hubris Syndrome, Evil Analysis, Data Analysis">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking Bad Evil Analysis</title>
+    <style>
+        /* Estilos Base */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #f4f4f4;
+            color: #333;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin: 1rem 0;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #007acc;
+        }
+        nav a.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        section {
+            padding: 1rem;
+            max-width: 1000px;
+            margin: 2rem auto;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+            margin-top: 2rem;
+        }
+        /* Estilos específicos de idioma */
+        #readme-content.english {
+            background-color: #f0f8ff; /* Azul claro */
+        }
+        #readme-content.spanish {
+            background-color: #fff7e6; /* Beige */
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Breaking Bad Evil Analysis</h1>
+        <p>Explore Walter White's descent into evil | Explora el descenso a la maldad de Walter White</p>
+    </header>
+
+    <nav>
+        <a href="#" onclick="toggleLanguage('english')">English</a> | 
+        <a href="#" onclick="toggleLanguage('spanish')">Español</a> | 
+        <a href="index.html">Back to Portfolio</a> | 
+        <a href="projects.html">Back to Projects</a>
+    </nav>
+    
+    <section id="readme-content" class="english">
+        <p>Loading content...</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cristina Fuentes</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+   <script>
+        // Toggle between English and Spanish content
+        function toggleLanguage(language) {
+            fetch('https://raw.githubusercontent.com/ChispiDEV/Breaking_Bad_Evil_Analysis/main/README.md')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch README.md');
+                    }
+                    return response.text();
+                })
+                .then(markdown => {
+                    const converter = new showdown.Converter();
+                    const contentDiv = document.getElementById('readme-content');
+
+                    // Divide el contenido por secciones
+                    const sections = markdown.split(/^# /m);
+
+                    let filteredContent = "";
+                    if (language === 'english') {
+                        filteredContent = sections.find(section => section.trim().startsWith('Breaking Bad Evil Analysis'));
+                        contentDiv.className = "english";
+                    } else if (language === 'spanish') {
+                        filteredContent = sections.find(section => section.trim().startsWith('Análisis de la maldad en Breaking Bad'));
+                        contentDiv.className = "spanish";
+                    }
+
+                    if (filteredContent) {
+                        contentDiv.innerHTML = converter.makeHtml(`# ${filteredContent}`);
+                    } else {
+                        contentDiv.innerHTML = '<p>Content not available for the selected language.</p>';
+                    }
+
+                    // Actualiza el estado de navegación
+                    document.querySelectorAll('nav a').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.textContent.toLowerCase().includes(language)) {
+                            link.classList.add('active');
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching or processing README:', error);
+                    document.getElementById('readme-content').innerHTML = '<p>Error loading content. Please try again later.</p>';
+                });
+        }
+
+        // Inicializa con contenido en inglés
+        document.addEventListener('DOMContentLoaded', () => toggleLanguage('english'));
+    </script>
+</body>
+</html>
