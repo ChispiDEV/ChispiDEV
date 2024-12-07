@@ -27,7 +27,7 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 
 ---
 ## Featured Projects:
-- **Breaking Bad Analysis** (In Progress): NLP analysis of Walter White's character development using Python and networkx. [View Project](breaking_bad_project.html)  
+- **Breaking Bad Analysis** (In Progress): NLP analysis of Walter White's character development using Python and networkx. [View Project](Breaking_Bad_page.html)  
  
 - **Machine Learning Models** (In Progress): A collection of ML models including classification and regression projects. [View Repository](#)
 
@@ -74,7 +74,7 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
 
 ---
 ## Proyectos Destacados:
-- **Análisis de Breaking Bad** (En proceso): Análisis NLP de la evolución del personaje Walter White usando Python y networkx. [Ver Proyecto](breaking_bad_project.html)
+- **Análisis de Breaking Bad** (En proceso): Análisis NLP de la evolución del personaje Walter White usando Python y networkx. [Ver Proyecto](Breaking_Bad_page.html)
  
 - **Modelos de Machine Learning** (En proceso): Una colección de modelos de ML que incluye proyectos de clasificación y regresión. [Ver Repositorio](#)
 
