@@ -6,7 +6,7 @@
 - **Location:** Madrid, Spain
 - **Email:** cristinafg93@hotmail.com
 - **Telegram:** <a href="https://telegram.me/ChispiDEV" target="_blank">ChispiDEV</a> || @ChispiDEV 
-- **LinkedIn:** [Cristina Fuentes LinkedIn](https://www.linkedin.com/in/tu-perfil)
+- **LinkedIn:** [Cristina Fuentes](https://www.linkedin.com/in/cristina-fg)
 - **GitHub:** [ChispiDEV](https://github.com/ChispiDEV)
 
 ---
