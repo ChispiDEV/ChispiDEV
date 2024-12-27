@@ -42,6 +42,12 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
 📲: <a href="https://telegram.me/ChispiDEV" target="_blank">Telegram</a> || @ChispiDEV 
 
 ---
+## Download My CV
+
+- [Download CV (PDF)](cv/Cristina_Fuentes_CV.pdf)
+- [Download CV (DOCX)](cv/Cristina_Fuentes_CV.docx)
+
+---
 ## Fun Facts
 🎮 Gamer with over 500 hours in Stardew Valley.  
 ✈️ Former support specialist at Riot Games.  
@@ -87,6 +93,12 @@ Revisa mis [Proyectos Destacados](projects.html) para obtener más información 
 ⏩: <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">LinkedIn Profile</a>
 
 📲: <a href="https://telegram.me/ChispiDEV" target="_blank">Telegram</a> || @ChispiDEV 
+
+---
+## Descarga Mi CV
+
+- [Descarga CV (PDF)](cv/Cristina_Fuentes_CV.pdf)
+- [Descarga CV (DOCX)](cv/Cristina_Fuentes_CV.docx)
 
 ---
 ## Curiosidades:
