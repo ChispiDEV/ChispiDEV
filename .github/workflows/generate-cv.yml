@@ -1,0 +1,41 @@
+name: Generate CV
+
+# Ejecutar workflow al hacer push en la rama principal
+on:
+  push:
+    branches:
+      - main  # Cambia esto si usas otra rama principal
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Usar una máquina virtual con Ubuntu
+
+    steps:
+      # Paso 1: Clonar el repositorio
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Paso 2: Instalar Pandoc y sus dependencias
+      - name: Install Pandoc and dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic
+
+      # Paso 3: Generar el archivo PDF desde Markdown
+      - name: Generate PDF
+        run: |
+          pandoc cv.md -o cv/Cristina_Fuentes_CV.pdf
+
+      # Paso 4: Generar el archivo DOCX desde Markdown
+      - name: Generate DOCX
+        run: |
+          pandoc cv.md -o cv/Cristina_Fuentes_CV.docx
+
+      # Paso 5: Subir los archivos generados al repositorio
+      - name: Commit and push updated CV files
+        run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
+          git add cv/Cristina_Fuentes_CV.pdf cv/Cristina_Fuentes_CV.docx
+          git commit -m "Updated CV files"
+          git push
