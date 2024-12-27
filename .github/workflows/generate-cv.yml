@@ -24,12 +24,12 @@ jobs:
       # Paso 3: Generar el archivo PDF desde Markdown
       - name: Generate PDF
         run: |
-          pandoc cv.md -o cv/Cristina_Fuentes_CV.pdf
+          pandoc cv/cv.md -o cv/Cristina_Fuentes_CV.pdf
 
       # Paso 4: Generar el archivo DOCX desde Markdown
       - name: Generate DOCX
         run: |
-          pandoc cv.md -o cv/Cristina_Fuentes_CV.docx
+          pandoc cv/cv.md -o cv/Cristina_Fuentes_CV.docx
 
       # Paso 5: Subir los archivos generados al repositorio
       - name: Commit and push updated CV files
