@@ -6,6 +6,9 @@ on:
     branches:
       - main  # Cambia esto si usas otra rama principal
 
+permissions:
+  contents: write
+  
 jobs:
   build:
     runs-on: ubuntu-latest  # Usar una máquina virtual con Ubuntu
