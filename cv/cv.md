@@ -46,9 +46,9 @@ Highly adaptable, collaborative, and passionate about leveraging data to solve c
 - Used Python and SQL for data extraction, cleaning, and analysis, processing over 500,000 records efficiently.
 - Built predictive models using scikit-learn to improve customer retention rates. 
 
-### Player Support Specialist for Riot Games
-**Telus International Europe INC.**. Sofia, Bulgaria
-**May 2022 - Sept 2022**
+### **Player Support Specialist for Riot Games**  
+**Telus International Europe INC.**, Sofia, Bulgaria  
+**May 2022 - Sept 2022**  
 - Resolved over 50 player tickets daily, maintaining high satisfaction rates (95% positive feedback).
 - Analyzed player data to identify recurring issues, contributing to operational improvements.
 - Developed problem-solving and communication skills in a fast-paced, multicultural environment.
