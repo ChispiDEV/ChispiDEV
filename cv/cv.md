@@ -4,11 +4,11 @@ title: "Cristina Fuentes"
 location: "Madrid, Spain"
 email: "cristinafg93@hotmail.com"
 links:
-  - label: "LinkedIn"
+  - label: LinkedIn
     url: "https://www.linkedin.com/in/cristina-fg"
-  - label: "GitHub"
+  - label: GitHub
     url: "https://github.com/ChispiDEV"
-  - label: "Telegram"
+  - label: Telegram
     url: "https://telegram.me/ChispiDEV"
     
 ---
