@@ -71,9 +71,9 @@ IMMUNE Institute, Spain
 Universidad Autónoma de Madrid, Spain  
 **2017 – 2018**  
 
-### **Biology Degree**
-Universidad Autónoma de Madrid, Spain
-**2011 - 2016**
+### **Biology Degree**  
+Universidad Autónoma de Madrid, Spain  
+**2011 – 2016**
 
 ---
 
