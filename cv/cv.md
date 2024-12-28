@@ -1,7 +1,7 @@
 ---
 
 title: "Cristina Fuentes"
-Location: "Madrid, Spain"
+location: "Madrid, Spain"
 email: "cristinafg93@hotmail.com"
 links:
   - label: "LinkedIn"
