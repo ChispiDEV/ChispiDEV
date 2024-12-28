@@ -27,7 +27,7 @@ jobs:
       # Paso 3: Generar el archivo PDF desde Markdown
       - name: Generate PDF
         run: |
-          pandoc cv/cv.md --template=templates/template.tex --pdf-engine=xelatex -o Cristina_Fuentes_CV.pdf
+          pandoc cv/cv.md --template=templates/template.tex --pdf-engine=xelatex -o cv/Cristina_Fuentes_CV.pdf
 
       # Paso 4: Generar el archivo DOCX desde Markdown
       - name: Generate DOCX
