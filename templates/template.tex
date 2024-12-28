@@ -2,27 +2,37 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+\usepackage{xcolor} % Para colores personalizados
+\usepackage{fontspec} % Para fuentes personalizadas
 \usepackage{enumitem} % Para listas personalizadas
 \usepackage{titlesec} % Para personalizar los títulos
 \usepackage{hyperref} % Para hipervínculos
 \usepackage{setspace} % Para controlar el interlineado
 
+% Configuración de colores y fuentes
+\definecolor{mypurple}{HTML}{3c1642}
+\definecolor{mydarkblue}{HTML}{086375}
+\definecolor{myblue}{HTML}{1dd3b0}
+\definecolor{mygreen}{HTML}{affc41}
+\definecolor{mylightgreen}{HTML}{b2ff9e}
+\setmainfont{Arial}
+
 % Configuración de títulos
-\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
-\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+\titleformat{\section}{\color{mygreen}\large\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\color{mylightgreen}\normalsize\bfseries}{}{0em}{}
 
 % Configuración de hipervínculos
 \hypersetup{
     colorlinks=true,
-    urlcolor=blue,
-    linkcolor=black
+    urlcolor=mydarkblue,
+    linkcolor=myblue
 }
 
 \begin{document}
 
 % Nombre y Contacto
 \begin{center}
-    {\Huge \textbf{Cristina Fuentes}} \\[1mm]
+    {\Huge \textbf{\textcolor{mypurple}{Cristina Fuentes}}} \\[1mm]
     Madrid, Spain \\
     \href{mailto:cristinafg93@hotmail.com}{cristinafg93@hotmail.com} | 
     \href{https://telegram.me/ChispiDEV}{Telegram: @ChispiDEV} \\
