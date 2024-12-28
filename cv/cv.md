@@ -1,5 +1,4 @@
 ---
-
 title: "Cristina Fuentes"
 location: "Madrid, Spain"
 email: "cristinafg93@hotmail.com"
@@ -9,8 +8,7 @@ links:
   - label: GitHub
     url: "https://github.com/ChispiDEV"
   - label: Telegram
-    url: "https://telegram.me/ChispiDEV"
-    
+    url: "https://telegram.me/ChispiDEV"   
 ---
 
 # Professional Summary
