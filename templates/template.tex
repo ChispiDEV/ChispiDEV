@@ -1,47 +1,118 @@
-\documentclass[11pt]{article}
-\usepackage[a4paper,margin=1in]{geometry}
-\usepackage{hyperref}
-\usepackage{titlesec}
-\usepackage{enumitem}
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
+\usepackage{enumitem} % Para listas personalizadas
+\usepackage{titlesec} % Para personalizar los títulos
+\usepackage{hyperref} % Para hipervínculos
+\usepackage{setspace} % Para controlar el interlineado
 
+% Configuración de títulos
 \titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+% Configuración de hipervínculos
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=black
+}
 
 \begin{document}
 
+% Nombre y Contacto
 \begin{center}
-    {\LARGE Cristina Fuentes} \\
-    Email: \href{mailto:cristinafg93@hotmail.com}{cristinafg93@hotmail.com} \\
-    Location: Madrid, Spain
+    {\Huge \textbf{Cristina Fuentes}} \\[1mm]
+    Madrid, Spain \\
+    \href{mailto:cristinafg93@hotmail.com}{cristinafg93@hotmail.com} | 
+    \href{https://telegram.me/ChispiDEV}{Telegram: @ChispiDEV} \\
+    \href{https://www.linkedin.com/in/tu-perfil}{LinkedIn} | 
+    \href{https://github.com/ChispiDEV}{GitHub: ChispiDEV} \\
 \end{center}
 
+\vspace{1em}
+
+% Resumen Profesional
 \section*{Professional Summary}
-Data Analyst with a background in biology and education. Expertise in Python, SQL, and data visualization.
+Data Analyst with a strong foundation in STEM and education, recently trained in data analytics through an intensive bootcamp. Proficient in Python, SQL, and data visualization tools such as Power BI and Tableau. Passionate about leveraging data to solve complex problems and contribute to organizational success.
 
+\vspace{1em}
+
+% Habilidades
 \section*{Skills}
-\begin{itemize}[leftmargin=*]
-    \item Python, SQL, Power BI, Tableau
-    \item Data Cleaning and Transformation
-    \item Machine Learning (Scikit-learn, NLP)
+\subsection*{Technical Skills}
+\begin{itemize}[leftmargin=0.5cm]
+    \item \textbf{Programming Languages:} Python, SQL
+    \item \textbf{Data Visualization Tools:} Power BI, Tableau, Matplotlib
+    \item \textbf{Data Analysis:} Data cleaning, transformation, and visualization
+    \item \textbf{Machine Learning:} Supervised and unsupervised learning, NLP
+    \item \textbf{Biological Sciences:} Genetics, Molecular Biology, Biochemistry
 \end{itemize}
 
-\section*{Experience}
-\textbf{Data Analyst} \\
-\[Company Name\], Madrid, Spain \hfill Jan 2023 - Present
-\begin{itemize}[leftmargin=*]
-    \item Analyzed large datasets to uncover actionable insights, improving decision-making by 20%.
-    \item Developed dynamic dashboards in Power BI to track KPIs.
+\subsection*{Soft Skills}
+\begin{itemize}[leftmargin=0.5cm]
+    \item Communication and Collaboration
+    \item Problem Solving and Critical Thinking
+    \item Leadership and Mentoring
+    \item Time Management and Organization
 \end{itemize}
 
-\textbf{Biology Teacher} \\
-\[High School Name\], Madrid, Spain \hfill 2016 - 2023
-\begin{itemize}[leftmargin=*]
-    \item Taught biology and developed data-driven teaching strategies to enhance student engagement.
+\vspace{1em}
+
+% Experiencia Profesional
+\section*{Professional Experience}
+
+\subsection*{Data Analyst Practice}
+\textbf{IMMUNE INSTITUTE}, Madrid, Spain \hfill \textit{Mar 2024 – Oct 2024}  
+\begin{itemize}[leftmargin=0.5cm]
+    \item Designed dynamic dashboards in Power BI, improving decision-making by 25\%.
+    \item Processed and analyzed large datasets using Python and SQL, uncovering actionable insights.
+    \item Automated data-cleaning workflows, reducing manual effort by 30\%.
 \end{itemize}
 
+\subsection*{Player Support Specialist}
+\textbf{Telus International Europe INC.}, Sofia, Bulgaria \hfill \textit{May 2022 – Sep 2022}  
+\begin{itemize}[leftmargin=0.5cm]
+    \item Resolved player issues, maintaining a 95\% satisfaction rate.
+    \item Identified recurring issues through data analysis, streamlining internal processes.
+\end{itemize}
+
+\subsection*{STEM Post-Secondary Education Teacher}
+\textbf{Various High Schools}, Madrid, Spain \hfill \textit{Sep 2016 – Sep 2023}  
+\begin{itemize}[leftmargin=0.5cm]
+    \item Taught biology, chemistry, and mathematics at secondary and post-secondary levels.
+    \item Developed data-driven lesson plans, improving student engagement by 20\%.
+    \item Mentored students in academic and professional development projects.
+\end{itemize}
+
+\vspace{1em}
+
+% Educación
 \section*{Education}
-\begin{itemize}[leftmargin=*]
-    \item \textbf{Master's in Education}, [University Name], 2015 - 2016
-    \item \textbf{Data Analysis Bootcamp}, IMMUNE Institute, 2023
+\begin{itemize}[leftmargin=0.5cm]
+    \item \textbf{Data Analysis Bootcamp}, IMMUNE Institute, Spain \hfill \textit{2024}
+    \item \textbf{Master's in Education}, Universidad Autónoma de Madrid, Spain \hfill \textit{2017 – 2018}
+    \item \textbf{Biology Degree}, Universidad Autónoma de Madrid, Spain \hfill \textit{2011 – 2016}
+\end{itemize}
+
+\vspace{1em}
+
+% Certificaciones
+\section*{Certifications}
+\begin{itemize}[leftmargin=0.5cm]
+    \item \href{https://www.credential.net/ad14325c-15f7-4a4a-8c27-0969c1ead58c#acc.b7DS18T2}{Bootcamp Data Analytics (IMMUNE Institute, 2024)}
+    \item \href{https://www.credly.com/badges/b44395d5-2341-454c-bb2f-4e815e1cf16a/public_url}{IT Specialist - HTML and CSS (Microsoft, 2022)}
+    \item \href{https://cert.efset.org/wDUAG4}{EF SET 75/100 (C2 Proficient, 2022)}
+\end{itemize}
+
+\vspace{1em}
+
+% Idiomas
+\section*{Languages}
+\begin{itemize}[leftmargin=0.5cm]
+    \item \textbf{Spanish:} Native
+    \item \textbf{English:} Fluent (C2)
+    \item \textbf{French:} Intermediate (B2)
 \end{itemize}
 
 \end{document}
