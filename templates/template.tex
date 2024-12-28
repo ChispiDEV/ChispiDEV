@@ -49,14 +49,14 @@ $if(title)$
             \, | \, \href{mailto:$email$}{$email$} \\[1mm]
         $endif$
         $if(links)$
-            \, | \, $for(links)\href{$it.url$}{$it.label$}$sep$ \, | \, $endfor$
+            $for(links)$\href{$it.url$}{$it.label$}$sep$ \, | \, $endfor$
         $endif$ \\[2mm]
     $else$
         $if(email)$
             \href{mailto:$email$}{$email$}%
         $endif$%
         $if(links)$
-            \, | \, $for(links)\href{$it.url$}{$it.label$}$sep$ \, | \, $endfor$
+            $for(links)\href{$it.url$}{$it.label$}$sep$ \, | \, $endfor$
         $endif$
     $endif$
 \end{center}
