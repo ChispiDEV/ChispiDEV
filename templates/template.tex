@@ -44,21 +44,14 @@ $if(title)$
 \begin{center}
     {\Huge \textbf{\textcolor{mypurple}{$title$}}} \\[1mm]
     $if(location)$
-        $location$ \\[1mm]
-        $if(email)$
-            \, | \, \href{mailto:$email$}{$email$} \\[1mm]
-        $endif$
-        $if(links)$
-            $for(links)$\href{$it.url$}{$it.label$}$sep$ \, | \, $endfor$
-        $endif$ \\[2mm]
-    $else$
-        $if(email)$
-            \href{mailto:$email$}{$email$}%
-        $endif$%
-        $if(links)$
-            $for(links)\href{$it.url$}{$it.label$}$sep$ \, | \, $endfor$
-        $endif$
+        $location$%
     $endif$
+    $if(email)$
+        \, | \, \href{mailto:$email$}{$email$}%
+    $endif$
+    $if(links)$
+        \, | \, $for(links)$\href{$it.url$}{\textcolor{myblue}{$it.label$}}$sep$ \, | \, $endfor$
+    $endif$ \\[2mm]
 \end{center}
 $endif$
 
