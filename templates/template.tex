@@ -39,22 +39,19 @@ $endfor$
 $if(title)$
 \begin{center}
     {\Huge \textbf{\textcolor{mypurple}{$title$}}} \\[1mm]
-$endif$
-
-$if(location)$
-    $location$ \\[1mm]
-$endif$
-
-$if(email)$
-    \href{mailto:$email$}{$email$} \\[1mm]
-$endif$
-
-$if(links)$
-    $for(links)$
-        \href{$it.url$}{$it.label$} \\[1mm]
-    $endfor$
-$endif$
+    $if(location)$
+        $location$ \\[1mm]
+    $endif$
+    $if(email)$
+        \href{mailto:$email$}{$email$} \\[1mm]
+    $endif$
+    $if(links)$
+        $for(links)$
+            \href{$it.url$}{$it.label$} \\[1mm]
+        $endfor$
+    $endif$
 \end{center}
+$endif$
 
 % Contenido principal
 $body$
