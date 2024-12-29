@@ -44,8 +44,9 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
 ---
 ## Download My CV
 
-- [Download CV (PDF)](cv/Cristina_Fuentes_CV.pdf)
-- [Download CV (DOCX)](cv/Cristina_Fuentes_CV.docx)
+- <a href="https://github.com/ChispiDEV/cv-repo/releases/download/v1.0/Cristina_Fuentes_CV.pdf" target="_blank">Download CV (PDF)</a>
+- <a href="https://github.com/ChispiDEV/cv-repo/releases/download/v1.0/Cristina_Fuentes_CV.docx" target="_blank">Download CV (DOCX)</a>
+
 
 ---
 ## Fun Facts
@@ -97,8 +98,8 @@ Revisa mis [Proyectos Destacados](projects.html) para obtener más información 
 ---
 ## Descarga Mi CV
 
-- [Descarga CV (PDF)](cv/Cristina_Fuentes_CV.pdf)
-- [Descarga CV (DOCX)](cv/Cristina_Fuentes_CV.docx)
+- <a href="https://github.com/ChispiDEV/cv-repo/releases/download/v1.0/Cristina_Fuentes_CV.pdf" target="_blank">Descarga mi CV (PDF)</a>
+- <a href="https://github.com/ChispiDEV/cv-repo/releases/download/v1.0/Cristina_Fuentes_CV.docx" target="_blank">Descarga mi CV (DOCX)</a>
 
 ---
 ## Curiosidades:
