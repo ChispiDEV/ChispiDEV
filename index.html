@@ -26,17 +26,13 @@
 
     <!-- Chatbot Floating Popup -->
     <section id="chatbot-popup">
-        <h2>Chatbot</h2>
         <div id="chatbot-header">
             <span>Chatbot</span>
             <button id="toggle-chatbot">-</button>
         </div>
         <div id="chatbot-content">
             <div id="messages"></div>
-            <div id="input-container">
-                <input id="input" type="text" placeholder="Ask something about this repository..." onkeydown="if(event.key === 'Enter') sendMessage()">
-                <button onclick="sendMessage()">Send</button>
-            </div>
+            <input id="chat-input" type="text" placeholder="Ask something about this repository..." onkeydown="if(event.key === 'Enter') sendMessage()">
         </div>
     </section>
  
