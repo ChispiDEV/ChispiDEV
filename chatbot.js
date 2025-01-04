@@ -25,17 +25,11 @@ async function sendMessage() {
 }
 
 async function fetchChatbotResponse(userInput) {
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+    const response = await fetch('https://tyche-chatbot.herokuapp.com/chat', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer YOUR_OPENAI_API_KEY'
-        },
-        body: JSON.stringify({
-            model: "YOUR_FINE_TUNED_MODEL_ID",
-            messages: context,
-            max_tokens: 150
-        })
+        body: JSON.stringify({ model: "gpt-3.5-turbo", messages: context, max_tokens: 150 })
     });
 
     const data = await response.json();
