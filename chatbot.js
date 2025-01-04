@@ -1,3 +1,23 @@
+// Variables globales
+const chatbotPopup = document.getElementById('chatbot-popup');
+const chatbotHeader = document.getElementById('chatbot-header');
+const toggleChatbotButton = document.getElementById('toggle-chatbot');
+const chatbotContent = document.getElementById('chatbot-content');
+
+// Toggle chatbot visibility
+toggleChatbotButton.addEventListener('click', () => {
+    if (chatbotPopup.classList.contains('minimized')) {
+        chatbotPopup.classList.remove('minimized');
+        chatbotContent.style.display = 'flex';
+        toggleChatbotButton.textContent = '-';
+    } else {
+        chatbotPopup.classList.add('minimized');
+        chatbotContent.style.display = 'none';
+        toggleChatbotButton.textContent = '+';
+    }
+});
+
+// Codigo del chatbot
 const messagesDiv = document.getElementById('messages');
 const input = document.getElementById('input');
 const context = []; //  Array para mantener el historial de conversación
