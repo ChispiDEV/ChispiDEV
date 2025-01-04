@@ -44,9 +44,13 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
 ---
 ## Download My CV
 
-- <a href="https://github.com/ChispiDEV/ChispiDEV/blob/main/public-cv/Cristina_Fuentes_CV.pdf" target="_blank">Download CV (PDF)</a>
-- <a href="https://github.com/ChispiDEV/ChispiDEV/blob/main/public-cv/Cristina_Fuentes_CV.docx" target="_blank">Download CV (DOCX)</a>
+- <a href="https://github.com/ChispiDEV/ChispiDEV/blob/main/public-cv/Cristina_Fuentes_CV.pdf" 
+     download="Cristina_Fuentes_CV.pdf" 
+     target="_blank">Download CV (PDF)</a>
 
+- <a href="https://github.com/ChispiDEV/ChispiDEV/blob/main/public-cv/Cristina_Fuentes_CV.docx" 
+     download="Cristina_Fuentes_CV.docx" 
+     target="_blank">Download CV (DOCX)</a>
 
 ---
 ## Fun Facts
@@ -98,9 +102,13 @@ Revisa mis [Proyectos Destacados](projects.html) para obtener más información 
 ---
 ## Descarga Mi CV
 
-- <a href="https://github.com/ChispiDEV/ChispiDEV/blob/main/public-cv/Cristina_Fuentes_CV.pdf" target="_blank">Descarga mi CV (PDF)</a>
-- <a href="https://github.com/ChispiDEV/ChispiDEV/blob/main/public-cv/Cristina_Fuentes_CV.docx" target="_blank">Descarga mi CV (DOCX)</a>
+- <a href="https://github.com/ChispiDEV/ChispiDEV/blob/main/public-cv/Cristina_Fuentes_CV.pdf" 
+     download="Cristina_Fuentes_CV.pdf" 
+     target="_blank">Descarga mi CV (PDF)</a>
 
+- <a href="https://github.com/ChispiDEV/ChispiDEV/blob/main/public-cv/Cristina_Fuentes_CV.docx" 
+     download="Cristina_Fuentes_CV.docx" 
+     target="_blank">Descarga mi CV (DOCX)</a>
 ---
 ## Curiosidades:
 🎮 Viciada de los juegos con más de 500 horas jugadas en Stardew Valley.  
