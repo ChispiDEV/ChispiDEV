@@ -7,56 +7,7 @@
     <meta name="keywords" content="Data Analysis, Python, SQL, Portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cristina Fuentes - Portfolio</title>
-    <style>
-        /* Estilos Base */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background: #f4f4f4;
-            color: #333;
-            padding: 1rem 2rem;
-            text-align: center;
-        }
-        nav {
-            text-align: center;
-            margin: 1rem 0;
-        }
-        nav a {
-            margin: 0 1rem;
-            text-decoration: none;
-            color: #007acc;
-        }
-        nav a.active {
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        section {
-            padding: 1rem;
-            max-width: 1000px;
-            margin: 2rem auto;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #333;
-            color: #fff;
-            margin-top: 2rem;
-        }
-        /* Estilos específicos de idioma */
-        #readme-content.english {
-            background-color: #f0f8ff; /* Azul claro */
-        }
-        #readme-content.spanish {
-            background-color: #fff7e6; /* Beige */
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -73,12 +24,22 @@
         <p>Loading content...</p>
     </section>
 
+    <!-- Chatbot Section -->
+    <section id="chatbot-section">
+        <h2>Chatbot</h2>
+        <div id="chat">
+            <div id="messages"></div>
+            <input type="text" id="input" placeholder="Ask something about this repository..." onkeydown="if(event.key === 'Enter') sendMessage()">
+        </div>
+    </section>
+ 
     <footer>
         <p>&copy; 2024 Cristina Fuentes</p>
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
-   <script>
+    <script src="chatbot.js"></script>
+    <script>
         // Toggle between English and Spanish content
         function toggleLanguage(language) {
         fetch('https://raw.githubusercontent.com/ChispiDEV/ChispiDEV/main/README.md')
