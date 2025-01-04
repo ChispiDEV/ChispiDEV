@@ -44,8 +44,8 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
 ---
 ## Download My CV
 
-- <a href="https://objects.githubusercontent.com/github-production-release-asset-2e65be/909692287/7941ae6f-56f3-4187-ac3e-1bf2aa2aee17?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20241229%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241229T214308Z&X-Amz-Expires=300&X-Amz-Signature=b4eca67143ef662eb5b6ddf475ee56868a955cc9614d9676bd3ab05385da9665&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DCristina_Fuentes_CV.pdf&response-content-type=application%2Foctet-stream" target="_blank">Download CV (PDF)</a>
-- <a href="https://objects.githubusercontent.com/github-production-release-asset-2e65be/909692287/0003a9fb-a226-45dd-850b-7039afdc110e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20241229%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241229T214512Z&X-Amz-Expires=300&X-Amz-Signature=219b30283f3d46b49a8bca8801cb4367a6926652d87cb995d57dc100eabecd29&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DCristina_Fuentes_CV.docx&response-content-type=application%2Foctet-stream" target="_blank">Download CV (DOCX)</a>
+- <a href="https://github.com/ChispiDEV/ChispiDEV/blob/main/public-cv/Cristina_Fuentes_CV.pdf" target="_blank">Download CV (PDF)</a>
+- <a href="https://github.com/ChispiDEV/ChispiDEV/blob/main/public-cv/Cristina_Fuentes_CV.docx" target="_blank">Download CV (DOCX)</a>
 
 
 ---
@@ -98,8 +98,8 @@ Revisa mis [Proyectos Destacados](projects.html) para obtener más información 
 ---
 ## Descarga Mi CV
 
-- <a href="https://github.com/ChispiDEV/cv-repo/releases/download/v1.0/Cristina_Fuentes_CV.pdf" target="_blank">Descarga mi CV (PDF)</a>
-- <a href="https://github.com/ChispiDEV/cv-repo/releases/download/v1.0/Cristina_Fuentes_CV.docx" target="_blank">Descarga mi CV (DOCX)</a>
+- <a href="https://github.com/ChispiDEV/ChispiDEV/blob/main/public-cv/Cristina_Fuentes_CV.pdf" target="_blank">Descarga mi CV (PDF)</a>
+- <a href="https://github.com/ChispiDEV/ChispiDEV/blob/main/public-cv/Cristina_Fuentes_CV.docx" target="_blank">Descarga mi CV (DOCX)</a>
 
 ---
 ## Curiosidades:
