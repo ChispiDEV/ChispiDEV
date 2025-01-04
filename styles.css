@@ -132,7 +132,7 @@ button:hover {
 
 #chatbot-header {
     background: #007acc;
-    color: #fff;
+    color: white;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -140,30 +140,52 @@ button:hover {
     cursor: pointer;
 }
 
+#chatbot-header span {
+    font-weight: bold;
+}
+
 #chatbot-header button {
-    background: none;
+    background: transparent;
     border: none;
-    color: #fff;
-    font-size: 1rem;
+    color: white;
+    font-size: 18px;
     cursor: pointer;
 }
 
 #chatbot-content {
     display: flex;
     flex-direction: column;
-    height: 300px;
-    display: none; /* Initially hidden */
+    height: 300px; /*Define una altura fija*/
+    overflow: hidden;
 }
 
-#chatbot-content #messages {
+#messages {
     flex: 1;
     overflow-y: auto;
     padding: 10px;
     background: #f9f9f9;
     border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
 }
 
-#chatbot-content #input {
+.user-message {
+    background: #007acc;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background: #ccc;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    align-self: flex-start;
+}
+
+#chat-input {
     padding: 10px;
     border: none;
     border-top: 1px solid #ccc;
