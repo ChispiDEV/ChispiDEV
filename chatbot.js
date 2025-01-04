@@ -1,8 +1,13 @@
 // Variables globales
 const chatbotPopup = document.getElementById('chatbot-popup');
-const chatbotHeader = document.getElementById('chatbot-header');
-const toggleChatbotButton = document.getElementById('toggle-chatbot');
 const chatbotContent = document.getElementById('chatbot-content');
+const messagesDiv = document.getElementById('messages');
+const chatInput = document.getElementById('chat-input');
+const toggleChatbotButton = document.getElementById('toggle-chatbot');
+const context = []; //  Array para mantener el historial de conversación
+
+// Inicializa el contenido para que esté visible al principio
+chatbotContent.style.display = 'flex';
 
 // Toggle chatbot visibility
 toggleChatbotButton.addEventListener('click', () => {
@@ -17,11 +22,6 @@ toggleChatbotButton.addEventListener('click', () => {
     }
 });
 
-// Codigo del chatbot
-const messagesDiv = document.getElementById('messages');
-const input = document.getElementById('input');
-const context = []; //  Array para mantener el historial de conversación
-
 function addMessage(text, sender) {
     const message = document.createElement('div');
     message.classList.add('message', sender);
@@ -30,18 +30,19 @@ function addMessage(text, sender) {
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
 }
 
+// Función para enviar mensaje
 async function sendMessage() {
-    const userInput = input.value;
-    if (!userInput.trim()) return;
+    const userMessage = chatInput.value.trim();
+    if (!userMessage) return;
 
-    addMessage(userInput, 'user');
-    context.push({ role: "user", content: userInput });
-    input.value = '';
+    addMessage(userMessage, 'user');
+    context.push({ role: "user", content: userMessage });
+    chatInput.value = '';
 
     addMessage('Typing...', 'bot');
 
     try {
-        const response = await fetch('http://localhost:3000/chat', {
+        const response = await fetch('https://tyche-chatbot.herokuapp.com/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -58,6 +59,10 @@ async function sendMessage() {
         }
 
         const data = await response.json();
+        if (!data.choices || data.choices.length === 0 || !data.choices[0].message.content) {
+            throw new Error('Invalid response from the chatbot API');
+        }
+
         const botResponse = data.choices[0].message.content.trim();
         addMessage(botResponse, 'bot');
         context.push({ role: "assistant", content: botResponse });
@@ -65,18 +70,6 @@ async function sendMessage() {
         console.error('Error:', error);
         addMessage('Sorry, there was an error processing your request.', 'bot');
     }
-}
-
-async function fetchChatbotResponse(userInput) {
-    const response = await fetch('https://tyche-chatbot.herokuapp.com/chat', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        body: JSON.stringify({ model: "gpt-3.5-turbo", messages: context, max_tokens: 150 })
-    });
-
-    const data = await response.json();
-    return data.choices[0].message.content.trim();
 }
 
 // Optional: Restore context from localStorage
