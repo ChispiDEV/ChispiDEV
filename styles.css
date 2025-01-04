@@ -1,0 +1,93 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #f4f4f4;
+    color: #333;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #007acc;
+}
+
+nav a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+section {
+    padding: 1rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* Readme Language-Specific Styles */
+#readme-content.english {
+    background-color: #f0f8ff; /* Light blue */
+}
+
+#readme-content.spanish {
+    background-color: #fff7e6; /* Beige */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Chatbot Styles */
+#chatbot-section {
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+#messages {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+}
+
+.message {
+    margin: 5px 0;
+}
+
+.user {
+    text-align: right;
+    color: blue;
+}
+
+.bot {
+    text-align: left;
+    color: green;
+}
+
+#input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
