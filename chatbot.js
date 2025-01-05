@@ -48,10 +48,9 @@ async function sendMessage() {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                model: "gpt-3.5-turbo", // Cambia el modelo si es necesario
-                messages: context,
-                max_tokens: 150
-            })
+                message: userInput,
+                language: "es"
+            }),
         });
 
         if (!response.ok) {
