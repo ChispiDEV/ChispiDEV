@@ -42,7 +42,7 @@ async function sendMessage() {
     addMessage('Typing...', 'bot');
 
     try {
-        const response = await fetch('https://tyche-chatbot.herokuapp.com/chat', {
+        const response = await fetch('https://tyche-chatbot-da1d0dc13fc5.herokuapp.com/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
