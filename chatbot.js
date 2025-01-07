@@ -58,11 +58,11 @@ async function sendMessage() {
         }
 
         const data = await response.json();
-        if (!data.choices || data.choices.length === 0 || !data.choices[0].message.content) {
+        if (!data.response) {
             throw new Error('Invalid response from the chatbot API');
         }
-
-        const botResponse = data.choices[0].message.content.trim();
+            
+        const botResponse = data.response.trim();
         addMessage(botResponse, 'bot');
         context.push({ role: "assistant", content: botResponse });
     } catch (error) {
