@@ -106,8 +106,9 @@ Revisa mis [Proyectos Destacados](projects.html) para obtener más información 
      download="Cristina_Fuentes_CV_esp.pdf" 
      target="_blank">Descarga mi CV (PDF)</a>
 
+
 - <a href="https://raw.githubusercontent.com/ChispiDEV/ChispiDEV/main/public-cv/Cristina_Fuentes_CV_esp.docx" 
-     download="Cristina_Fuentes_CV_esp.docx" 
+     download="Cristina_Fuentes_CV_esp.docx"
      target="_blank">Descarga mi CV (DOCX)</a>
 ---
 ## Curiosidades:
