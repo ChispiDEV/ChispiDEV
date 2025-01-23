@@ -40,13 +40,21 @@ Puedes ver mi portafolio y los proyectos en detalle en mi [Página de GitHub Pag
 
 ---
 ## 🚀 Featured Projects:
-### 📊 **Breaking Bad Analysis** (In Progress): NLP analysis of Walter White's character development using Python and networkx. <a href="Breaking_Bad_page.html" target="_blank">[View Project]</a><br>
+### 📊 **Breaking Bad Analysis** (In Progress): 
+ - NLP analysis of Walter White's character development using Python and networkx. 
+ - <a href="Breaking_Bad_page.html" target="_blank">[View Project]</a><br>
  
-### 🤖 **Machine Learning Models** (In Progress): A collection of ML models including classification and regression projects. [View Repository](#)
+### 🤖 **Machine Learning Models** (In Progress): 
+ - A collection of ML models including classification and regression projects.
+ - [View Repository](#)
 
-### 📘 **LaTeX PDF Generator:** Markdown document automation with professional layout. [View Repository](#)
+### 📘 **LaTeX PDF Generator (In Progress):** 
+ - Markdown document automation with professional layout.
+ - [View Repository](#)
 
-### 🔍 **Web Scraping Basics:** Introductory tutorial for extracting data from web sites. [View Repository](#)  
+### 🔍 **Web Scraping Basics (In Progress):** 
+ - Introductory tutorial for extracting data from web sites.
+ - [View Repository](#)  
 
 Check out my [Featured Projects](projects.html) for more detailed insights into my work.
 
@@ -120,13 +128,21 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
 
 ---
 ## 🚀 Proyectos Destacados:
-### 📊 **Análisis de Breaking Bad** (En proceso): Análisis NLP de la evolución del personaje Walter White usando Python y networkx. <a href="Breaking_Bad_page.html" target="_blank">[Ver Proyecto]</a><br>
+### 📊 **Análisis de Breaking Bad** (En proceso): 
+ - Análisis NLP de la evolución del personaje Walter White usando Python y networkx.
+ - <a href="Breaking_Bad_page.html" target="_blank">[Ver Proyecto]</a><br>
  
-### 🤖 **Modelos de Machine Learning** (En proceso): Una colección de modelos de ML que incluye proyectos de clasificación y regresión. [Ver Repositorio](#)
+### 🤖 **Modelos de Machine Learning** (En proceso): 
+ - Una colección de modelos de ML que incluye proyectos de clasificación y regresión.
+ - [Ver Repositorio](#)
 
-### 📘 **Generador de PDF en LaTeX0:** Automatización de documentos Markdown con diseño profesional. [Ver Repositorio](#)
+### 📘 **Generador de PDF en LaTeX (En proceso):** 
+ - Automatización de documentos Markdown con diseño profesional.
+ - [Ver Repositorio](#)
 
-### 🔍 **Web Scraping Básico:** Tutorial introductorio para extraer datos de sitios web. [Ver Repositorio](#)
+### 🔍 **Web Scraping Básico (En proceso):** 
+ - Tutorial introductorio para extraer datos de sitios web.
+ - [Ver Repositorio](#)
 
 Revisa mis [Proyectos Destacados](projects.html) para obtener más información sobre mi trabajo.
 
