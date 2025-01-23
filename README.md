@@ -1,6 +1,8 @@
 # Welcome to Cristina's GitHub!! // ¡¡Bienvenido al GitHub de Cristina!!
+_Data Analyst | Python Enthusiast | Document Automation with LaTeX_
 
-Explore my portfolio and projects in detail on my [GitHub Pages website](https://chispidev.github.io/ChispiDEV/). // Puedes ver mi portafolio y los proyectos en detalle en mi [Página de GitHub Pages](https://chispidev.github.io/ChispiDEV/).
+Explore my portfolio and projects in detail on my [GitHub Pages website](https://chispidev.github.io/ChispiDEV/).  
+Puedes ver mi portafolio y los proyectos en detalle en mi [Página de GitHub Pages](https://chispidev.github.io/ChispiDEV/).
 
 ---
 
@@ -11,54 +13,76 @@ Explore my portfolio and projects in detail on my [GitHub Pages website](https:/
 
 🌸 My pronouns are "She/Her".
 
-👩‍🔬 Former **biology teacher** turned data analyst with a passion for technology, education, and problem-solving.  
+👩‍🔬 Former **mathematics and science teacher** turned **data analyst** with a passion for technology, education, and problem-solving. Specialized in:  
+ - 📊 **Data Analytics:** Python, Pandas, SQL.  
+ - 📄 **Document Automation:** LaTeX, Pandoc.  
+ - 📈 **Visualization:** Matplotlib, Seaborn, Power BI.  
 
-🍀 Recently completed a **Data Analysis Bootcamp at IMMUNE Institute**, where I gained hands-on experience in Machine Learning, Data Visualization, and Advanced Analytics. 
+🍀 Recently completed a **Data Analysis Bootcamp at IMMUNE Institute**, gaining hands-on experience in:
+  - **Machine Learning**
+  - **Data Visualization**
+  - **Advanced Analytics** 
 
-👀 My background in biochemistry and education helps me bring a unique perspective to data-driven projects.  
+👀 My background in **biochemistry and education** helps me bring a unique perspective to data-driven projects, allowing me to blend scientific reasoning with creativity.  
 
 ---
-## Skills:
-- **Programming Languages:** ![Python](https://img.shields.io/badge/-Python-blue) ![SQL](https://img.shields.io/badge/-SQL-orange)  ![HTML](https://img.shields.io/badge/-HTML-pink) ![CSS](https://img.shields.io/badge/-CSS-green) 
-- **Frameworks:** Pandas, NumPy, SciPy, Matplotlib, Pytest, scikit-learn  
+## 🔧 Skills:
+- **Programming Languages:** ![Python](https://img.shields.io/badge/-Python-blue) ![SQL](https://img.shields.io/badge/-SQL-orange)  ![HTML](https://img.shields.io/badge/-HTML-pink) ![CSS](https://img.shields.io/badge/-CSS-green) ![R](https://img.shields.io/badge/-R-red) 
+- **Frameworks:** Pandas, NumPy, SciPy, Matplotlib, Pytest, scikit-learn, Seaborn  
 - **Visualization Tools:** Power BI, Tableau  
-- **Development Tools:** Jupyter Notebook, Google Colab, Git, Anaconda  
+- **Development Tools:** LaTeX, Pandoc, Jupyter Notebook, Google Colab, Git, Anaconda  
 - **Databases:** MySQL, OracleSQL
 
 ---
-## Featured Projects:
-- **Breaking Bad Analysis** (In Progress): NLP analysis of Walter White's character development using Python and networkx. <a href="Breaking_Bad_page.html" target="_blank">[View Project]</a><br>
+## 🖥️ Main Technologies:
+![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
+![LaTeX](https://img.shields.io/badge/-LaTeX-008080?logo=latex&logoColor=white)
+
+---
+## 🚀 Featured Projects:
+### 📊 **Breaking Bad Analysis** (In Progress): NLP analysis of Walter White's character development using Python and networkx. <a href="Breaking_Bad_page.html" target="_blank">[View Project]</a><br>
  
-- **Machine Learning Models** (In Progress): A collection of ML models including classification and regression projects. [View Repository](#)
+### 🤖 **Machine Learning Models** (In Progress): A collection of ML models including classification and regression projects. [View Repository](#)
+
+### 📘 **LaTeX PDF Generator:** Markdown document automation with professional layout. [View Repository](#)
+
+### 🔍 **Web Scraping Basics:** Introductory tutorial for extracting data from web sites. [View Repository](#)  
 
 Check out my [Featured Projects](projects.html) for more detailed insights into my work.
 
 ---
-## Contact:
-📧: cristinafg93@hotmail.com
-
-⏩: <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">LinkedIn Profile</a>
-
-📲: <a href="https://telegram.me/ChispiDEV" target="_blank">Telegram</a> || @ChispiDEV 
+## 📞 Contact:
+ - 🌐 **My Portfolio:** _(In Process)_
+ - 📫 **Email:** cristinafg93@hotmail.com  
+ - 💼 **LinkedIn:** <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">LinkedIn Profile</a>  
+ - 📲 **Telegram:**: <a href="https://telegram.me/ChispiDEV" target="_blank">Telegram</a> || @ChispiDEV  
 
 ---
-## Download My CV
+## 🔥 What am I doing now?
+- 💻 Improving my skills in **data modeling and interactive dashboards**.
+- 📖 Learning about social network analysis with **NetworkX**.
+- 🤝 Open to collaborations on projects related to data analytics or automation.
 
+---
+## 📄 Download My CV:
 - <a href="https://raw.githubusercontent.com/ChispiDEV/ChispiDEV/main/public-cv/Cristina_Fuentes_CV.pdf"
      download="Cristina_Fuentes_CV.pdf" 
-     target="_blank">Download CV (PDF)</a>
-
+     target="_blank">Download CV (PDF)</a>  
 - <a href="https://raw.githubusercontent.com/ChispiDEV/ChispiDEV/main/public-cv/Cristina_Fuentes_CV.docx" 
      download="Cristina_Fuentes_CV.docx"
-     target="_blank">Download CV (DOCX)</a>
+     target="_blank">Download CV (DOCX)</a>  
 
 ---
-## Fun Facts
-🎮 Gamer with over 500 hours in Stardew Valley.  
-✈️ Former support specialist at Riot Games.  
-🐶 Dog mom to "Riven" and "Haru".  
+## 🧮 My Statistics:
+![GitHub's Statistics](https://github-readme-stats.vercel.app/api?username=ChispiDEV&show_icons=true&theme=radical)
+
+---
+## 🎉 Fun Facts:
+🎮 Gamer with over **500 hours in Stardew Valley**.  
+✈️ Former **support specialist at Riot Games**.  
+🐶 Dog mom to **Riven** and **Haru**.  
 🎨 Avid knitter and nail artist.  
-🌍 Studying Japanese to fulfil one of my dreams, to visit Kumamoto, where the One Piece statues are!
+🌍 Studying Japanese to fulfil one of my dreams, to visit **Kumamoto**, where the One Piece statues are!
 
 ---
 
@@ -67,53 +91,74 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
 ## Sobre mí:
 👋 Soy Cristina (mis compañeros suelen llamarme Chispi). ¡Bienvenidos a mi GitHub!
 
-🌸 Uso pronombres femeninos (Ella).
+🌸 Uso **pronombres femeninos** (Ella).
 
-👩‍🔬 **Bióloga y exprofesora** desarrollándose en el campo del análisis de datos, apasionada por la tecnología y la solución de desafíos.
+👩‍🔬 **Bióloga y exprofesora de matemáticas y ciencias** desarrollándose en el campo del **análisis de datos**, apasionada por la tecnología y la solución de desafíos. Me especializo en:  
+ - 📊 **Análisis de Datos:** Python, Pandas, SQL.  
+ - 📄 **Automatización de Documentos:** LaTeX, Pandoc.  
+ - 📈 **Visualización:** Matplotlib, Seaborn, Power BI.  
 
-🍀 A principios de octubre de 2024 terminé la formación en el **Bootcamp de Análisis de Datos en IMMUNE Institute**, donde adquirí experiencia práctica en Machine Learning, Visualización de Datos y Análisis Avanzado.
+🍀 Terminé el **Bootcamp de Análisis de Datos en IMMUNE Institute**, donde adquirí experiencia en:
+ - **Machine Learning**
+ - **Visualización de Datos**
+ - **Análisis Avanzado**
 
-👀 Mi formación en bioquímica y educación me permite aportar una perspectiva única a los proyectos impulsados por datos.
+👀 Mi formación en **bioquímica y educación** me permite aportar una perspectiva única y creativa a los proyectos basados en datos.
 
 ---
-## Habilidades:
-- **Lenguajes de Programación:** ![Python](https://img.shields.io/badge/-Python-blue) ![SQL](https://img.shields.io/badge/-SQL-orange) ![HTML](https://img.shields.io/badge/-HTML-pink) ![CSS](https://img.shields.io/badge/-CSS-green)
-- **Frameworks:** Pandas, NumPy, SciPy, Matplotlib, Pytest, scikit-learn  
+## 🔧 Habilidades:
+- **Lenguajes de Programación:** ![Python](https://img.shields.io/badge/-Python-blue) ![SQL](https://img.shields.io/badge/-SQL-orange) ![HTML](https://img.shields.io/badge/-HTML-pink) ![CSS](https://img.shields.io/badge/-CSS-green) ![R](https://img.shields.io/badge/-R-red) 
+- **Frameworks:** Pandas, NumPy, SciPy, Matplotlib, Pytest, scikit-learn, Seaborn  
 - **Herramientas de Visualización:** Power BI, Tableau  
-- **Herramientas de Desarrollo:** Jupyter Notebook, Google Colab, Git, Anaconda  
+- **Herramientas de Desarrollo:**  LaTeX, Pandoc, Jupyter Notebook, Google Colab, Git, Anaconda  
 - **Bases de Datos:** MySQL, OracleSQL
 
 ---
-## Proyectos Destacados:
-- **Análisis de Breaking Bad** (En proceso): Análisis NLP de la evolución del personaje Walter White usando Python y networkx. <a href="Breaking_Bad_page.html" target="_blank">[Ver Proyecto]</a><br>
+## 🖥️ Tecnologías Principales
+![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
+![LaTeX](https://img.shields.io/badge/-LaTeX-008080?logo=latex&logoColor=white)
+
+---
+## 🚀 Proyectos Destacados:
+### 📊 **Análisis de Breaking Bad** (En proceso): Análisis NLP de la evolución del personaje Walter White usando Python y networkx. <a href="Breaking_Bad_page.html" target="_blank">[Ver Proyecto]</a><br>
  
-- **Modelos de Machine Learning** (En proceso): Una colección de modelos de ML que incluye proyectos de clasificación y regresión. [Ver Repositorio](#)
+### 🤖 **Modelos de Machine Learning** (En proceso): Una colección de modelos de ML que incluye proyectos de clasificación y regresión. [Ver Repositorio](#)
+
+### 📘 **Generador de PDF en LaTeX0:** Automatización de documentos Markdown con diseño profesional. [Ver Repositorio](#)
+
+### 🔍 **Web Scraping Básico:** Tutorial introductorio para extraer datos de sitios web. [Ver Repositorio](#)
 
 Revisa mis [Proyectos Destacados](projects.html) para obtener más información sobre mi trabajo.
 
 ---
-## Contacto:
-📧: cristinafg93@hotmail.com
-
-⏩: <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">LinkedIn Profile</a>
-
-📲: <a href="https://telegram.me/ChispiDEV" target="_blank">Telegram</a> || @ChispiDEV 
+## 📞 Contacto:
+- 🌐 **Mi Portafolio:** _(En Proceso)_
+- 📫 **Correo Electrónico:** cristinafg93@hotmail.com  
+- 💼 **LinkedIn:** <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">LinkedIn Profile</a>  
+- 📲 **Telegram:** <a href="https://telegram.me/ChispiDEV" target="_blank">Telegram</a> || @ChispiDEV  
 
 ---
-## Descarga Mi CV
+## 🔥 ¿Qué estoy haciendo ahora?
+- 💻 Mejorando mis habilidades en **modelado de datos y dashboards interactivos**.
+- 📖 Aprendiendo sobre análisis de redes sociales con **NetworkX**.
+- 🤝 Abierto/a a colaboraciones en proyectos relacionados con análisis de datos o automatización.
 
-## Descarga Mi CV
-
+---
+## 📄 Descarga Mi CV:
 - [Descarga mi CV (PDF)](https://raw.githubusercontent.com/ChispiDEV/ChispiDEV/main/public-cv/Cristina_Fuentes_CV_esp.pdf)
 - [Descarga mi CV (DOCX)](https://raw.githubusercontent.com/ChispiDEV/ChispiDEV/main/public-cv/Cristina_Fuentes_CV_esp.docx)
 
 ---
-## Curiosidades:
-🎮 Viciada de los juegos con más de 500 horas jugadas en Stardew Valley.  
-✈️ Especialista de soporte en Riot Games.  
-🐶 Amante de los perros con dos bebotas en casa llamadas "Riven" y "Haru".  
-🎨 Mañosa con las agujas de tejer y diseño de uñas.  
-🌍 Estudiando japonés para cumplir uno de mis sueños, ¡visitar Kumamoto! (Donde están las estatuas de One Piece).
+## 🧮 Mis Estadísticas
+![Estadísticas de GitHub](https://github-readme-stats.vercel.app/api?username=ChispiDEV&show_icons=true&theme=radical)
+
+---
+## 🎉 Curiosidades Sobre Mí:
+ - 🎮 Viciada de los juegos mde gestión de recursos con más de **500 horas en Stardew Valley**.  
+ - ✈️ Antigua **especialista de soporte en Riot Games**.  
+ - 🐶 Amante de los perros con dos bebotas en casa llamadas **Riven** y **Haru**.
+ - 🎨 Mañosa con las agujas de tejer y diseño de uñas.
+ - 🌍 Estudiando japonés para cumplir uno de mis sueños, ¡visitar **Kumamoto**! (Hogar de las estatuas de One Piece).
 
 ---
 
