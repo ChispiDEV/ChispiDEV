@@ -60,7 +60,7 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
 
 ---
 ## 📞 Contact:
- - 🌐 **My Portfolio:** _(In Process)_ <a href="https://chispidev.github.io/ChispiDEV/" target="_blank"></a>
+ - 🌐 **My Portfolio:** _(In Process)_ <a href="https://chispidev.github.io/ChispiDEV/" target="_blank">chispidev.github.io/ChispiDEV</a>
  - 📫 **Email:** cristinafg93@hotmail.com  
  - 💼 **LinkedIn:** <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">LinkedIn Profile</a>  
  - 📲 **Telegram:**: <a href="https://telegram.me/ChispiDEV" target="_blank">Telegram</a> || @ChispiDEV  
@@ -148,7 +148,7 @@ Revisa mis [Proyectos Destacados](projects.html) para obtener más información 
 
 ---
 ## 📞 Contacto:
-- 🌐 **Mi Portafolio:** _(En Proceso)_ <a href="https://chispidev.github.io/ChispiDEV/" target="_blank"></a>
+- 🌐 **Mi Portafolio:** _(En Proceso)_ <a href="https://chispidev.github.io/ChispiDEV/" target="_blank">chispidev.github.io/ChispiDEV</a>
 - 📫 **Correo Electrónico:** cristinafg93@hotmail.com  
 - 💼 **LinkedIn:** <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">LinkedIn Profile</a>  
 - 📲 **Telegram:** <a href="https://telegram.me/ChispiDEV" target="_blank">Telegram</a> || @ChispiDEV  
