@@ -1,7 +1,4 @@
 // Variables globales
-const chatbotContent = document.getElementById('chatbot-content');
-const messagesDiv = document.getElementById('messages');
-const chatInput = document.getElementById('chat-input');
 const context = []; //  Array para mantener el historial de conversación
 
 // Seleccionamos los elementos del DOM
@@ -29,6 +26,7 @@ function addMessage(text, sender) {
     const message = document.createElement('div');
     message.classList.add('message', sender);
     message.textContent = text;
+    const messagesDiv = document.getElementById('messages');
     if (messagesDiv) {
         messagesDiv.appendChild(message);
         messagesDiv.scrollTop = messagesDiv.scrollHeight;
@@ -37,6 +35,8 @@ function addMessage(text, sender) {
 
 // Función para enviar mensaje
 async function sendMessage() {
+    const chatInput = document.getElementById('chat-input');
+    if (!chatInput) return;
     const userMessage = chatInput.value.trim();
     if (!userMessage) return;
 

@@ -101,6 +101,22 @@
   background-color: #495057;
 }
 
+.language-switcher {
+  display: flex; /* Asegura que los elementos estén en línea */
+  gap: 5px; /* Espaciado entre los enlaces y el separador */
+  align-items: center; /* Alinea verticalmente los enlaces */
+}
+
+.language-switcher a {
+  text-decoration: none; /* Sin subrayado */
+  color: #007bff; /* Color del texto */
+  font-weight: bold; /* Texto en negrita */
+}
+
+.language-switcher a:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
 #readme-content {
   margin-right: 270px; /* Deja espacio para el índice a la derecha */
   padding: 20px;
