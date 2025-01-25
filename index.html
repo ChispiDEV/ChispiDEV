@@ -12,7 +12,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
     <script src="js/scripts.js"></script> <!-- Archivo JS separado -->
-    <script src="js/chatbot.js"></script>
     
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -58,8 +57,14 @@
         <!-- El contenido del README.md se renderizará dinámicamente aquí -->
     </div>
 
-    <div id="chatbot" style="position: fixed; bottom: 20px; right: 20px; width: 300px; height: 400px; background-color: #f8f9fa; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: none; overflow: hidden;">
+    <div id="chatbot-container" style="position: fixed; bottom: 20px; right: 20px; width: 300px; height: 400px; background-color: #f8f9fa; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: none; overflow: hidden;">
         <!-- Aquí irá el contenido dinámico del chatbot -->
+        <iframe src="js/chatbot.js" 
+        width="300" 
+        height="400" 
+        style="border: none; border-radius: 10px;">
+</iframe>
+
     </div>
     <button id="chatbot-toggle" style="position: fixed; bottom: 20px; right: 330px; background-color: #333; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; box-shadow: 0 2px 5px rgba(0,0,0,0.3); cursor: pointer;">
         💬

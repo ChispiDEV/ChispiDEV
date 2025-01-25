@@ -9,7 +9,8 @@ window.addEventListener('DOMContentLoaded', event => {
     const menuToggle = document.body.querySelector('.menu-toggle');
     const sidebarWrapper = document.getElementById('sidebar-wrapper');
     
-    menuToggle.addEventListener('click', () => {
+    menuToggle.addEventListener('click', event => {
+        event.preventDefault();
         sidebarWrapper.classList.toggle('active');
     })
 
