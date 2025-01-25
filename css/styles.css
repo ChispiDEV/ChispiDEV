@@ -2,17 +2,31 @@
 #sidebar-wrapper {
   position: fixed;
   top: 0;
-  left: -250px;
+  right: 0;
+  height: 100%;
   width: 250px;
   height: 100%;
   background-color: #343a40;
-  overflow-y: auto;
+  color: #fff;
+  overflow-y: auto; /* Habilitar scroll si el contenido es largo */
+  padding: 20px;
   transition: all 0.3s;
-  z-index: 1000;
+  z-index: 1000; /* Asegura que el índice esté encima del contenido */
+}
+
+#sidebar-wrapper a {
+  color: #fff; /* Enlaces en blanco */
+  text-decoration: none;
+  padding: 10px 0;
+  display: block;
+}
+
+#sidebar-wrapper a:hover {
+  background-color: #555; /* Fondo más claro al pasar el cursor */
 }
 
 #sidebar-wrapper.active {
-  left: 0;
+  right: 0;
 }
 
 .sidebar-nav {
@@ -45,4 +59,9 @@
 
 .menu-toggle:hover {
   background-color: #495057;
+}
+
+#readme-content {
+  margin-right: 270px; /* Deja espacio para el índice a la derecha */
+  padding: 20px;
 }
