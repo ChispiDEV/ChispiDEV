@@ -36,6 +36,12 @@ window.addEventListener('DOMContentLoaded', event => {
             menuToggleTimes.classList.add('fa-bars');
         }
     }
+    
+    function toggleMenu() {
+        const sidebar = document.getElementById('sidebar-wrapper');
+        sidebar.classList.toggle('open');
+    }
+    
 
     // Scroll to top button appear
     document.addEventListener('scroll', () => {
