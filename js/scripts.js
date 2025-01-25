@@ -88,12 +88,21 @@ window.addEventListener('DOMContentLoaded', event => {
         // Leer y procesar el archivo README.md
         fetch('https://raw.githubusercontent.com/ChispiDEV/ChispiDEV/main/README.md')
             .then(response => {
-                if (!response.ok) throw new Error('Error al cargar el README.md');
+                if (!response.ok) {
+                    throw new Error('Error al cargar el README.md (status ${response.status})');
+                }    
                 return response.text();
             })
             .then(markdown => {
-                const sections = markdown.split(/^# /m).filter(section => section.trim() !== ""); // Dividir por encabezados de nivel 1
+                console.log("Markdown cargado correctamente:", markdown); // Depuración
                 const converter = new showdown.Converter();
+                const contentDiv = document.getElementById('readme-content');
+                const sidebar = document.getElementById('nav-items');
+
+                // Dividir contenido por secciones principales
+                const sections = markdown.split(/^# /m).filter(section => section.trim() !== ""); // Dividir por encabezados de nivel 1
+                console.log("Secciones detectadas:", sections); // Depuración
+
                 let language = 'spanish'; // Idioma predeterminado
 
                 // Función para filtrar contenido según idioma
@@ -121,6 +130,8 @@ window.addEventListener('DOMContentLoaded', event => {
                             title: subsection.split('\n')[0].trim() // El título es la primera línea
                         }));
 
+                        console.log("Subsecciones detectadas:", subsections); // Depuración
+
                     // Generar el menú dinámico
                     navItems.innerHTML = '';
                     subsections.forEach(subsection => {
@@ -135,10 +146,10 @@ window.addEventListener('DOMContentLoaded', event => {
                     const colors = ["#f8f9fa", "#e9ecef", "#dee2e6", "#ced4da", "#adb5bd"]; // Paleta de colores
 
                     contentDiv.innerHTML = subsections
-                        .map((subsection, index) => `
-                            <div id="${subsection.id}" style="background-color: ${colors[index % colors.length]}; padding: 20px; margin-bottom: 20px; border-radius: 10px;">
-                                <h2>${subsection.title}</h2>
-                                ${converter.makeHtml(subsection.content.replace(subsection.title, '').trim())}
+                        .map((sub, idx) => `
+                            <div id="${sub.id}" style="background-color: ${colors[idx % colors.length]}; padding: 20px; margin-bottom: 20px; border-radius: 10px;">
+                                <h2>${sub.title}</h2>
+                                ${converter.makeHtml(sub.content.replace(sub.title, '').trim())}
                             </div>
                         `)
                         .join('');
