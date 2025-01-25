@@ -17,22 +17,17 @@
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-oHFjMR5gwr9/eq14fkvzPHN8R0I46fU+jPCJbJvEzUKoi3cPlEvI+prKDj4UU9K4" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet"> <!-- Tu archivo CSS -->
 </head>
+
 <body id="page-top">
-    <!-- Navigation-->
-    <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a> 
+    <!-- Botón para alternar el menú -->
+    <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+
+    <!-- Navegación lateral-->
     <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand"><a href="#page-top">Cristina Fuentes</a></li>
-            <li class="sidebar-nav-item"><a href="#page-top">Inicio</a></li>
-            <li class="sidebar-nav-item"><a href="#about">About</a></li>
-            <li class="sidebar-nav-item"><a href="#services">Services</a></li>
-            <li class="sidebar-nav-item"><a href="#portfolio">Portfolio</a></li>
-            <li class="sidebar-nav-item"><a href="#contact">Contact</a></li>
-        </ul>
-        <a href="#" onclick="toggleLanguage('english')">English</a> | 
-        <a href="#" onclick="toggleLanguage('spanish')">Español</a>
+        <ul class="sidebar-nav" id="nav-items"></ul>
     </nav>
 
     <!-- Header//#page-top -->
@@ -40,62 +35,19 @@
         <div class="container px-4 px-lg-5 text-center">
             <h1 class="mb-1">Cristina Fuentes - Portfolio</h1>
             <h3 class="mb-5"><em>Bilingual Profile | Perfil bilingüe</em></h3>
-            <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
         </div>
     </header>
     
-    <!-- About Section -->
-    <section class="content-section bg-light" id="about">
-        <div class="container px-4 px-lg-5 text-center">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-lg-10">
-                    <h2>About Me</h2>
-                    <p class="lead mb-5">Learn more about my skills, experience, and projects.</p>
-                    <a class="btn btn-dark btn-xl" href="#services">What I Offer</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Contenido principal -->
+    <div class="container mt-5" id="readme-content">
+        <h1>Cargando contenido...</h1>
+    </div>
 
-    <!-- Services Section -->
-    <section class="content-section bg-primary text-white text-center" id="services">
-        <div class="container px-4 px-lg-5">
-            <div class="content-section-heading">
-                <h3 class="text-secondary mb-0">Services</h3>
-                <h2 class="mb-5">What I Offer</h2>
-            </div>
-            <div class="row gx-4 gx-lg-5">
-                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
-                    <i class="fas fa-laptop-code fa-3x mb-3"></i>
-                    <h4><strong>Web Development</strong></h4>
-                    <p>Creating responsive and user-friendly websites.</p>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
-                    <i class="fas fa-chart-line fa-3x mb-3"></i>
-                    <h4><strong>Data Analysis</strong></h4>
-                    <p>Analyzing data and visualizing insights effectively.</p>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <i class="fas fa-language fa-3x mb-3"></i>
-                    <h4><strong>Bilingual Services</strong></h4>
-                    <p>Offering content in both English and Spanish.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-  <!-- Portfolio Section -->
-    <section class="content-section" id="portfolio">
-        <div class="container px-4 px-lg-5">
-            <div class="content-section-heading text-center">
-                <h3 class="text-secondary mb-0">Portfolio</h3>
-                <h2 class="mb-5">Recent Projects</h2>
-            </div>
-            <div id="readme-content" class="english">
-                <p>Loading content...</p>
-            </div>
-        </div>
-    </section>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    <script src="js/scripts.js"></script> <!-- Archivo JS separado -->
+    <script src="js/chatbot.js"></script>
 
     <!-- Chatbot Floating Popup -->
     <section id="chatbot-popup" class="position-fixed bottom-0 end-0 m-3 shadow">
@@ -108,17 +60,16 @@
             <input id="chat-input" class="form-control" type="text" placeholder="Ask something..." onkeydown="if(event.key === 'Enter') sendMessage()">
         </div>
     </section>
- 
 
     <!-- Footer -->
     <footer class="footer text-center">
         <div class="container px-4 px-lg-5">
             <ul class="list-inline mb-5">
                 <li class="list-inline-item">
-                    <a class="social-link rounded-circle text-white me-3" href="#"><i class="fab fa-github"></i></a>
+                    <a class="social-link rounded-circle text-white me-3" href="https://github.com/ChispiDEV"><i class="fab fa-github"></i></a>
                 </li>
                 <li class="list-inline-item">
-                    <a class="social-link rounded-circle text-white me-3" href="#"><i class="fab fa-linkedin"></i></a>
+                    <a class="social-link rounded-circle text-white me-3" href="linkedin.com/in/cristina-fg/"><i class="fab fa-linkedin"></i></a>
                 </li>
             </ul>
         <p class="text-muted small mb-0">&copy; 2025 Cristina Fuentes</p>
@@ -126,13 +77,6 @@
     
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
-    
-     <!-- Bootstrap JS and Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
-    <script src="js/chatbot.js"></script>
-    <script src="js/toggleLanguage.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+
 </body>
 </html>
