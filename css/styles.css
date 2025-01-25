@@ -3,7 +3,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  right: 0;
+  right: -250px;
   height: 100%;
   width: 250px;
   max-width: 80%;
@@ -29,6 +29,7 @@
 }
 
 #sidebar-wrapper.active {
+  right: 0;
   transform: translateX(0); /* Hace que el menú se deslice hacia la vista */
 }
 
