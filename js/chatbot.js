@@ -1,27 +1,27 @@
 // Variables globales
-const chatbotPopup = document.getElementById('chatbot-popup');
 const chatbotContent = document.getElementById('chatbot-content');
 const messagesDiv = document.getElementById('messages');
 const chatInput = document.getElementById('chat-input');
-const toggleChatbotButton = document.getElementById('toggle-chatbot');
 const context = []; //  Array para mantener el historial de conversación
 
-// Inicializa el contenido para que esté visible al principio
-if (chatbotContent) chatbotContent.style.display = 'flex';
+// Seleccionamos los elementos del DOM
+const chatbotToggle = document.getElementById('chatbot-toggle');
+const chatbotContainer = document.getElementById('chatbot-container');
 
-// Toggle chatbot visibility
-if (toggleChatbotButton) {
-    toggleChatbotButton.addEventListener('click', () => {
-        if (chatbotPopup && chatbotPopup.classList.contains('minimized')) {
-            chatbotPopup.classList.remove('minimized');
-            if (chatbotContent) chatbotContent.style.display = 'flex';
-            toggleChatbotButton.textContent = '-';
-        } else {
-            chatbotPopup.classList.add('minimized');
-            if (chatbotContent) chatbotContent.style.display = 'none';
-            toggleChatbotButton.textContent = '+';
-        }
+// Manejamos el clic en el botón para mostrar/ocultar el contenedor del chatbot
+if (chatbotToggle) {
+    chatbotToggle.addEventListener('click', () => {
+        const isChatbotVisible = chatbotContainer.style.display === 'block';
+        chatbotContainer.style.display = isChatbotVisible ? 'none' : 'block';
     });
+}
+
+// Opcional: Configurar el iframe dinámicamente (si necesitas cargar una URL específica)
+const chatbotIframe = chatbotContainer.querySelector('iframe');
+if (chatbotIframe) {
+    chatbotIframe.onload = () => {
+        console.log('El chatbot se ha cargado correctamente en el iframe.');
+    };
 }
 
 // Agregar un mensaje al chat
@@ -44,7 +44,7 @@ async function sendMessage() {
     context.push({ role: "user", content: userMessage });
     if (chatInput) chatInput.value = '';
 
-    addMessage('Typing...', 'bot');
+    addMessage('Escribiendo...', 'bot');
 
     try {
         const response = await fetch('https://tyche-chatbot.herokuapp.com/chat', {
@@ -59,12 +59,12 @@ async function sendMessage() {
         });
 
         if (!response.ok) {
-            throw new Error('Failed to fetch response');
+            throw new Error('Error al obtener respuesta del chatbot');
         }
 
         const data = await response.json();
         if (!data.response) {
-            throw new Error('Invalid response from the chatbot API');
+            throw new Error('Respuesta inválida de la API del chatbot');
         }
             
         const botResponse = data.response.trim();
