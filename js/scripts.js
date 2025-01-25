@@ -80,11 +80,11 @@ window.addEventListener('DOMContentLoaded', event => {
         })();
     };
 
+    const navItems = document.getElementById('nav-items');
+    const contentDiv = document.getElementById('readme-content');
+
     // Función para procesar el README.md y generar contenido dinámico
     const processReadme = () => {
-        const navItems = document.getElementById('nav-items');
-        const contentDiv = document.getElementById('readme-content');
-
         // Leer y procesar el archivo README.md
         fetch('https://raw.githubusercontent.com/ChispiDEV/ChispiDEV/main/README.md')
             .then(response => {
@@ -92,34 +92,53 @@ window.addEventListener('DOMContentLoaded', event => {
                 return response.text();
             })
             .then(markdown => {
-                const sections = markdown.split(/^# /m).map(section => `# ${section}`); // Dividir por encabezados
+                const sections = markdown.split(/^# /m).filter(section => section.trim() !== ""); // Dividir por encabezados de nivel 1
                 const converter = new showdown.Converter();
                 let language = 'spanish'; // Idioma predeterminado
 
                 // Función para filtrar contenido según idioma
                 const renderContent = lang => {
-                    const filteredSections = sections.filter(section =>
+                    // Encontrar la sección correspondiente al idioma
+                    const languageSection = sections.find(section =>
                         lang === 'english'
-                            ? section.includes('English Version')
-                            : section.includes('Versión en Español')
+                            ? section.startsWith('English Version')
+                            : section.startsWith('Versión en Español')
                     );
 
-                    // Actualizar navegación
+                    if (!languageSection) {
+                        contentDiv.innerHTML = `<p>No se encontró contenido para el idioma seleccionado (${lang}).</p>`;
+                        navItems.innerHTML = '';
+                        return;
+                    }
+
+                    // Dividir la sección en subtítulos (`##`)
+                    const subsections = languageSection
+                        .split(/^## /m) // Dividir por subtítulos de nivel 2
+                        .filter(subsection => subsection.trim() !== "") // Eliminar partes vacías
+                        .map((subsection, index) => ({
+                            id: `section-${index}`,
+                            content: subsection.trim(),
+                            title: subsection.split('\n')[0].trim() // El título es la primera línea
+                        }));
+
+                    // Generar el menú dinámico
                     navItems.innerHTML = '';
-                    filteredSections.forEach((section, index) => {
-                        const titleMatch = section.match(/^#\s(.+)/); // Extraer título del encabezado
-                        if (titleMatch) {
-                            const title = titleMatch[1].trim();
-                            const listItem = document.createElement('li');
-                            listItem.classList.add('sidebar-nav-item');
-                            listItem.innerHTML = `<a href="#section-${index}">${title}</a>`;
-                            navItems.appendChild(listItem);
-                        }
+                    subsections.forEach(subsection => {
+                        const listItem = document.createElement('li');
+                        listItem.classList.add('sidebar-nav-item');
+                        listItem.innerHTML = `<a href="#${subsection.id}">${subsection.title}</a>`;
+                        navItems.appendChild(listItem);
                     });
 
-                    // Mostrar contenido
-                    contentDiv.innerHTML = filteredSections
-                        .map((section, index) => `<div id="section-${index}">${converter.makeHtml(section)}</div>`)
+
+                    // Renderizar el contenido
+                    contentDiv.innerHTML = subsections
+                        .map(subsection => `
+                            <div id="${subsection.id}">
+                                <h2>${subsection.title}</h2>
+                                ${converter.makeHtml(subsection.content.replace(subsection.title, '').trim())}
+                            </div>
+                        `)
                         .join('');
                 };
 
@@ -138,6 +157,6 @@ window.addEventListener('DOMContentLoaded', event => {
             });
     };
 
-    // Llamar a la función para procesar el README.md
+    // Procesar el README.md al cargar la página
     processReadme();
 });
