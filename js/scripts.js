@@ -5,16 +5,12 @@
 */
 window.addEventListener('DOMContentLoaded', event => {
 
-    const sidebarWrapper = document.getElementById('sidebar-wrapper');
-    let scrollToTopVisible = false;
-
-    // Closes the sidebar menu
+    // Alternar menú lateral
     const menuToggle = document.body.querySelector('.menu-toggle');
-    menuToggle.addEventListener('click', event => {
-        event.preventDefault();
+    const sidebarWrapper = document.getElementById('sidebar-wrapper');
+    
+    menuToggle.addEventListener('click', () => {
         sidebarWrapper.classList.toggle('active');
-        _toggleMenuIcon();
-        menuToggle.classList.toggle('active');
     })
 
     // Closes responsive menu when a scroll trigger link is clicked
@@ -80,6 +76,15 @@ window.addEventListener('DOMContentLoaded', event => {
         })();
     };
 
+    // Chatbot toggle
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatbot = document.getElementById('chatbot');
+
+    chatbotToggle.addEventListener('click', () => {
+        const isVisible = chatbot.style.display === 'block';
+        chatbot.style.display = isVisible ? 'none' : 'block';
+    });
+
     const navItems = document.getElementById('nav-items');
     const contentDiv = document.getElementById('readme-content');
 
@@ -143,11 +148,15 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
                     // Renderizar el contenido
-                    const colors = ["#f8f9fa", "#e9ecef", "#dee2e6", "#ced4da", "#adb5bd"]; // Paleta de colores
+                    const colors = [
+                        'bg-color-1', 'bg-color-2', 'bg-color-3', 'bg-color-4', 'bg-color-5', 
+                        'bg-color-6', 'bg-color-7', 'bg-color-8', 'bg-color-9', 'bg-color-10', 
+                        'bg-color-11', 'bg-color-12', 'bg-color-13', 'bg-color-14', 'bg-color-15'
+                    ]; // Paleta de colores
 
                     contentDiv.innerHTML = subsections
                         .map((sub, idx) => `
-                            <div id="${sub.id}" style="background-color: ${colors[idx % colors.length]}; padding: 20px; margin-bottom: 20px; border-radius: 10px;">
+                            <div id="${sub.id}" class="${colors[idx % colors.length]}" style="padding: 20px; margin-bottom: 20px; border-radius: 10px;">
                                 <h2>${sub.title}</h2>
                                 ${converter.makeHtml(sub.content.replace(sub.title, '').trim())}
                             </div>

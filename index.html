@@ -30,7 +30,9 @@
 
 <body id="page-top">
     <!-- Botón para alternar el menú -->
-    <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+    <a class="menu-toggle rounded" href="#" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </a>
 
     <!-- Navegación lateral-->
     <nav id="sidebar-wrapper">
@@ -56,17 +58,12 @@
         <!-- El contenido del README.md se renderizará dinámicamente aquí -->
     </div>
 
-    <!-- Chatbot Floating Popup -->
-    <section id="chatbot-popup" class="position-fixed bottom-0 end-0 m-3 shadow">
-        <div id="chatbot-header" class="bg-primary text-white p-2 d-flex justify-content-between">
-            <span>Chatbot</span>
-            <button id="toggle-chatbot" class="btn-close btn-close-white"></button>
-        </div>
-        <div id="chatbot-content" class="bg-light p-3">
-            <div id="messages" class="mb-3"></div>
-            <input id="chat-input" class="form-control" type="text" placeholder="Ask something..." onkeydown="if(event.key === 'Enter') sendMessage()">
-        </div>
-    </section>
+    <div id="chatbot" style="position: fixed; bottom: 20px; right: 20px; width: 300px; height: 400px; background-color: #f8f9fa; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: none; overflow: hidden;">
+        <!-- Aquí irá el contenido dinámico del chatbot -->
+    </div>
+    <button id="chatbot-toggle" style="position: fixed; bottom: 20px; right: 330px; background-color: #333; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; box-shadow: 0 2px 5px rgba(0,0,0,0.3); cursor: pointer;">
+        💬
+    </button>
 
     <!-- Footer -->
     <footer class="footer text-center">
