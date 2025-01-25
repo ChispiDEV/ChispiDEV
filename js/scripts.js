@@ -135,7 +135,7 @@ window.addEventListener('DOMContentLoaded', event => {
                     const colors = ["#f8f9fa", "#e9ecef", "#dee2e6", "#ced4da", "#adb5bd"]; // Paleta de colores
 
                     contentDiv.innerHTML = subsections
-                        .map(subsection => `
+                        .map((subsection, index) => `
                             <div id="${subsection.id}" style="background-color: ${colors[index % colors.length]}; padding: 20px; margin-bottom: 20px; border-radius: 10px;">
                                 <h2>${subsection.title}</h2>
                                 ${converter.makeHtml(subsection.content.replace(subsection.title, '').trim())}
