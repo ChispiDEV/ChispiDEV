@@ -79,11 +79,11 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // Chatbot toggle
     const chatbotToggle = document.getElementById('chatbot-toggle');
-    const chatbot = document.getElementById('chatbot');
+    const chatbotContainer = document.getElementById('chatbot-container');
 
     chatbotToggle.addEventListener('click', () => {
-        const isVisible = chatbot.style.display === 'block';
-        chatbot.style.display = isVisible ? 'none' : 'block';
+        const isVisible = chatbotContainer.style.display === 'block';
+        chatbotContainer.style.display = isVisible ? 'none' : 'block';
     });
 
     const navItems = document.getElementById('nav-items');
