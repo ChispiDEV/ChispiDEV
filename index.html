@@ -57,7 +57,16 @@
         <!-- El contenido del README.md se renderizará dinámicamente aquí -->
     </div>
 
-    <div id="chatbot-toggle" 
+    <!-- Chatbot -->
+    <div id="chatbot-popup" class="minimized">
+        <div id="chatbot-content">
+            <div id="messages"></div>
+            <input id="chat-input" type="text" placeholder="Escribe un mensaje..." />
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <div id="toggle-chatbot" 
         style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; cursor: pointer; background-color: #007bff; color: white; padding: 10px 15px; border-radius: 5px;">
         💬
     </div>

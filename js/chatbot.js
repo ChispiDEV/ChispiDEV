@@ -7,27 +7,32 @@ const toggleChatbotButton = document.getElementById('toggle-chatbot');
 const context = []; //  Array para mantener el historial de conversación
 
 // Inicializa el contenido para que esté visible al principio
-chatbotContent.style.display = 'flex';
+if (chatbotContent) chatbotContent.style.display = 'flex';
 
 // Toggle chatbot visibility
-toggleChatbotButton.addEventListener('click', () => {
-    if (chatbotPopup.classList.contains('minimized')) {
-        chatbotPopup.classList.remove('minimized');
-        chatbotContent.style.display = 'flex';
-        toggleChatbotButton.textContent = '-';
-    } else {
-        chatbotPopup.classList.add('minimized');
-        chatbotContent.style.display = 'none';
-        toggleChatbotButton.textContent = '+';
-    }
-});
+if (toggleChatbotButton) {
+    toggleChatbotButton.addEventListener('click', () => {
+        if (chatbotPopup && chatbotPopup.classList.contains('minimized')) {
+            chatbotPopup.classList.remove('minimized');
+            if (chatbotContent) chatbotContent.style.display = 'flex';
+            toggleChatbotButton.textContent = '-';
+        } else {
+            chatbotPopup.classList.add('minimized');
+            if (chatbotContent) chatbotContent.style.display = 'none';
+            toggleChatbotButton.textContent = '+';
+        }
+    });
+}
 
+// Agregar un mensaje al chat
 function addMessage(text, sender) {
     const message = document.createElement('div');
     message.classList.add('message', sender);
     message.textContent = text;
-    messagesDiv.appendChild(message);
-    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    if (messagesDiv) {
+        messagesDiv.appendChild(message);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
 }
 
 // Función para enviar mensaje
@@ -37,12 +42,12 @@ async function sendMessage() {
 
     addMessage(userMessage, 'user');
     context.push({ role: "user", content: userMessage });
-    chatInput.value = '';
+    if (chatInput) chatInput.value = '';
 
     addMessage('Typing...', 'bot');
 
     try {
-        const response = await fetch('https://git.heroku.com/tyche-chatbot.git/chat', {
+        const response = await fetch('https://tyche-chatbot.herokuapp.com/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -67,11 +72,11 @@ async function sendMessage() {
         context.push({ role: "assistant", content: botResponse });
     } catch (error) {
         console.error('Error:', error);
-        addMessage('Sorry, there was an error processing your request.', 'bot');
+        addMessage('Lo siento, hubo un error procesando tu solicitud.', 'bot');
     }
 }
 
-// Optional: Restore context from localStorage
+// Opcional: Restaurar contexto del localStorage
 window.onload = () => {
     const savedContext = localStorage.getItem('chatContext');
     if (savedContext) {
@@ -81,7 +86,7 @@ window.onload = () => {
     }
 };
 
-// Optional: Save context to localStorage before closing the window
+// Opcional: Guardar contexto en localStorage antes de cerrar la ventana
 window.onbeforeunload = () => {
     localStorage.setItem('chatContext', JSON.stringify(context));
 };
