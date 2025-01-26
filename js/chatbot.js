@@ -4,7 +4,7 @@ const context = []; //  Array para mantener el historial de conversación
 // Seleccionamos los elementos del DOM
 const chatbotToggle = document.getElementById('chatbot-toggle');
 const chatbotContainer = document.getElementById('chatbot-container');
-const chatbotClose = document.getElementById('close-chatbot');
+const sendButton = document.getElementById('send-message');
 const messagesDiv = document.getElementById('messages');
 const chatInput = document.getElementById('chat-input');
 
@@ -12,11 +12,6 @@ const chatInput = document.getElementById('chat-input');
 chatbotToggle.addEventListener('click', () => {
     chatbotContainer.style.display = 
         chatbotContainer.style.display === 'none' ? 'block' : 'none';
-});
-
-// Cerrar el chatbot al hacer clic en el botón "X"
-chatbotClose.addEventListener('click', () => {
-    chatbotContainer.style.display = 'none';
 });
 
 // Agregar un mensaje al chat
@@ -28,7 +23,6 @@ function addMessage(text, sender) {
     message.style.backgroundColor = sender === 'user' ? '#007bff' : '#f1f1f1';
     message.style.color = sender === 'user' ? 'white' : 'black';
     message.style.borderRadius = '10px';
-    message.style.maxWidth = '70%';
     messagesDiv.appendChild(message);
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
 }
@@ -68,10 +62,8 @@ async function sendMessage() {
     }
 }
 
-// Enlazar el botón de enviar con la función "sendMessage"
-document.querySelector('button[onclick="sendMessage()"]').addEventListener('click', sendMessage);
-
 // Enviar mensaje al presionar "Enter" en el input
+sendButton.addEventListener('click', sendMessage);
 chatInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') sendMessage();
 });
