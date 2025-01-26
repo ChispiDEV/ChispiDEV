@@ -1,17 +1,16 @@
 /* Estilos del menú lateral */
 #sidebar-wrapper {
   position: fixed;
-  top: 0;
-  right: -250px;
-  height: 100%;
+  z-index: 2; /* Asegura que el índice esté encima del contenido */
+  right: 0;
   width: 250px;
-  background-color: #222;
+  height: 100%;
+  transition: all 0.4s ease 0s;
+  transform: translateX(250px);
+  background-color: #1D809F;
   color: #fff;
   overflow-y: auto; /* Habilitar scroll si el contenido es largo */
-  padding: 20px;
-  transition: transform 0.3s ease;
-  z-index: 1000; /* Asegura que el índice esté encima del contenido */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 #sidebar-wrapper a {
@@ -27,13 +26,18 @@
 
 /* Clase activa para mostrar el menú */
 #sidebar-wrapper.active {
-  transform: translateX(-250px); /* Hace que el menú se deslice hacia la vista */
+  right: 250px;
+  width: 250px;
+  transition: all 0.4s ease 0s;
 }
 
 .sidebar-nav {
-  list-style: none;
-  padding: 20px;
+  position: absolute;
+  top: 0;
+  width: 250px;
   margin: 0;
+  padding: 0;
+  list-style: none;
   font-size: 1rem; /* Ajusta el tamaño del texto */
 }
 
@@ -72,15 +76,15 @@
 /* Botón de alternar menú */
 .menu-toggle {
   position: fixed;
-  top: 10px;
-  right: 10px; /* Posición del botón en la esquina superior derecha */
-  z-index: 1001; /* Asegurarse de que esté delante del contenido */
-  background-color: #007bff;
+  right: 15px; /* Posición del botón en la esquina superior derecha */
+  top: 15px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
   color: white;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
+  background-color: #007bff;
+  line-height: 50px;
+  z-index: 999; /* Asegurarse de que esté delante del contenido */
 }
 
 .menu-toggle .fa-bars {
@@ -164,4 +168,24 @@
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
+}
+
+footer.footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+footer.footer .social-link {
+  display: block;
+  text-decoration: none;
+  height: 4rem;
+  width: 4rem;
+  line-height: 4.3rem;
+  font-size: 1.5rem;
+  background-color: #1D809F;
+  transition: background-color 0.15s ease-in-out;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+footer.footer .social-link:hover {
+  background-color: #155d74;
+  text-decoration: none;
 }
