@@ -6,7 +6,7 @@
 window.addEventListener('DOMContentLoaded', event => {
 
     // Alternar menú lateral
-    const menuToggle = document.body.querySelector('.menu-toggle');
+    const menuToggle = document.querySelector('.menu-toggle');
     const sidebarWrapper = document.getElementById('sidebar-wrapper');
     
     menuToggle.addEventListener('click', event => {
@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', event => {
             menuToggleTimes.classList.add('fa-bars');
         }
     }
-    
+
     function toggleMenu() {
         const sidebar = document.getElementById('sidebar-wrapper');
         sidebar.classList.toggle('open');

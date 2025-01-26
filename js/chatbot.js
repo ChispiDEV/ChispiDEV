@@ -10,9 +10,11 @@ const chatInput = document.getElementById('chat-input');
 
 // Manejamos el clic en el botón para mostrar/ocultar el contenedor del chatbot
 chatbotToggle.addEventListener('click', () => {
-    chatbotContainer.style.display = chatbotContainer.style.display === 'none' ? 'block' : 'none';
+    chatbotContainer.style.display = 
+        chatbotContainer.style.display === 'none' ? 'block' : 'none';
 });
 
+// Cerrar el chatbot al hacer clic en el botón "X"
 chatbotClose.addEventListener('click', () => {
     chatbotContainer.style.display = 'none';
 });
@@ -21,8 +23,7 @@ chatbotClose.addEventListener('click', () => {
 function addMessage(text, sender) {
     const message = document.createElement('div');
     message.textContent = text;
-    message.classList.add('message', sender);
-    message.textContent = text;message.style.margin = sender === 'user' ? '5px 0 5px auto' : '5px auto 5px 0';
+    message.style.margin = sender === 'user' ? '5px 0 5px auto' : '5px auto 5px 0';
     message.style.padding = '10px';
     message.style.backgroundColor = sender === 'user' ? '#007bff' : '#f1f1f1';
     message.style.color = sender === 'user' ? 'white' : 'black';
@@ -37,11 +38,12 @@ async function sendMessage() {
     const userMessage = chatInput.value.trim();
     if (!userMessage) return;
 
-    addMessage(userMessage, 'user');
+    addMessage(userMessage, 'user'); // Muestra el mensaje del usuario
     chatInput.value = '';
-    addMessage('Escribiendo...', 'bot');
+    addMessage('Escribiendo...', 'bot'); // Mensaje de "escribiendo"
 
     try {
+        // Petición al backend del chatbot
         const response = await fetch('https://tyche-chatbot.herokuapp.com/chat', {
             method: 'POST',
             headers: {
@@ -59,12 +61,20 @@ async function sendMessage() {
 
         const data = await response.json();
         const botResponse = data.response || 'Lo siento, no entendí eso.';
-        addMessage(botResponse, 'bot');
+        addMessage(botResponse, 'bot'); // Mensaje del chatbot
     } catch (error) {
         console.error('Error:', error);
         addMessage('Lo siento, hubo un error procesando tu solicitud.', 'bot');
     }
 }
+
+// Enlazar el botón de enviar con la función "sendMessage"
+document.querySelector('button[onclick="sendMessage()"]').addEventListener('click', sendMessage);
+
+// Enviar mensaje al presionar "Enter" en el input
+chatInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') sendMessage();
+});
 
 // Opcional: Restaurar contexto del localStorage
 window.onload = () => {
