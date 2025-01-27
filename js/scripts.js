@@ -4,6 +4,7 @@
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-stylish-portfolio/blob/master/LICENSE)
 */
 window.addEventListener('DOMContentLoaded', event => {
+    let scrollToTopVisible = false;
 
     // Alternar menú lateral
     const menuToggle = document.querySelector('.menu-toggle');
@@ -44,8 +45,8 @@ window.addEventListener('DOMContentLoaded', event => {
     
 
     // Scroll to top button appear
+    const scrollToTop = document.body.querySelector('.scroll-to-top');
     document.addEventListener('scroll', () => {
-        const scrollToTop = document.body.querySelector('.scroll-to-top');
         if (document.documentElement.scrollTop > 100) {
             if (!scrollToTopVisible) {
                 fadeIn(scrollToTop);
@@ -59,8 +60,14 @@ window.addEventListener('DOMContentLoaded', event => {
         }
     });
 
+    // Evento de clic para el botón de "scroll to top"
+    scrollToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
     // Función de fade in/out
     function fadeOut(el) {
+        if (!el) return;
         el.style.opacity = 1;
         (function fade() {
             if ((el.style.opacity -= .1) < 0) {
@@ -72,10 +79,11 @@ window.addEventListener('DOMContentLoaded', event => {
     };
 
     function fadeIn(el, display) {
+        if (!el) return;
         el.style.opacity = 0;
         el.style.display = display || "block";
         (function fade() {
-            var val = parseFloat(el.style.opacity);
+            let val = parseFloat(el.style.opacity);
             if (!((val += .1) > 1)) {
                 el.style.opacity = val;
                 requestAnimationFrame(fade);
