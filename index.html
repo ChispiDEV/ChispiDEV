@@ -1,99 +1,94 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Cristina Fuentes - Portfolio</title>
-    <meta name="description" content="Cristina Fuentes - Data Analyst Portfolio.">
-    <meta name="author" content="Cristina Fuentes">
-    <meta name="keywords" content="Data Analysis, Python, SQL, Portfolio">
-    
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
-    <script src="js/scripts.js"></script> <!-- Archivo JS separado -->
-    
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Simple line icons-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
-    
-    <!-- Core theme CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-oHFjMR5gwr9/eq14fkvzPHN8R0I46fU+jPCJbJvEzUKoi3cPlEvI+prKDj4UU9K4" crossorigin="anonymous">
-    <link href="css/styles.css" rel="stylesheet"> <!-- Tu archivo CSS -->
-</head>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Cristina Fuentes - Data Analyst Portfolio." />
+        <meta name="author" content="Cristina Fuentes" />
+        <meta name="keywords" content="Data Analysis, Python, SQL, Portfolio">
+        <title>Cristina Fuentes - Portfolio</title>
 
-<body id="page-top">
-    <!-- Botón para alternar el menú -->
-    <a class="menu-toggle rounded" href="#" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-    </a>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Simple line icons-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
 
-    <!-- Navegación lateral-->
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav" id="nav-items">
-            <!-- El menú se generará dinámicamente aquí -->
-        </ul>
-
-        <div class="language-switcher">
-            <a href="#" onclick="toggleLanguage('english')">English</a> | 
-            <a href="#" onclick="toggleLanguage('spanish')">Español</a>
-        </div>
-    </nav>
-
-    <!-- Header//#page-top -->
-    <header id="main-title" class="masthead d-flex align-items-center">
-        <div class="container px-4 px-lg-5 text-center">
-            <h1 class="mb-1">Cristina Fuentes - Portfolio</h1>
-            <h3 class="mb-5"><em>Bilingual Profile | Perfil bilingüe</em></h3>
-        </div>
-    </header>
-    
-    <!-- Contenido principal -->
-    <div class="container mt-5" id="readme-content">
-        <h1>Cargando contenido...</h1>
-        <!-- El contenido del README.md se renderizará dinámicamente aquí -->
-    </div>
-
-    <!-- Botón del Chatbot -->
-    <div id="chatbot-toggle" 
-        style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; cursor: pointer; background-color: #007bff; color: white; padding: 10px 15px; border-radius: 5px;">
-        💬
-    </div>
-
-    <!-- Contenedor del Chatbot -->
-    <div id="chatbot-container" 
-        style="position: fixed; bottom: 80px; right: 20px; display: none; z-index: 1000; width: 320px; height: 420px; background-color: white; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);">
-        <div id="chatbot-header" style="background-color: #007bff; color: white; padding: 10px; text-align: center; border-top-left-radius: 10px; border-top-right-radius: 10px;">
-            <h3>Chatbot</h3>
-        </div>
-        <div id="messages" style="overflow-y: auto; height: 300px; padding: 10px;"></div>
-        <div id="chatbot-input-container" style="display: flex; padding: 10px; border-top: 1px solid #ddd;">
-            <input id="chat-input" type="text" placeholder="Escribe un mensaje..." style="flex: 1; padding: 5px; border: 1px solid #ddd; border-radius: 5px;">
-            <button id="send-message" style="margin-left: 5px; background-color: #007bff; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Enviar</button>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer text-center">
-        <div class="container px-4 px-lg-5">
-            <ul class="list-inline mb-5">
-                <li class="list-inline-item">
-                    <a class="social-link rounded-circle text-white me-3" href="https://github.com/ChispiDEV"><i class="fab fa-github"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="social-link rounded-circle text-white me-3" href="linkedin.com/in/cristina-fg/"><i class="fab fa-linkedin"></i></a>
-                </li>
+    <body id="page-top">
+        <!-- Navigation-->
+        <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav" id="nav-items">
+                <!-- El menú se generará dinámicamente aquí -->
             </ul>
-        <p class="text-muted small mb-0">&copy; 2025 Cristina Fuentes</p>
-    </footer>
-    
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+        </nav>
+        <!-- Header-->
+        <header class="masthead d-flex align-items-center">
+            <div class="container px-4 px-lg-5 text-center">
+                <h1 class="mb-1">Cristina Fuentes - Portfolio</h1>
+                <h3 class="mb-5"><em>Bilingual Profile | Perfil bilingüe</em></h3>
+                <a class="btn btn-primary btn-xl" href="#" onclick="toggleLanguage('english')">English</a> | 
+                <a class="btn btn-primary btn-xl" href="#" onclick="toggleLanguage('spanish')">Español</a>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="content-section bg-light" id="readme-content">
+            <div class="container px-4 px-lg-5 text-center">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-10">
+                        <h2>Cargando contenido...</h2>
+                        <!-- El contenido del README.md se renderizará dinámicamente aquí -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Botón del Chatbot -->
+        <div id="chatbot-toggle" 
+            style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; cursor: pointer; background-color: #007bff; color: white; padding: 10px 15px; border-radius: 5px;">
+            💬
+        </div>
 
-</body>
+        <!-- Contenedor del Chatbot -->
+        <div id="chatbot-container" 
+            style="position: fixed; bottom: 80px; right: 20px; display: none; z-index: 1000; width: 320px; height: 420px; background-color: white; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);">
+            <div id="chatbot-header" style="background-color: #007bff; color: white; padding: 10px; text-align: center; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <h3>Chatbot</h3>
+            </div>
+            <div id="messages" style="overflow-y: auto; height: 300px; padding: 10px;"></div>
+            <div id="chatbot-input-container" style="display: flex; padding: 10px; border-top: 1px solid #ddd;">
+                <input id="chat-input" type="text" placeholder="Escribe un mensaje..." style="flex: 1; padding: 5px; border: 1px solid #ddd; border-radius: 5px;">
+                <button id="send-message" style="margin-left: 5px; background-color: #007bff; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Enviar</button>
+            </div>
+        </div>
+
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container px-4 px-lg-5">
+                <ul class="list-inline mb-5">
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="fav fa-bluesky"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white mr-3" href="linkedin.com/in/cristina-fg/"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white" href="https://github.com/ChispiDEV"><i class="fab fa-github"></i></a>
+                    </li>
+                </ul>
+                <p class="text-muted small mb-0">Copyright &copy; 2025 Cristina Fuentes</p>
+            </div>
+        </footer>
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
