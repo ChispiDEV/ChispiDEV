@@ -170,7 +170,7 @@ Revisa mis [Proyectos Destacados](projects.html) para obtener más información 
 
 ---
 ## 🎉 Curiosidades Sobre Mí:
- - 🎮 Viciada de los juegos mde gestión de recursos con más de **500 horas en Stardew Valley**.  
+ - 🎮 Viciada de los juegos de gestión de recursos con más de **500 horas en Stardew Valley**.  
  - ✈️ Antigua **especialista de soporte en Riot Games**.  
  - 🐶 Amante de los perros con dos bebotas en casa llamadas **Riven** y **Haru**.
  - 🎨 Mañosa con las agujas de tejer y diseño de uñas.
