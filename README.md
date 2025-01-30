@@ -8,7 +8,7 @@ Puedes ver mi portafolio y los proyectos en detalle en mi [Página de GitHub Pag
 
 ---
 # English Version  
-## About me:
+## 🧑‍💻 About me:
 👋 I'm Cristina (often called Chispi by colleagues). Welcome to my GitHub!
 
 🌸 My pronouns are "She/Her".
@@ -96,7 +96,7 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
 
 ---
 # Versión en Español  
-## Sobre mí:
+## 🧑‍💻 Sobre mí:
 👋 Soy Cristina (mis compañeros suelen llamarme Chispi). ¡Bienvenidos a mi GitHub!
 
 🌸 Uso **pronombres femeninos** (Ella).
@@ -157,7 +157,7 @@ Revisa mis [Proyectos Destacados](projects.html) para obtener más información 
 ## 🔥 ¿Qué estoy haciendo ahora?
 - 💻 Mejorando mis habilidades en **modelado de datos y dashboards interactivos**.
 - 📖 Aprendiendo sobre análisis de redes sociales con **NetworkX**.
-- 🤝 Abierto/a a colaboraciones en proyectos relacionados con análisis de datos o automatización.
+- 🤝 Disponible para colaboraciones en proyectos relacionados con análisis de datos o automatización.
 
 ---
 ## 📄 Descarga Mi CV:
@@ -170,7 +170,7 @@ Revisa mis [Proyectos Destacados](projects.html) para obtener más información 
 
 ---
 ## 🎉 Curiosidades Sobre Mí:
- - 🎮 Viciada de los juegos mde gestión de recursos con más de **500 horas en Stardew Valley**.  
+ - 🎮 Viciada de los juegos de gestión de recursos con más de **500 horas en Stardew Valley**.  
  - ✈️ Antigua **especialista de soporte en Riot Games**.  
  - 🐶 Amante de los perros con dos bebotas en casa llamadas **Riven** y **Haru**.
  - 🎨 Mañosa con las agujas de tejer y diseño de uñas.
