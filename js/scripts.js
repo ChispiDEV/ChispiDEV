@@ -293,5 +293,5 @@ window.addEventListener('DOMContentLoaded', event => {
     };
 
     // Procesar el README.md al cargar la página
-    processReadme();
+    processReadmebb();
 });
