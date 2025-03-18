@@ -11210,3 +11210,11 @@ footer.footer .social-link:hover {
   word-wrap: break-word; /* Rompe líneas largas automáticamente */
 }
 
+/* Recuadro semitransparente  */
+.text-box {
+  background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+  color: white; /* Texto en blanco para contraste */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  display: inline-block; /* Para ajustar al contenido */
+}
