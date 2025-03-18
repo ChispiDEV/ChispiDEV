@@ -11212,9 +11212,10 @@ footer.footer .social-link:hover {
 
 /* Recuadro semitransparente  */
 .text-box {
-  background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
-  color: white; /* Texto en blanco para contraste */
+  background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+  color: black; /* Texto en negro */
   padding: 20px; /* Espaciado interno */
   border-radius: 10px; /* Bordes redondeados */
   display: inline-block; /* Para ajustar al contenido */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Sombra suave para destacar */
 }
