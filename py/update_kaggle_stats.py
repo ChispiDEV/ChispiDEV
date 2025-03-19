@@ -1,6 +1,7 @@
 import os
 import json
 import requests
+from bs4 import BeautifulSoup
 from kaggle.api.kaggle_api_extended import KaggleApi
 
 # Leer kaggle.json manualmente
@@ -27,26 +28,51 @@ api.authenticate()
 
 print("✅ Autenticación en Kaggle completada correctamente.")
 
-# Obtener información del usuario
-profile_url = f"https://www.kaggle.com/{creds['username']}"
-response = requests.get(profile_url)
 
-if response.status_code == 200:
-    print(f"✅ Perfil de usuario Kaggle disponible: {profile_url}")
-else:
-    print(f"❌ ERROR: No se pudo acceder a {profile_url}")
-    exit(1)
+# Web Scraping del perfil de Kaggle
+url = f"https://www.kaggle.com/{creds['username']}"
+response = requests.get(url)
+soup = BeautifulSoup(response.text, "html.parser")
 
+# Extraer datos básicos
+name = soup.find("h1", class_="sc-dBMfYx").text.strip() if soup.find("h1") else "N/A"
+followers = soup.find("span", text="Followers").find_next_sibling("span").text.strip() if soup.find("span", text="Followers") else "0"
+following = soup.find("span", text="Following").find_next_sibling("span").text.strip() if soup.find("span", text="Following") else "0"
+datasets = soup.find("span", text="Datasets").find_next_sibling("span").text.strip() if soup.find("span", text="Datasets") else "0"
+notebooks = soup.find("span", text="Notebooks").find_next_sibling("span").text.strip() if soup.find("span", text="Notebooks") else "0"
+competitions = soup.find("span", text="Competitions").find_next_sibling("span").text.strip() if soup.find("span", text="Competitions") else "0"
+medals = soup.find("span", text="Medals").find_next_sibling("span").text.strip() if soup.find("span", text="Medals") else "0"
 
-# Formatear salida en Markdown
-stats_md = f"## 📊 Kaggle Statistics\n- **Perfil**: [Ver perfil]({profile_url})\n"
-stats_esp_md = f"## 📊 Estadísticas de Kaggle\n- **Perfil**: [Ver perfil]({profile_url})\n"
+# Crear estadísticas en inglés
+stats_en = f"""
+## 📊 Kaggle Statistics
+- **Name**: {name}
+- **Followers**: {followers}
+- **Following**: {following}
+- **Datasets**: {datasets}
+- **Notebooks**: {notebooks}
+- **Competitions**: {competitions}
+- **Medals**: {medals}
+"""
+
+# Crear estadísticas en español
+stats_es = f"""
+## 📊 Estadísticas de Kaggle
+- **Nombre**: {name}
+- **Seguidores**: {followers}
+- **Siguiendo**: {following}
+- **Datasets**: {datasets}
+- **Notebooks**: {notebooks}
+- **Competiciones**: {competitions}
+- **Medallas**: {medals}
+"""
+
 
 # Escribir resultados en un archivo Markdown
-with open("kaggle_stats.md", "w", encoding="utf-8") as file:
-    file.write(stats_md)
+with open("assets/kaggle_stats.md", "w", encoding="utf-8") as file:
+    file.write(stats_en)
 
-with open("kaggle_stats_esp.md", "w", encoding="utf-8") as file:
-    file.write(stats_esp_md)
+with open("assets/kaggle_stats_esp.md", "w", encoding="utf-8") as file:
+    file.write(stats_es)
 
 print("✅ Kaggle stats actualizadas correctamente.")
