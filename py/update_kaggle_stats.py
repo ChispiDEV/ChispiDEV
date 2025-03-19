@@ -29,6 +29,10 @@ api.authenticate()
 
 print("✅ Autenticación en Kaggle completada correctamente.")
 
+# Obtener información del usuario
+user_info = api.user()
+print(f"📊 Datos del usuario Kaggle: {user_info}")
+
 # Extraer estadísticas relevantes
 stats = {
     "Name": user_info.get("displayName", "N/A"),
