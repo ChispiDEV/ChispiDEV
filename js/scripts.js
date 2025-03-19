@@ -102,6 +102,8 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // Función para procesar el README.md y generar contenido dinámico
     function processReadme(url, contentId, navId) {
+        console.log(`📥 Cargando README desde: ${url}`); // Verificar que se intenta cargar la URL
+    
         // Leer y procesar el archivo README.md
         fetch(url)
             .then(response => {
@@ -117,6 +119,7 @@ window.addEventListener('DOMContentLoaded', event => {
                 const contentDiv = document.getElementById(contentId);
                 const navItems = document.getElementById(navId);
 
+                // Verificar si los elementos existen en el HTML
                 if (!contentDiv || !navItems) {
                     console.error(`⚠️ No se encontró el elemento con id ${contentId} o ${navId}`);
                     return;
@@ -147,6 +150,7 @@ window.addEventListener('DOMContentLoaded', event => {
                     );
 
                     if (!languageSection) {
+                        console.error(`❌ No se encontró una sección para '${lang}' en ${url}.`);
                         contentDiv.innerHTML = `<p>No se encontró en (${lang}).</p>`;
                         navItems.innerHTML = '';
                         return;
