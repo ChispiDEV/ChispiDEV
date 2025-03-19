@@ -30,7 +30,7 @@ api.authenticate()
 print("✅ Autenticación en Kaggle completada correctamente.")
 
 # Obtener información del usuario
-user_info = api.metadata(creds["username"])
+user_info = api.user_details(creds["username"])
 print(f"📊 Datos del usuario Kaggle: {user_info}")
 
 # Extraer estadísticas relevantes
