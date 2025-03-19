@@ -84,6 +84,12 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
 ## 🧮 My Statistics:
 ![GitHub's Statistics](https://github-readme-stats.vercel.app/api?username=ChispiDEV&show_icons=true&theme=radical)
 
+
+📊 **Kaggle Stats:**  
+<!-- KAGGLE_STATS_START -->
+_(Cargando estadísticas de Kaggle...)_
+<!-- KAGGLE_STATS_END -->
+
 ---
 ## 🎉 Fun Facts:
 🎮 Gamer with over **500 hours in Stardew Valley**.  

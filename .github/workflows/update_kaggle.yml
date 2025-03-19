@@ -1,0 +1,37 @@
+name: Update Kaggle Stats
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Ejecutar cada 24 horas (medianoche UTC)
+  workflow_dispatch: # Permite ejecución manual
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Clonar el repositorio
+        uses: actions/checkout@v3
+
+      - name: 🐍 Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: 🏗️ Instalar dependencias
+        run: pip install kaggle
+
+      - name: 🔑 Configurar Credenciales de Kaggle
+        env:
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+
+      - name: 🚀 Ejecutar script de actualización
+        run: python py/update_kaggle_stats.py
+
+      - name: 📤 Subir cambios a GitHub
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add README.md assets/kaggle_stats.md
+          git commit -m "🔄 Actualización diaria de stats de Kaggle"
+          git push
