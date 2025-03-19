@@ -1,5 +1,6 @@
 import os
 import json
+import requests
 from kaggle.api.kaggle_api_extended import KaggleApi
 
 # Leer kaggle.json manualmente
@@ -11,9 +12,6 @@ if not os.path.exists(kaggle_path):
 
 with open(kaggle_path, "r") as f:
     creds = json.load(f)
-
-# Depuración: Imprimir credenciales antes de la autenticación
-print(f"🔍 Credenciales cargadas: {creds}")
 
 # Verificar si el username y key existen
 if "username" not in creds or "key" not in creds:
@@ -30,43 +28,25 @@ api.authenticate()
 print("✅ Autenticación en Kaggle completada correctamente.")
 
 # Obtener información del usuario
-user_info = api.user_details(creds["username"])
-print(f"📊 Datos del usuario Kaggle: {user_info}")
+profile_url = f"https://www.kaggle.com/{creds['username']}"
+response = requests.get(profile_url)
 
-# Extraer estadísticas relevantes
-stats = {
-    "Name": user_info.get("displayName", "N/A"),
-    "Followers": user_info.get("followers", 0),
-    "Following": user_info.get("following", 0),
-    "Datasets": user_info.get("totalDatasets", 0),
-    "Notebooks": user_info.get("totalScripts", 0),
-    "Competitions": user_info.get("totalCompetitions", 0),
-    "Medals": user_info.get("totalMedals", 0)
-}
+if response.status_code == 200:
+    print(f"✅ Perfil de usuario Kaggle disponible: {profile_url}")
+else:
+    print(f"❌ ERROR: No se pudo acceder a {profile_url}")
+    exit(1)
 
-stats_esp = {
-    "Nombre": user_info.get("displayName", "N/A"),
-    "Seguidores": user_info.get("followers", 0),
-    "Siguiendo": user_info.get("following", 0),
-    "Datasets": user_info.get("totalDatasets", 0),
-    "Notebooks": user_info.get("totalScripts", 0),
-    "Competiciones": user_info.get("totalCompetitions", 0),
-    "Medallas": user_info.get("totalMedals", 0)
-}
 
 # Formatear salida en Markdown
-stats_md = "\n".join([f"- **{key}**: {value}" for key, value in stats.items()])
-stats_esp_md = "\n".join([f"- **{key}**: {value}" for key, value in stats_esp.items()])
+stats_md = f"## 📊 Kaggle Statistics\n- **Perfil**: [Ver perfil]({profile_url})\n"
+stats_esp_md = f"## 📊 Estadísticas de Kaggle\n- **Perfil**: [Ver perfil]({profile_url})\n"
 
 # Escribir resultados en un archivo Markdown
 with open("kaggle_stats.md", "w", encoding="utf-8") as file:
-    file.write("## 📊 Kaggle Statistics\n")
     file.write(stats_md)
-    file.write("\n")
 
 with open("kaggle_stats_esp.md", "w", encoding="utf-8") as file:
-    file.write("## 📊 Estadísticas de Kaggle\n")
     file.write(stats_esp_md)
-    file.write("\n")
 
 print("✅ Kaggle stats actualizadas correctamente.")
