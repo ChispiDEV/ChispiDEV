@@ -19,7 +19,9 @@ jobs:
 
       - name: 📊 Configurar Kaggle API
         run: |
-          echo "${{ secrets.KAGGLE_JSON }}" > ~/.kaggle/kaggle.json && chmod 600 ~/.kaggle/kaggle.json
+          mkdir -p ~/.kaggle
+          echo "${{ secrets.KAGGLE_JSON }}" > ~/.kaggle/kaggle.json
+          chmod 600 ~/.kaggle/kaggle.json
       
       - name: 🏗️ Instalar dependencias
         run: pip install kaggle
