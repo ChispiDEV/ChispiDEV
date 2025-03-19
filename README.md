@@ -87,7 +87,7 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
 
 📊 **Kaggle Stats:**  
 <!-- KAGGLE_STATS_START -->
-_(Cargando estadísticas de Kaggle...)_
+_(Loading Kaggle Stats...)_
 <!-- KAGGLE_STATS_END -->
 
 ---
@@ -173,6 +173,12 @@ Revisa mis [Proyectos Destacados](projects.html) para obtener más información 
 ---
 ## 🧮 Mis Estadísticas
 ![Estadísticas de GitHub](https://github-readme-stats.vercel.app/api?username=ChispiDEV&show_icons=true&theme=radical)
+
+
+📊 **Estadísticas de Kaggle:**  
+<!-- KAGGLE_STATS_START -->
+_(Cargando estadísticas de Kaggle...)_
+<!-- KAGGLE_STATS_END -->
 
 ---
 ## 🎉 Curiosidades Sobre Mí:
