@@ -1,38 +1,44 @@
-import kaggle
 import os
-import json
+import requests
 
-# Cargar credenciales de Kaggle
+# Obtener credenciales de Kaggle desde las variables de entorno
 KAGGLE_USERNAME = os.getenv("KAGGLE_USERNAME")
 KAGGLE_KEY = os.getenv("KAGGLE_KEY")
 
-# Configurar la API de Kaggle
-api = kaggle.KaggleApi()
-api.authenticate()
+if not KAGGLE_USERNAME or not KAGGLE_KEY:
+    raise ValueError("❌ Error: No se encontraron las credenciales de Kaggle en las variables de entorno.")
 
-# Obtener datos del usuario
-user_metadata = api.metadata("users", KAGGLE_USERNAME)
-user_info = json.loads(user_metadata)
+# Endpoint de la API de Kaggle para obtener datos del usuario
+KAGGLE_API_URL = f"https://www.kaggle.com/api/v1/users/{KAGGLE_USERNAME}.json"
+
+# Autenticación con la API de Kaggle
+response = requests.get(KAGGLE_API_URL, auth=(KAGGLE_USERNAME, KAGGLE_KEY))
+
+if response.status_code != 200:
+    raise Exception(f"❌ Error al obtener datos de Kaggle: {response.status_code} - {response.text}")
+
+# Procesar la respuesta JSON
+user_info = response.json()
 
 # Extraer estadísticas relevantes
 stats = {
-    "Name": user_info["displayName"],
-    "Followers": user_info["followers"],
-    "Following": user_info["following"],
-    "Datasets": user_info["totalDatasets"],
-    "Notebooks": user_info["totalScripts"],
-    "Competitions": user_info["totalCompetitions"],
-    "Medals": user_info["totalMedals"]
+    "Name": user_info.get("displayName", "N/A"),
+    "Followers": user_info.get("followers", 0),
+    "Following": user_info.get("following", 0),
+    "Datasets": user_info.get("totalDatasets", 0),
+    "Notebooks": user_info.get("totalScripts", 0),
+    "Competitions": user_info.get("totalCompetitions", 0),
+    "Medals": user_info.get("totalMedals", 0)
 }
 
 stats_esp = {
-    "Nombre": user_info["displayName"],
-    "Seguidores": user_info["followers"],
-    "Siguiendo": user_info["following"],
-    "Datasets": user_info["totalDatasets"],
-    "Cuadernos": user_info["totalScripts"],
-    "Competiciones": user_info["totalCompetitions"],
-    "Medallas": user_info["totalMedals"]
+    "Nombre": user_info.get("displayName", "N/A"),
+    "Seguidores": user_info.get("followers", 0),
+    "Siguiendo": user_info.get("following", 0),
+    "Datasets": user_info.get("totalDatasets", 0),
+    "Cuadernos": user_info.get("totalScripts", 0),
+    "Competiciones": user_info.get("totalCompetitions", 0),
+    "Medallas": user_info.get("totalMedals", 0)
 }
 
 # Formatear salida en Markdown
