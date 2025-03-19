@@ -33,4 +33,4 @@ jobs:
           git add README.md assets/kaggle_stats.md
           git commit -m "🔄 Actualización diaria de stats de Kaggle"
           git push
-        continue-on-error: true  # Evita fallos si no hay cambios en el commit
+        continue-on-error: true  # Evita fallos si no hay cambios en el MD al hacer el commit
