@@ -1,29 +1,17 @@
-import kaggle
 import os
 import json
+from kaggle.api.kaggle_api_extended import KaggleApi
 
+# Leer kaggle.json manualmente
+with open(os.path.expanduser("~/.kaggle/kaggle.json"), "r") as f:
+    creds = json.load(f)
 
-# Crear el directorio de Kaggle si no existe
-os.makedirs(os.path.expanduser("~/.kaggle"), exist_ok=True)
+os.environ["KAGGLE_USERNAME"] = creds["username"]
+os.environ["KAGGLE_KEY"] = creds["key"]
 
-# Cargar credenciales desde una variable de entorno
-kaggle_json = os.getenv("KAGGLE_JSON")
-
-if not kaggle_json:
-    raise ValueError("❌ ERROR: La variable de entorno 'KAGGLE_JSON' no está configurada.")
-
-# Guardar `kaggle.json` en la ubicación correcta
-kaggle_json_path = os.path.expanduser("~/.kaggle/kaggle.json")
-
-with open(kaggle_json_path, "w") as f:
-    f.write(kaggle_json)
-
-# Asegurar permisos correctos
-os.chmod(kaggle_json_path, 0o600)
-
-# Inicializar la API de Kaggle
-api = kaggle.KaggleApi()
-api.authenticate() 
+# Autenticar manualmente
+api = KaggleApi()
+api.authenticate()
 
 print("✅ Autenticación en Kaggle completada correctamente.")
 
