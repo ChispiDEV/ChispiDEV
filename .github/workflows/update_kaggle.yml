@@ -20,17 +20,16 @@ jobs:
       - name: 📊 Configurar Kaggle API
         run: |
           mkdir -p ~/.kaggle
-          echo "${{ secrets.KAGGLE_JSON }}" > ~/.kaggle/kaggle.json
+          echo '${{ secrets.KAGGLE_JSON }}' > ~/.kaggle/kaggle.json
           chmod 600 ~/.kaggle/kaggle.json
       
       - name: 🏗️ Instalar dependencias
         run: pip install kaggle
 
-      - name: 📌 Verificar contenido de kaggle.json
-        run: cat ~/.kaggle/kaggle.json
-
-      - name: Verificar si kaggle.json existe
-        run: ls -la ~/.kaggle && cat ~/.kaggle/kaggle.json
+      - name: 🛠️ Depuración: Revisar kaggle.json
+        run: |
+          ls -la ~/.kaggle 
+          cat ~/.kaggle/kaggle.json
 
       - name: 🚀 Ejecutar script de actualización
         run: python py/update_kaggle_stats.py

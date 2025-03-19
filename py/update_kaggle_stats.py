@@ -3,8 +3,22 @@ import json
 from kaggle.api.kaggle_api_extended import KaggleApi
 
 # Leer kaggle.json manualmente
-with open(os.path.expanduser("~/.kaggle/kaggle.json"), "r") as f:
+kaggle_path = os.path.expanduser("~/.kaggle/kaggle.json")
+
+if not os.path.exists(kaggle_path):
+    print("❌ ERROR: El archivo kaggle.json no existe.")
+    exit(1)
+
+with open(kaggle_path, "r") as f:
     creds = json.load(f)
+
+# Depuración: Imprimir credenciales antes de la autenticación
+print(f"🔍 Credenciales cargadas: {creds}")
+
+# Verificar si el username y key existen
+if "username" not in creds or "key" not in creds:
+    print("❌ ERROR: El archivo kaggle.json no tiene username o key.")
+    exit(1)
 
 os.environ["KAGGLE_USERNAME"] = creds["username"]
 os.environ["KAGGLE_KEY"] = creds["key"]
