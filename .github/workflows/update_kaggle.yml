@@ -20,12 +20,10 @@ jobs:
       - name: 🏗️ Instalar dependencias
         run: pip install kaggle
 
-      - name: 🔑 Configurar Credenciales de Kaggle
+      - name: 🚀 Ejecutar script de actualización
         env:
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
-
-      - name: 🚀 Ejecutar script de actualización
         run: python py/update_kaggle_stats.py
 
       - name: 📤 Subir cambios a GitHub
@@ -35,3 +33,4 @@ jobs:
           git add README.md assets/kaggle_stats.md
           git commit -m "🔄 Actualización diaria de stats de Kaggle"
           git push
+        continue-on-error: true  # Evita fallos si no hay cambios en el commit
