@@ -104,26 +104,28 @@ window.addEventListener('DOMContentLoaded', event => {
     function processReadme(url, contentId, navId) {
         console.log(`📥 Cargando README desde: ${url}`); // Verificar que se intenta cargar la URL
     
+        const contentDiv = document.getElementById(contentId);
+        const navItems = document.getElementById(navId);
+        
+        // Verificar si los elementos existen en el HTML
+        if (!contentDiv || !navItems) {
+            console.warn(`⚠️ No se encontró el elemento con id ${contentId} o ${navId}, omitiendo la carga.`);
+            return; // Sale de la función si los elementos no existen en la página
+        }
+
         // Leer y procesar el archivo README.md
         fetch(url)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error('Error al cargar el README.md (status ${response.status})');
+                    throw new Error(`Error al cargar el README.md (status ${response.status})`);
                 }    
                 return response.text();
             })
             .then(markdown => {
-                console.log("📜 Markdown cargado correctamente de ${url}:", markdown.substring(0, 500)); // Mostrar primeras 500 letras para verificar
-                
+                console.log(`📜 Markdown cargado correctamente de ${url}:`, markdown.substring(0, 500)); // Mostrar primeras 500 letras para verificar
                 const converter = new showdown.Converter();
-                const contentDiv = document.getElementById(contentId);
-                const navItems = document.getElementById(navId);
+               
 
-                // Verificar si los elementos existen en el HTML
-                if (!contentDiv || !navItems) {
-                    console.error(`⚠️ No se encontró el elemento con id ${contentId} o ${navId}`);
-                    return;
-                }
 
                 // Dividir contenido por secciones principales
                 const sections = markdown.split(/^# /m).filter(section => section.trim() !== ""); // Dividir por encabezados de nivel 1
