@@ -179,20 +179,12 @@ window.addEventListener('DOMContentLoaded', event => {
                         navItems.appendChild(listItem);
                     });
 
-                    // Reemplazar espacios en listas anidadas para evitar errores de conversión
-                    const cleanedContent = sub.content
-                        .replace(sub.title, '') // Remover el título de la sección
-                        .replace(/^(\s*)-\s+/gm, '$1* ') // Normalizar listas con guiones
-                        .replace(/^(\s*)\*\s+/gm, '$1* ') // Asegurar listas bien formateadas
-
-                    const htmlContent = converter.makeHtml(cleanedContent);
-
                     // Renderizar el contenido con colores alternados
                     contentDiv.innerHTML = subsections
                         .map((sub, idx) => `
                             <div id="${sub.id}" class="${colors[idx % colors.length]}" style="padding: 20px; margin-bottom: 20px; border-radius: 10px;">
                                 <h2>${sub.title}</h2>
-                                ${htmlContent}
+                                ${converter.makeHtml(sub.content.replace(sub.title, '').trim())}
                             </div>
                         `)
                         .join('');
