@@ -24,7 +24,7 @@ jobs:
           chmod 600 ~/.kaggle/kaggle.json
       
       - name: 🏗️ Instalar dependencias
-        run: pip install kaggle
+        run: pip install kaggle beautifulsoup4 requests
 
       - name: 🛠️ Depuración Revisar kaggle.json
         run: |
