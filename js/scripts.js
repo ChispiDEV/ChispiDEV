@@ -111,19 +111,27 @@ window.addEventListener('DOMContentLoaded', event => {
                 return response.text();
             })
             .then(markdown => {
-                console.log("Markdown cargado correctamente:", markdown); // Depuración
+                console.log("📜 Markdown cargado correctamente de ${url}:", markdown.substring(0, 500)); // Mostrar primeras 500 letras para verificar
+                
                 const converter = new showdown.Converter();
                 const contentDiv = document.getElementById(contentId);
                 const navItems = document.getElementById(navId);
 
+                if (!contentDiv || !navItems) {
+                    console.error(`⚠️ No se encontró el elemento con id ${contentId} o ${navId}`);
+                    return;
+                }
+
                 // Dividir contenido por secciones principales
                 const sections = markdown.split(/^# /m).filter(section => section.trim() !== ""); // Dividir por encabezados de nivel 1
-                console.log("Secciones detectadas:", sections); // Depuración
+                console.log("📌 Secciones detectadas:", sections.length); // Depuración
 
                 let language = 'spanish'; // Idioma predeterminado
 
                 // Función para filtrar contenido según idioma
-                const renderContent = (lang, sections, contentDiv, navItems) => {
+                const renderContent = (lang) => {
+                    console.log(`🟢 Renderizando contenido en: ${lang}`);
+
                     // Definir la paleta de colores
                     const colors = [
                         'bg-color-1', 'bg-color-2', 'bg-color-3', 'bg-color-4', 'bg-color-5', 
@@ -134,12 +142,12 @@ window.addEventListener('DOMContentLoaded', event => {
                     // Encontrar la sección correspondiente al idioma
                     const languageSection = sections.find(section =>
                         lang === 'english'
-                            ? section.startsWith('English Version')
-                            : section.startsWith('Versión en Español')
+                            ? section.includes('English Version')
+                            : section.includes('Versión en Español')
                     );
 
                     if (!languageSection) {
-                        contentDiv.innerHTML = `<p>No se encontró contenido para el idioma seleccionado (${lang}).</p>`;
+                        contentDiv.innerHTML = `<p>No se encontró en (${lang}).</p>`;
                         navItems.innerHTML = '';
                         return;
                     }
@@ -149,12 +157,12 @@ window.addEventListener('DOMContentLoaded', event => {
                         .split(/^## /m) // Dividir por subtítulos de nivel 2
                         .filter(subsection => subsection.trim() !== "") // Eliminar partes vacías
                         .map((subsection, index) => ({
-                            id: `section-${index}`,
+                            id: `${contentId}-section-${index}`,
                             content: subsection.trim(),
                             title: subsection.split('\n')[0].trim() // El título es la primera línea
                         }));
 
-                    console.log("Subsecciones detectadas:", subsections); // Depuración
+                    console.log("🔹 ${subsections.length} subsecciones detectadas."); // Depuración
 
                     // Generar el menú dinámico
                     navItems.innerHTML = '';
@@ -177,18 +185,20 @@ window.addEventListener('DOMContentLoaded', event => {
                 };
 
                 // Alternar idioma
-                window.toggleLanguage = lang => {
+                window.toggleLanguage = (lang) => {
+                    console.log(`🔄 Cambiando idioma a: ${lang}`);
                     language = lang;
                     renderContent(language);
                 };
 
                 // Renderizar contenido inicial
-                renderContent(language, sections, contentDiv, navItems);
+                renderContent(language);
             })
 
             .catch(error => {
-                console.error('Error procesando el README:', error);
-                document.getElementById(contentId).innerHTML = '<p>Error cargando contenido.</p>';
+                console.error('❌ Error procesando el README:', error);
+                const contentDiv = document.getElementById(contentId);
+                if (contentDiv) contentDiv.innerHTML = '<p>Error cargando contenido.</p>';
             });
         }
 
