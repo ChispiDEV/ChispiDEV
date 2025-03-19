@@ -1,49 +1,53 @@
 import kaggle
 import os
+import json
 
 # Cargar credenciales de Kaggle
 KAGGLE_USERNAME = os.getenv("KAGGLE_USERNAME")
 KAGGLE_KEY = os.getenv("KAGGLE_KEY")
-kaggle.api.authenticate()
 
-# Obtener datos del perfil
-user_data = kaggle.api.user_profile(KAGGLE_USERNAME)
+# Configurar la API de Kaggle
+api = kaggle.KaggleApi()
+api.authenticate()
+
+# Obtener datos del usuario
+user_metadata = api.metadata("users", KAGGLE_USERNAME)
+user_info = json.loads(user_metadata)
 
 # Extraer estadísticas relevantes
-medals = user_data["totalMedals"]
-datasets = user_data["datasets"]
-notebooks = user_data["scripts"]
-rank = user_data["competitionRank"]
+stats = {
+    "Name": user_info["displayName"],
+    "Followers": user_info["followers"],
+    "Following": user_info["following"],
+    "Datasets": user_info["totalDatasets"],
+    "Notebooks": user_info["totalScripts"],
+    "Competitions": user_info["totalCompetitions"],
+    "Medals": user_info["totalMedals"]
+}
 
-# Crear contenido actualizado
-stats_content = f"""
-📊 **Kaggle Stats:**  
-- 🏅 Medallas: {medals}  
-- 📊 Datasets: {datasets}  
-- 📖 Notebooks: {notebooks}  
-- 🏆 Rank en Competencias: {rank}
-"""
+stats_esp = {
+    "Nombre": user_info["displayName"],
+    "Seguidores": user_info["followers"],
+    "Siguiendo": user_info["following"],
+    "Datasets": user_info["totalDatasets"],
+    "Cuadernos": user_info["totalScripts"],
+    "Competiciones": user_info["totalCompetitions"],
+    "Medallas": user_info["totalMedals"]
+}
 
-# Guardar las estadísticas en `kaggle_stats.md`
-with open("assets/kaggle_stats.md", "w", encoding="utf-8") as file:
-    file.write(stats_content)
+# Formatear salida en Markdown
+stats_md = "\n".join([f"- **{key}**: {value}" for key, value in stats.items()])
+stats_esp_md = "\n".join([f"- **{key}**: {value}" for key, value in stats_esp.items()])
 
-# Leer el README.md
-with open("README.md", "r", encoding="utf-8") as file:
-    readme = file.readlines()
+# Escribir resultados en un archivo Markdown
+with open("kaggle_stats.md", "w", encoding="utf-8") as file:
+    file.write("## 📊 Kaggle Statistics\n")
+    file.write(stats_md)
+    file.write("\n")
 
-# Encontrar la sección de estadísticas
-start_marker = "<!-- KAGGLE_STATS_START -->"
-end_marker = "<!-- KAGGLE_STATS_END -->"
+with open("kaggle_stats_esp.md", "w", encoding="utf-8") as file:
+    file.write("## 📊 Estadísticas de Kaggle\n")
+    file.write(stats_esp_md)
+    file.write("\n")
 
-start_idx = readme.index(start_marker + "\n") + 1
-end_idx = readme.index(end_marker + "\n", start_idx)
-
-# Reemplazar el contenido entre los marcadores
-readme[start_idx:end_idx] = [stats_content + "\n"]
-
-# Escribir los cambios en el README.md
-with open("README.md", "w", encoding="utf-8") as file:
-    file.writelines(readme)
-
-print("✅ README actualizado con estadísticas de Kaggle.")
+print("✅ Kaggle stats actualizadas correctamente.")
