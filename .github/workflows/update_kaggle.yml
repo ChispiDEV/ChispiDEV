@@ -26,7 +26,7 @@ jobs:
       - name: 🏗️ Instalar dependencias
         run: pip install kaggle
 
-      - name: 🛠️ Depuración: Revisar kaggle.json
+      - name: 🛠️ Depuración Revisar kaggle.json
         run: |
           ls -la ~/.kaggle 
           cat ~/.kaggle/kaggle.json
