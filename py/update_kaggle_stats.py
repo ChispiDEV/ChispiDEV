@@ -1,24 +1,16 @@
-import os
-import requests
+import kaggle
+import json
 
-# Obtener credenciales de Kaggle desde las variables de entorno
-KAGGLE_USERNAME = os.getenv("KAGGLE_USERNAME")
-KAGGLE_KEY = os.getenv("KAGGLE_KEY")
 
-if not KAGGLE_USERNAME or not KAGGLE_KEY:
-    raise ValueError("❌ Error: No se encontraron las credenciales de Kaggle en las variables de entorno.")
+# Inicializar la API de Kaggle
+api = kaggle.KaggleApi()
+api.authenticate() 
 
-# Endpoint de la API de Kaggle para obtener datos del usuario
-KAGGLE_API_URL = f"https://www.kaggle.com/api/v1/users/{KAGGLE_USERNAME}.json"
+# Obtener metadata del usuario
+user_metadata = api.metadata("users", "chispithal")
 
-# Autenticación con la API de Kaggle
-response = requests.get(KAGGLE_API_URL, auth=(KAGGLE_USERNAME, KAGGLE_KEY))
-
-if response.status_code != 200:
-    raise Exception(f"❌ Error al obtener datos de Kaggle: {response.status_code} - {response.text}")
-
-# Procesar la respuesta JSON
-user_info = response.json()
+# Convertir la metadata a JSON legible
+user_info = json.loads(user_metadata)
 
 # Extraer estadísticas relevantes
 stats = {
@@ -36,7 +28,7 @@ stats_esp = {
     "Seguidores": user_info.get("followers", 0),
     "Siguiendo": user_info.get("following", 0),
     "Datasets": user_info.get("totalDatasets", 0),
-    "Cuadernos": user_info.get("totalScripts", 0),
+    "Notebooks": user_info.get("totalScripts", 0),
     "Competiciones": user_info.get("totalCompetitions", 0),
     "Medallas": user_info.get("totalMedals", 0)
 }
