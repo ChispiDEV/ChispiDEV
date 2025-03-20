@@ -77,10 +77,10 @@ with open("assets/kaggle_stats_esp.md", "w", encoding="utf-8") as file:
 print("✅ Kaggle stats actualizadas correctamente.")
 
 # Leer contenido de las estadísticas
-with open("kaggle_stats.md", "r", encoding="utf-8") as f:
+with open("assets/kaggle_stats.md", "r", encoding="utf-8") as f:
     stats_content = f.read()
 
-with open("kaggle_stats_esp.md", "r", encoding="utf-8") as f:
+with open("assets/kaggle_stats_esp.md", "r", encoding="utf-8") as f:
     stats_content_esp = f.read()
 
 # Leer el README
