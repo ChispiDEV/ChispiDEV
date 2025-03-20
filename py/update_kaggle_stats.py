@@ -137,6 +137,13 @@ with open("README.md", "r", encoding="utf-8") as f:
 # Reemplazar la sección en el README
 updated_readme = re.sub(
     r"<!-- KAGGLE-STATS -->.*?<!-- /KAGGLE-STATS -->",
+    repl.replace("\\", "\\\\"),  # Escapar posibles backslashes
+    updated_readme,
+    flags=re.DOTALL
+)
+
+updated_readme = re.sub(
+    r"<!-- KAGGLE-STATS -->.*?<!-- /KAGGLE-STATS -->",
     f"<!-- KAGGLE-STATS -->\n{stats_content}\n<!-- /KAGGLE-STATS -->",
     readme_content,
     flags=re.DOTALL
@@ -148,6 +155,11 @@ updated_readme = re.sub(
     updated_readme,
     flags=re.DOTALL
 )
+
+# Depuración texto
+print(repr(updated_readme))  # Ver contenido del README
+print(repr(repl))            # Ver qué se intenta reemplazar
+
 # Guardar cambios en el README
 with open("README.md", "w", encoding="utf-8") as f:
     f.write(updated_readme)
