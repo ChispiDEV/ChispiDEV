@@ -34,13 +34,13 @@ print("✅ Autenticación en Kaggle completada correctamente.")
 
 # Obtener datos de la API de Kaggle
 # Cantidad de datasets publicados
-datasets = api.datasets_list(user=creds["username"])
+datasets = api.dataset_list(user=creds["username"])
 datasets_count = len(datasets)
 # Cantidad de notebooks publicados
-notebooks = api.kernels_list(user=creds["username"])
+notebooks = api.kernel_list(user=creds["username"])
 notebooks_count = len(notebooks)
 # Competiciones activas (No muestra participación)
-competitions = api.competitions_list()
+competitions = api.competition_list()
 competitions_count = len(competitions)
 
 # Configurar Selenium (headless mode)
