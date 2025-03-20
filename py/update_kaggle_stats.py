@@ -94,7 +94,8 @@ updated_readme = re.sub(
     f"<!-- KAGGLE-STATS -->\n{stats_content}\n<!-- /KAGGLE-STATS -->",
     readme_content,
     flags=re.DOTALL
-) + re.sub(
+)
+updated_readme = re.sub(
     r"<!-- ESTADISTICAS-KAGGLE -->.*?<!-- /ESTADISTICAS-KAGGLE -->",
     f"<!-- ESTADISTICAS-KAGGLE -->\n{stats_content_esp}\n<!-- /ESTADISTICAS-KAGGLE -->",
     readme_content,
