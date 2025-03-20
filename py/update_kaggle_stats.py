@@ -92,6 +92,7 @@ print("📊 Competiciones activas en Kaggle:", competitions_count)
 
 # Crear estadísticas en inglés
 stats_en = f"""
+<!-- KAGGLE-STATS -->
 ## 📊 Kaggle Statistics
 - **Name**: {name}
 - **Followers**: {followers}
@@ -100,10 +101,12 @@ stats_en = f"""
 - **Notebooks**: {notebooks}
 - **Competitions**: {competitions}
 - **Medals**: {medals}
+<!-- /KAGGLE-STATS -->
 """
 
 # Crear estadísticas en español
 stats_es = f"""
+<!-- ESTADISTICAS-KAGGLE -->
 ## 📊 Estadísticas de Kaggle
 - **Nombre**: {name}
 - **Seguidores**: {followers}
@@ -112,53 +115,28 @@ stats_es = f"""
 - **Notebooks**: {notebooks}
 - **Competiciones**: {competitions}
 - **Medallas**: {medals}
+<!-- /ESTADISTICAS-KAGGLE -->
 """
-
-# Escribir resultados en un archivo Markdown
-with open("assets/kaggle_stats.md", "w", encoding="utf-8") as file:
-    file.write(stats_en)
-
-with open("assets/kaggle_stats_esp.md", "w", encoding="utf-8") as file:
-    file.write(stats_es)
-
-print("✅ Kaggle stats actualizadas correctamente.")
-
-# Leer contenido de las estadísticas
-with open("assets/kaggle_stats.md", "r", encoding="utf-8") as f:
-    stats_content = f.read()
-
-with open("assets/kaggle_stats_esp.md", "r", encoding="utf-8") as f:
-    stats_content_esp = f.read()
 
 # Leer el README
 with open("README.md", "r", encoding="utf-8") as f:
     readme_content = f.read()
 
 # Reemplazar la sección en el README
-updated_readme = re.sub(
-    r"<!-- KAGGLE-STATS -->.*?<!-- /KAGGLE-STATS -->",
-    repl.replace("\\", "\\\\"),  # Escapar posibles backslashes
-    updated_readme,
-    flags=re.DOTALL
-)
+def replace_stats(match):
+    tag = match.group(1)  # Captura el comentario de apertura
+    if "KAGGLE-STATS" in tag:
+        return stats_en  # Reemplaza con la versión en inglés
+    elif "ESTADISTICAS-KAGGLE" in tag:
+        return stats_es  # Reemplaza con la versión en español
+    return match.group(0)  # En caso de no coincidir, devolver original
 
 updated_readme = re.sub(
-    r"<!-- KAGGLE-STATS -->.*?<!-- /KAGGLE-STATS -->",
-    f"<!-- KAGGLE-STATS -->\n{stats_content}\n<!-- /KAGGLE-STATS -->",
+    r"(<!-- KAGGLE-STATS -->.*?<!-- /KAGGLE-STATS -->|<!-- ESTADISTICAS-KAGGLE -->.*?<!-- /ESTADISTICAS-KAGGLE -->)",
+    replace_stats,
     readme_content,
     flags=re.DOTALL
 )
-
-updated_readme = re.sub(
-    r"<!-- ESTADISTICAS-KAGGLE -->.*?<!-- /ESTADISTICAS-KAGGLE -->",
-    f"<!-- ESTADISTICAS-KAGGLE -->\n{stats_content_esp}\n<!-- /ESTADISTICAS-KAGGLE -->",
-    updated_readme,
-    flags=re.DOTALL
-)
-
-# Depuración texto
-print(repr(updated_readme))  # Ver contenido del README
-print(repr(repl))            # Ver qué se intenta reemplazar
 
 # Guardar cambios en el README
 with open("README.md", "w", encoding="utf-8") as f:
