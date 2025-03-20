@@ -67,7 +67,6 @@ stats_es = f"""
 - **Medallas**: {medals}
 """
 
-
 # Escribir resultados en un archivo Markdown
 with open("assets/kaggle_stats.md", "w", encoding="utf-8") as file:
     file.write(stats_en)
@@ -76,3 +75,32 @@ with open("assets/kaggle_stats_esp.md", "w", encoding="utf-8") as file:
     file.write(stats_es)
 
 print("✅ Kaggle stats actualizadas correctamente.")
+
+# Leer contenido de las estadísticas
+with open("kaggle_stats.md", "r", encoding="utf-8") as f:
+    stats_content = f.read()
+
+with open("kaggle_stats_esp.md", "r", encoding="utf-8") as f:
+    stats_content_esp = f.read()
+
+# Leer el README
+with open("README.md", "r", encoding="utf-8") as f:
+    readme_content = f.read()
+
+# Reemplazar la sección en el README
+updated_readme = re.sub(
+    r"<!-- KAGGLE-STATS -->.*?<!-- /KAGGLE-STATS -->",
+    f"<!-- KAGGLE-STATS -->\n{stats_content}\n<!-- /KAGGLE-STATS -->",
+    readme_content,
+    flags=re.DOTALL
+) + re.sub(
+    r"<!-- ESTADISTICAS-KAGGLE -->.*?<!-- /ESTADISTICAS-KAGGLE -->",
+    f"<!-- ESTADISTICAS-KAGGLE -->\n{stats_content_esp}\n<!-- /ESTADISTICAS-KAGGLE -->",
+    readme_content,
+    flags=re.DOTALL
+
+# Guardar cambios en el README
+with open("README.md", "w", encoding="utf-8") as f:
+    f.write(updated_readme)
+
+print("✅ README actualizado con nuevas estadísticas de Kaggle.")
