@@ -98,6 +98,7 @@ updated_readme = re.sub(
     f"<!-- ESTADISTICAS-KAGGLE -->\n{stats_content_esp}\n<!-- /ESTADISTICAS-KAGGLE -->",
     readme_content,
     flags=re.DOTALL
+)
 
 # Guardar cambios en el README
 with open("README.md", "w", encoding="utf-8") as f:
