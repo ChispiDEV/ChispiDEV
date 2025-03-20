@@ -1,0 +1,43 @@
+import os
+import json
+from kaggle.api.kaggle_api_extended import KaggleApi
+
+# Leer kaggle.json manualmente
+kaggle_path = os.path.expanduser("~/.kaggle/kaggle.json")
+
+if not os.path.exists(kaggle_path):
+    print("❌ ERROR: El archivo kaggle.json no existe.")
+    exit(1)
+
+with open(kaggle_path, "r") as f:
+    creds = json.load(f)
+
+os.environ["KAGGLE_USERNAME"] = creds["username"]
+os.environ["KAGGLE_KEY"] = creds["key"]
+
+# Autenticar manualmente
+api = KaggleApi()
+api.authenticate()
+
+print("✅ Autenticación en Kaggle completada correctamente.")
+
+# Obtener información del usuario
+user_data = api.user(creds["username"])
+
+# Extraer datos
+name = user_data.get("displayName", "N/A")
+followers = user_data.get("followers", 0)
+following = user_data.get("following", 0)
+datasets = user_data.get("datasetCount", 0)
+notebooks = user_data.get("totalScripts", 0)
+competitions = user_data.get("competitionCount", 0)
+medals = user_data.get("totalMedals", 0)
+
+# Mostrar datos
+print("📊 Nombre:", name)
+print("📊 Seguidores:", followers)
+print("📊 Siguiendo:", following)
+print("📊 Datasets:", datasets)
+print("📊 Notebooks:", notebooks)
+print("📊 Competiciones:", competitions)
+print("📊 Medallas:", medals)
