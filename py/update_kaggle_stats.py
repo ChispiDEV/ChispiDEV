@@ -40,7 +40,7 @@ datasets_count = len(datasets)
 notebooks = api.kernels_list(user=creds["username"])
 notebooks_count = len(notebooks)
 # Competiciones activas (No muestra participación)
-competitions = api.competition_list()
+competitions = api.competitions_list()
 competitions_count = len(competitions)
 
 # Configurar Selenium (headless mode)
