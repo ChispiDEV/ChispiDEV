@@ -29,25 +29,19 @@ api.authenticate()
 
 print("✅ Autenticación en Kaggle completada correctamente.")
 
+# Obtener información del usuario
+user_data = api.user(creds["username"])
 
-# Web Scraping del perfil de Kaggle
-url = f"https://www.kaggle.com/{creds['username']}"
-response = requests.get(url)
-soup = BeautifulSoup(response.text, "html.parser")
+# Extraer datos
+name = user_data.get("displayName", "N/A")
+followers = user_data.get("followers", 0)
+following = user_data.get("following", 0)
+datasets = user_data.get("datasetCount", 0)
+notebooks = user_data.get("totalScripts", 0)
+competitions = user_data.get("competitionCount", 0)
+medals = user_data.get("totalMedals", 0)
 
-# Extraer datos básicos
-name = soup.find("h1", class_="sc-dBMfYx").text.strip() if soup.find("h1") else "N/A"
-followers = soup.find("span", text="Followers").find_next_sibling("span").text.strip() if soup.find("span", text="Followers") else "0"
-following = soup.find("span", text="Following").find_next_sibling("span").text.strip() if soup.find("span", text="Following") else "0"
-datasets = soup.find("span", text="Datasets").find_next_sibling("span").text.strip() if soup.find("span", text="Datasets") else "0"
-notebooks = soup.find("span", text="Notebooks").find_next_sibling("span").text.strip() if soup.find("span", text="Notebooks") else "0"
-competitions = soup.find("span", text="Competitions").find_next_sibling("span").text.strip() if soup.find("span", text="Competitions") else "0"
-medals = soup.find("span", text="Medals").find_next_sibling("span").text.strip() if soup.find("span", text="Medals") else "0"
-
-# Comprobar los datos en consola
-user_info = api.user_creds(creds["username"])
-print(user_info)
-
+# Mostrar datos
 print("📊 Nombre:", name)
 print("📊 Seguidores:", followers)
 print("📊 Siguiendo:", following)
