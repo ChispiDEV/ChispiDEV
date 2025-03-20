@@ -27,7 +27,17 @@ jobs:
           chmod 600 ~/.kaggle/kaggle.json
       
       - name: 🏗️ Instalar dependencias
-        run: pip install kaggle beautifulsoup4 requests
+        run: |
+          python -m pip install --upgrade pip
+          pip install kaggle selenium
+
+      - name: 🖥️ Instalar Google Chrome y ChromeDriver
+        run: |
+          sudo apt update
+          sudo apt install -y google-chrome-stable
+          sudo apt install -y chromium-chromedriver
+          echo "CHROME_BIN=/usr/bin/google-chrome" >> $GITHUB_ENV
+          echo "PATH=$PATH:/usr/lib/chromium-browser/" >> $GITHUB_ENV
 
       - name: 🛠️ Depuración Revisar kaggle.json
         run: |
