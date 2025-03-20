@@ -5,6 +5,9 @@ on:
     - cron: "0 0 * * *"  # Ejecutar cada 24 horas (medianoche UTC)
   workflow_dispatch: # Permite ejecución manual
 
+permissions:
+  contents: write  # Permitir escribir en los repositorios
+  
 jobs:
   update-readme:
     runs-on: ubuntu-latest
