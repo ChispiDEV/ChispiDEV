@@ -81,7 +81,7 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
      target="_blank">Download CV (DOCX)</a>  
 
 ---
-## 🧮 My Statistics:
+## 🧮 GitHub Statistics
 ![GitHub's Statistics](https://github-readme-stats.vercel.app/api?username=ChispiDEV&show_icons=true&theme=radical)
 
 
@@ -180,7 +180,7 @@ Revisa mis [Proyectos Destacados](projects.html) para obtener más información 
 - [Descarga mi CV (DOCX)](https://raw.githubusercontent.com/ChispiDEV/ChispiDEV/main/public-cv/Cristina_Fuentes_CV_esp.docx)
 
 ---
-## 🧮 Mis Estadísticas
+## 🧮 Estadísticas de GihHub
 
 ![Estadísticas de GitHub](https://github-readme-stats.vercel.app/api?username=ChispiDEV&show_icons=true&theme=radical)
 
