@@ -1,8 +1,11 @@
 import re
 import os
 import json
-import requests
-from bs4 import BeautifulSoup
+import time
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 from kaggle.api.kaggle_api_extended import KaggleApi
 
 # Leer kaggle.json manualmente
@@ -29,26 +32,63 @@ api.authenticate()
 
 print("✅ Autenticación en Kaggle completada correctamente.")
 
-# Obtener información del usuario
-user_data = api.user(creds["username"])
+# Obtener datos de la API de Kaggle
+# Cantidad de datasets publicados
+datasets = api.datasets_list(user=creds["username"])
+datasets_count = len(datasets)
+# Cantidad de notebooks publicados
+notebooks = api.kernels_list(user=creds["username"])
+notebooks_count = len(notebooks)
+# Competiciones activas (No muestra participación)
+competitions = api.competitions_list()
+competitions_count = len(competitions)
 
-# Extraer datos
-name = user_data.get("displayName", "N/A")
-followers = user_data.get("followers", 0)
-following = user_data.get("following", 0)
-datasets = user_data.get("datasetCount", 0)
-notebooks = user_data.get("totalScripts", 0)
-competitions = user_data.get("competitionCount", 0)
-medals = user_data.get("totalMedals", 0)
+# Configurar Selenium (headless mode)
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--disable-gpu")
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--disable-dev-shm-usage")
 
-# Mostrar datos
+service = Service("/usr/bin/chromedriver")  # Ruta del driver (ajústala según tu sistema)
+driver = webdriver.Chrome(service=service, options=chrome_options)
+
+# Acceder al perfil de Kaggle
+url = f"https://www.kaggle.com/{creds['username']}"
+driver.get(url)
+time.sleep(5)  # Esperar a que la página cargue
+
+# Extraer información
+try:
+    name = driver.find_element(By.TAG_NAME, "h1").text.strip()
+except:
+    name = "N/A"
+
+try:
+    followers = driver.find_element(By.XPATH, "//span[text()='Followers']/following-sibling::span").text.strip()
+except:
+    followers = "0"
+
+try:
+    following = driver.find_element(By.XPATH, "//span[text()='Following']/following-sibling::span").text.strip()
+except:
+    following = "0"
+
+try:
+    medals = driver.find_element(By.XPATH, "//span[text()='Medals']/following-sibling::span").text.strip()
+except:
+    medals = "0"
+
+# 📌 Cerrar Selenium
+driver.quit()
+
 print("📊 Nombre:", name)
 print("📊 Seguidores:", followers)
 print("📊 Siguiendo:", following)
-print("📊 Datasets:", datasets)
-print("📊 Notebooks:", notebooks)
-print("📊 Competiciones:", competitions)
 print("📊 Medallas:", medals)
+print("📊 Datasets publicados:", datasets_count)
+print("📊 Notebooks publicados:", notebooks_count)
+print("📊 Competiciones activas en Kaggle:", competitions_count)
 
 # Crear estadísticas en inglés
 stats_en = f"""
