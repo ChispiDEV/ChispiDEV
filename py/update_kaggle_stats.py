@@ -44,6 +44,18 @@ notebooks = soup.find("span", text="Notebooks").find_next_sibling("span").text.s
 competitions = soup.find("span", text="Competitions").find_next_sibling("span").text.strip() if soup.find("span", text="Competitions") else "0"
 medals = soup.find("span", text="Medals").find_next_sibling("span").text.strip() if soup.find("span", text="Medals") else "0"
 
+# Comprobar los datos en consola
+user_info = api.user_creds(creds["username"])
+print(user_info)
+
+print("📊 Nombre:", name)
+print("📊 Seguidores:", followers)
+print("📊 Siguiendo:", following)
+print("📊 Datasets:", datasets)
+print("📊 Notebooks:", notebooks)
+print("📊 Competiciones:", competitions)
+print("📊 Medallas:", medals)
+
 # Crear estadísticas en inglés
 stats_en = f"""
 ## 📊 Kaggle Statistics
