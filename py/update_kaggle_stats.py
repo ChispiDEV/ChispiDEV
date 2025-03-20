@@ -97,9 +97,9 @@ stats_en = f"""
 - **Name**: {name}
 - **Followers**: {followers}
 - **Following**: {following}
-- **Datasets**: {datasets}
-- **Notebooks**: {notebooks}
-- **Competitions**: {competitions}
+- **Datasets**: {datasets_count}
+- **Notebooks**: {notebooks_count}
+- **Competitions**: {competitions_count}
 - **Medals**: {medals}
 <!-- /KAGGLE-STATS -->
 """
@@ -111,9 +111,9 @@ stats_es = f"""
 - **Nombre**: {name}
 - **Seguidores**: {followers}
 - **Siguiendo**: {following}
-- **Datasets**: {datasets}
-- **Notebooks**: {notebooks}
-- **Competiciones**: {competitions}
+- **Datasets**: {datasets_count}
+- **Notebooks**: {notebooks_count}
+- **Competiciones**: {competitions_count}
 - **Medallas**: {medals}
 <!-- /ESTADISTICAS-KAGGLE -->
 """
