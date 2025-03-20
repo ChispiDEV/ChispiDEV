@@ -178,9 +178,9 @@ Revisa mis [Proyectos Destacados](projects.html) para obtener más información 
 
 
 📊 **Estadísticas de Kaggle:**  
-<!-- KAGGLE-STATS-ESP -->
+<!-- ESTADISTICAS-KAGGLE -->
 _(Cargando estadísticas de Kaggle...)_
-<!-- /KAGGLE-STATS-ESP -->
+<!-- /ESTADISTICAS-KAGGLE -->
 
 ---
 ## 🎉 Curiosidades Sobre Mí:
