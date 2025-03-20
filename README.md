@@ -82,13 +82,14 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
 
 ---
 ## 🧮 My Statistics:
+📈 **GitHub Stats:** 
 ![GitHub's Statistics](https://github-readme-stats.vercel.app/api?username=ChispiDEV&show_icons=true&theme=radical)
 
 
 📊 **Kaggle Stats:**  
-<!-- KAGGLE_STATS_START -->
+<!-- KAGGLE-STATS -->
 _(Loading Kaggle Stats...)_
-<!-- KAGGLE_STATS_END -->
+<!-- /KAGGLE-STATS -->
 
 ---
 ## 🎉 Fun Facts:
@@ -172,13 +173,14 @@ Revisa mis [Proyectos Destacados](projects.html) para obtener más información 
 
 ---
 ## 🧮 Mis Estadísticas
+📈 **Estadísticas de GitHub:**  
 ![Estadísticas de GitHub](https://github-readme-stats.vercel.app/api?username=ChispiDEV&show_icons=true&theme=radical)
 
 
 📊 **Estadísticas de Kaggle:**  
-<!-- KAGGLE_STATS_ESP_START -->
+<!-- KAGGLE-STATS-ESP -->
 _(Cargando estadísticas de Kaggle...)_
-<!-- KAGGLE_STATS_ESP_END -->
+<!-- /KAGGLE-STATS-ESP -->
 
 ---
 ## 🎉 Curiosidades Sobre Mí:
