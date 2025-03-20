@@ -137,14 +137,14 @@ with open("README.md", "r", encoding="utf-8") as f:
 # Reemplazar la sección en el README
 updated_readme = re.sub(
     r"<!-- KAGGLE-STATS -->.*?<!-- /KAGGLE-STATS -->",
-    f"<!-- KAGGLE-STATS -->\n{stats_content}\n<!-- /KAGGLE-STATS -->",
+    f"<!-- KAGGLE-STATS -->\n{stats_content.encode('unicode_escape').decode()}\n<!-- /KAGGLE-STATS -->",
     readme_content,
     flags=re.DOTALL
 )
 updated_readme = re.sub(
     r"<!-- ESTADISTICAS-KAGGLE -->.*?<!-- /ESTADISTICAS-KAGGLE -->",
-    f"<!-- ESTADISTICAS-KAGGLE -->\n{stats_content_esp}\n<!-- /ESTADISTICAS-KAGGLE -->",
-    readme_content,
+    f"<!-- ESTADISTICAS-KAGGLE -->\n{stats_content_esp.encode('unicode_escape').decode()}\n<!-- /ESTADISTICAS-KAGGLE -->",
+    updated_readme,
     flags=re.DOTALL
 )
 
