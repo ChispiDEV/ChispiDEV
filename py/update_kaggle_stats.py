@@ -37,7 +37,7 @@ print("✅ Autenticación en Kaggle completada correctamente.")
 datasets = api.dataset_list(user=creds["username"])
 datasets_count = len(datasets)
 # Cantidad de notebooks publicados
-notebooks = api.kernel_list(user=creds["username"])
+notebooks = api.kernels_list(user=creds["username"])
 notebooks_count = len(notebooks)
 # Competiciones activas (No muestra participación)
 competitions = api.competition_list()
