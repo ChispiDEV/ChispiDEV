@@ -213,4 +213,8 @@ window.addEventListener('DOMContentLoaded', event => {
     
     // Cargar README de Breaking Bad
     processReadme('https://raw.githubusercontent.com/ChispiDEV/Breaking_Bad_Evil_Analysis/main/README.md', 'readme-contentbb', 'nav-itemsbb');
+
+    // Cargar README de Proyectos
+    processReadme('https://raw.githubusercontent.com/ChispiDEV/', 'readme-content-projects', 'nav-items-projects');
+
 });

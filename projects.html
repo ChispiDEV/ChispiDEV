@@ -7,154 +7,99 @@
     <meta name="keywords" content="Data Analysis, Featured Projects, Portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Featured Projects - Cristina Fuentes</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header, footer {
-            background: #f4f4f4;
-            color: #333;
-            text-align: center;
-            padding: 1rem;
-        }
-        nav {
-            text-align: center;
-            margin: 1rem 0;
-        }
-        nav a {
-            margin: 0 1rem;
-            text-decoration: none;
-            color: #007acc;
-        }
-        nav a.active {
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        #projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 1rem;
-        }
-        .project {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 1.5rem;
-            background: linear-gradient(135deg, #f9f9f9, #fff);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-        }
-        .project h3 {
-            margin-top: 0;
-            color: #007acc;
-            font-size: 1.5rem;
-        }
-        .project p a {
-            color: #007acc;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .project p a:hover {
-            text-decoration: underline;
-        }
-        .hidden {
-            display: none;
-        }
-        #english-projects {
-            background-color: #f0f8ff; /* Azul claro */
-            padding: 1rem;
-            border-radius: 8px;
-        }
-        #spanish-projects {
-            background-color: #fff7e6; /* Beige */
-            padding: 1rem;
-            border-radius: 8px;
-        }
-    </style>
+    
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Simple line icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+    
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
+        crossorigin="anonymous"
+    >
+    <link href="css/styles.css" 
+        rel="stylesheet" 
+    />
 </head>
-<body>
-    <header>
-        <h1>Featured Projects | Proyectos Destacados</h1>
-        <p>Explore my data analysis work | Revisa mis trabajos de análisis de datos</p>
+
+<body id="page-top">
+    <!-- Botón para alternar el menú-->
+    <a class="menu-toggle rounded" href="#" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </a>
+
+    <!-- Navegación lateral-->
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav" id="nav-items-projects">
+            <!-- El menú se generará dinámicamente aquí -->
+        </ul>
+    </nav>
+    <!-- Header-->
+    <header class="masthead-projects d-flex align-items-center">
+        <div class="container px-4 px-lg-5 text-center">
+            <div class="text-box"> <!-- Contenedor para resaltar el texto -->
+                <h1 class="mb-1">Featured Projects | Proyectos Destacados</h1>
+                <h3 class="mb-5"><em>Explore my data analysis work | Revisa mis trabajos de análisis de datos</em></h3>
+                <a class="btn btn-primary btn-xl" href="#" onclick="toggleLanguage('english')">English</a> | 
+                <a class="btn btn-primary btn-xl" href="#" onclick="toggleLanguage('spanish')">Español</a> | 
+                <a class="btn btn-primary btn-xl" href="index.html">Home</a>
+            </div>    
+        </div>
     </header>
 
-    <nav>
-        <a href="index.html">Home</a> | 
-        <a href="#" onclick="toggleLanguage('english')">English</a> | 
-        <a href="#" onclick="toggleLanguage('spanish')">Español</a>
-    </nav>
+    <!-- Contenido principal -->
+    <div class="container mt-5" id="readme-content-projects">
+        <h1>Cargando contenido...</h1>
+        <!-- El contenido del README.md se renderizará dinámicamente aquí -->
+    </div>
 
-    <section id="projects">
-        <!-- English Section -->
-        <div id="english-projects">
-            <h2>Featured Projects</h2>
-            <div class="project">
-                <h3>Breaking Bad Analysis (Currently only in spanish)</h3>
-                <p>🔍 Analyze Walter White's character development using NLP and interpersonal network analysis.</p>
-                <p>
-                    🔗 <a href="Breaking_Bad_page.html" target="_blank">Website</a><br>
-                    📂 <a href="https://github.com/ChispiDEV/Breaking_Bad_Evil_Analysis" target="_blank">Repository</a><br>
-                    📊 <a href="https://tu-usuario.github.io/repositorio-breaking-bad" target="_blank">Interactive Demo</a>
-                </p>
-            </div>
-            <!-- Add more projects here as needed -->
+    <!-- Botón del Chatbot -->
+    <div id="chatbot-toggle" 
+        style="position: fixed; bottom: 20px; right: 80px; z-index: 1000; cursor: pointer; background-color: #007bff; color: white; padding: 10px 15px; border-radius: 5px;">
+        💬
+    </div>
+
+    <!-- Contenedor del Chatbot -->
+    <div id="chatbot-container" 
+        style="position: fixed; bottom: 80px; right: 20px; display: none; z-index: 1000; width: 320px; height: 420px; background-color: white; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);">
+        <div id="chatbot-header" style="background-color: #007bff; color: white; padding: 10px; text-align: center; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+            <h3>Chatbot</h3>
         </div>
-
-        <!-- Spanish Section -->
-        <div id="spanish-projects" class="hidden">
-            <h2>Proyectos Destacados</h2>
-            <div class="project">
-                <h3>Análisis de Breaking Bad</h3>
-                <p>🔍 Analizar el desarrollo del personaje Walter White utilizando NLP y análisis de redes interpersonales.</p>
-                <p>
-                    🔗 <a href="Breaking_Bad_page.html" target="_blank">Sitio web</a><br>
-                    📂 <a href="https://github.com/ChispiDEV/Breaking_Bad_Evil_Analysis" target="_blank">Repositorio</a><br>
-                    📊 <a href="https://tu-usuario.github.io/repositorio-breaking-bad" target="_blank">Demo interactiva</a>
-                </p>
-            </div>
-            <!-- Añadir los proyectos aquí según se vayan incorporando -->
+        <div id="messages" style="overflow-y: auto; height: 300px; padding: 10px;"></div>
+        <div id="chatbot-input-container" style="display: flex; padding: 10px; border-top: 1px solid #ddd;">
+            <input id="chat-input" type="text" placeholder="Escribe un mensaje..." style="flex: 1; padding: 5px; border: 1px solid #ddd; border-radius: 5px;">
+            <button id="send-message" style="margin-left: 5px; background-color: #007bff; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Enviar</button>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Cristina Fuentes | <a href="index.html">Go to Home</a></p>
+    </div>
+    
+    <!-- Footer-->
+    <footer class="footer text-center">
+        <div class="container px-4 px-lg-5">
+            <ul class="list-inline mb-5">
+                <li class="list-inline-item">
+                    <a class="social-link rounded-circle text-white mr-3" href="https://www.linkedin.com/in/cristina-fg/"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="social-link rounded-circle text-white" href="https://github.com/ChispiDEV"><i class="fab fa-github"></i></a>
+                </li>
+            </ul>
+            <p class="text-muted small mb-0">Copyright &copy; 2025 Cristina Fuentes</p>
+        </div>
     </footer>
 
-    <script>
-        // Toggle between English and Spanish projects
-        function toggleLanguage(language) {
-            const englishSection = document.getElementById('english-projects');
-            const spanishSection = document.getElementById('spanish-projects');
-            const links = document.querySelectorAll('nav a');
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a> 
 
-            if (language === 'english') {
-                englishSection.classList.remove('hidden');
-                spanishSection.classList.add('hidden');
-            } else if (language === 'spanish') {
-                spanishSection.classList.remove('hidden');
-                englishSection.classList.add('hidden');
-            }
-
-            // Update active link in navigation
-            links.forEach(link => {
-                link.classList.remove('active');
-                if (link.textContent.toLowerCase().includes(language)) {
-                    link.classList.add('active');
-                }
-            });
-        }
-
-        // Initialize with English content visible
-        document.addEventListener('DOMContentLoaded', () => toggleLanguage('english'));
-    </script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
 </body>
-</html>
