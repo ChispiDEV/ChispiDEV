@@ -5,11 +5,6 @@ I specialize in transforming data into valuable insights through **text analysis
 
 I’m always open to collaborations and discussions—feel free to reach out!
 
-### 📝 My recent projects are:
-🔹 **Character evolution analysis** in *Breaking Bad* using NLP and sentiment analysis.
-🔹 **Social network exploration** in TV series with graph science techniques.
-🔹 **Web scraping and data visualization tools** for structured insights.
-
 ## 🎩 Breaking Bad Analysis (Currently only in spanish)
 🔍 Analyzing Walter White's character development using NLP and interpersonal network analysis.</p>
  
@@ -26,11 +21,6 @@ En esta página encontrarás una recopilación de mis trabajos en **análisis de
 Me especializo en transformar datos en información valiosa mediante el **análisis de texto, modelos basados en grafos y machine learning**.  
   
 Siempre estoy abierta a colaboraciones e intercambio de ideas. ¡No dudes en contactarme!
-
-### 📝 Mis proyectos recientes son:
-🔹 **Análisis de la evolución de personajes** en *Breaking Bad* con NLP y análisis de sentimientos.
-🔹 **Exploración de redes sociales** en series de TV usando ciencia de grafos.
-🔹 **Desarrollo de herramientas de web scraping y visualización de datos** para extraer insights estructurados.
 
 ## 🎩 Análisis de Breaking Bad
 🔍 Análisis del desarrollo del personaje Walter White utilizando NLP y análisis de redes interpersonales.
