@@ -1,4 +1,3 @@
----
 # 🌍 English Version 
 ## 🖥️ Welcome to My Projects!
 This page showcases my work in **data analysis, NLP, and network science**.  
