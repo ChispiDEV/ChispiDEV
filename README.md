@@ -61,7 +61,7 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
  - 🌐 **My Portfolio:** _(In Process)_ <a href="https://chispidev.github.io/ChispiDEV/?lang=en" target="_blank">chispidev.github.io/ChispiDEV</a>
  - 📫 **Email:** <a href="mailto:cristinafg.it@gmail.com">cristinafg.it@gmail.com</a>
  - 💼 **LinkedIn:** <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">LinkedIn Profile</a>  
- - 📲 **Telegram:**: <a href="https://telegram.me/DataChispi" target="_blank">Telegram</a> || @DataChispi  
+ - 📲 **Telegram:** <a href="https://telegram.me/DataChispi" target="_blank">Telegram</a> || @DataChispi  
 
 ---
 ## 🔥 What am I doing now?
