@@ -11,8 +11,6 @@ Puedes ver mi portafolio y los proyectos en detalle en mi [Página de GitHub Pag
 ## 🧑‍💻 About me:
 👋 I'm Cristina (often called Chispi by colleagues). Welcome to my GitHub!
 
-🌸 My pronouns are "She/Her".
-
 👩‍🔬 Former **mathematics and science teacher** turned **data analyst** with a passion for technology, education, and problem-solving. Specialized in:  
  - 📊 **Data Analytics:** Python, Pandas, SQL.  
  - 📄 **Document Automation:** LaTeX, Pandoc.  
@@ -125,8 +123,6 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
 # Versión en Español  
 ## 🧑‍💻 Sobre mí:
 👋 Soy Cristina (mis compañeros suelen llamarme Chispi). ¡Bienvenidos a mi GitHub!
-
-🌸 Uso **pronombres femeninos** (Ella).
 
 👩‍🔬 **Bióloga y exprofesora de matemáticas y ciencias** desarrollándose en el campo del **análisis de datos**, apasionada por la tecnología y la solución de desafíos. Me especializo en:  
  - 📊 **Análisis de Datos:** Python, Pandas, SQL.  
