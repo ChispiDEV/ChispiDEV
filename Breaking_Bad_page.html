@@ -47,10 +47,18 @@
                 <div class="text-box"> <!-- Contenedor para resaltar el texto -->
                     <h1 class="mb-1">Breaking Bad Evil Analysis</h1>
                     <h3 class="mb-5"><em>Explore Walter White's descent into evil | Explora el descenso a la maldad de Walter White</em></h3>
-                    <a class="btn btn-primary btn-xl" href="#" onclick="toggleLanguage('english')">English</a> | 
-                    <a class="btn btn-primary btn-xl" href="#" onclick="toggleLanguage('spanish')">Español</a> | 
-                    <a class="btn btn-primary btn-xl" href="index.html">Back to Portfolio</a> | 
-                    <a class="btn btn-primary btn-xl" href="projects.html">Back to Projects</a>
+                    
+                    <!-- Primera línea: Botones de idioma -->
+                    <div class="mb-3">
+                        <a class="btn btn-primary btn-xl" href="#" onclick="toggleLanguage('english')">English</a>  
+                        <a class="btn btn-primary btn-xl" href="#" onclick="toggleLanguage('spanish')">Español</a>  
+                    </div>
+                    
+                     <!-- Segunda línea: Botones de navegación -->
+                    <div class="mb-3">
+                        <a class="btn btn-success btn-xl" href="index.html">Home</a>  
+                        <a class="btn btn-success btn-xl" href="projects.html">Projects</a>  
+                    </div>
                 </div>    
             </div>
         </header>
@@ -79,7 +87,7 @@
                 <button id="send-message" style="margin-left: 5px; background-color: #007bff; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Enviar</button>
             </div>
         </div>
-        
+
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container px-4 px-lg-5">
@@ -90,11 +98,26 @@
                     <li class="list-inline-item">
                         <a class="social-link rounded-circle text-white" href="https://github.com/ChispiDEV"><i class="fab fa-github"></i></a>
                     </li>
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white" href="https://www.kaggle.com/chispithal" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png" alt="Kaggle" style="width: 24px; height: 24px; border-radius: 50%;">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white" href="https://medium.com/@cristinafg-it" target="_blank">
+                            <i class="fab fa-medium"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white" href="https://bsky.app/profile/cristinafg-it.bsky.social" target="_blank">
+                            <img src="https://github.com/bluesky-social/social-app/blob/main/packages/frontend/assets/bluesky-logo.svg?raw=true" alt="Bluesky" style="width: 24px; height: 24px; border-radius: 50%;">
+                        </a>
+                    </li>
                 </ul>
                 <p class="text-muted small mb-0">Copyright &copy; 2025 Cristina Fuentes</p>
             </div>
         </footer>
-
+        
         <!-- Scroll to Top Button-->
         <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a> 
 
