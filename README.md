@@ -42,6 +42,10 @@ Puedes ver mi portafolio y los proyectos en detalle en mi [Página de GitHub Pag
  - NLP analysis of Walter White's character development using Python and networkx. 
  - <a href="Breaking_Bad_page.html" target="_blank">[View Project]</a><br>
  
+### 🚑 **Tyche Logistics Project** (In Progress): 
+ - Structure and automation scripts used to create a digital billing and transport management system.
+ - <a href="Tyche_Logistics_Project.html" target="_blank">[View Project]</a><br>
+
 ### 🤖 **Machine Learning Models** (In Progress): 
  - A collection of ML models including classification and regression projects.
  - [View Repository](#)
@@ -176,7 +180,11 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
 ### 📊 **Análisis de Breaking Bad** (En proceso): 
  - Análisis NLP de la evolución del personaje Walter White usando Python y networkx.
  - <a href="Breaking_Bad_page.html" target="_blank">[Ver Proyecto]</a><br>
- 
+
+### 🚑 **Proyecto Logística Tyche** (In Progress): 
+ - Automatización y creación de un sistema digital de gestión de facturas y transporte.
+ - <a href="Tyche_Logistics_Project.html" target="_blank">[View Project]</a><br>
+
 ### 🤖 **Modelos de Machine Learning** (En proceso): 
  - Una colección de modelos de ML que incluye proyectos de clasificación y regresión.
  - [Ver Repositorio](#)

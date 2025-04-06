@@ -12,6 +12,14 @@ I’m always open to collaborations and discussions—feel free to reach out!
 - 📂 <a href="https://github.com/ChispiDEV/Breaking_Bad_Evil_Analysis" target="_blank">Repository</a><br>
 - 📊 <a href="https://tu-usuario.github.io/repositorio-breaking-bad" target="_blank">Interactive Demo</a>
 
+## 🚑 Tyche Logistics Project (Currently only in spanish)
+🔍 Structure and automation scripts used to create a digital billing and transport management system</p>
+ 
+- 🔗 <a href="Tyche_Logistics_Project.html" target="_blank">Website</a><br>
+- 📂 <a href="https://github.com/ChispiDEV/Tyche_Logistics" target="_blank">Repository</a><br>
+- 📊 <a href="https://tu-usuario.github.io/repositorio-tyche" target="_blank">Interactive Demo</a>
+
+
 <!-- Add more projects here as needed -->
 
 ---
@@ -28,5 +36,13 @@ Siempre estoy abierta a colaboraciones e intercambio de ideas. ¡No dudes en con
 🔗 <a href="Breaking_Bad_page.html" target="_blank">Sitio web</a><br>
 📂 <a href="https://github.com/ChispiDEV/Breaking_Bad_Evil_Analysis" target="_blank">Repositorio</a><br>
 📊 <a href="https://tu-usuario.github.io/repositorio-breaking-bad" target="_blank">Demo interactiva</a>
+
+## 🚑 Proyecto Logística Tyche (Currently only in spanish)
+🔍 Automatización y creación de un sistema digital de gestión de facturas y transporte</p>
+ 
+- 🔗 <a href="Tyche_Logistics_Project.html" target="_blank">Sitio Web</a><br>
+- 📂 <a href="https://github.com/ChispiDEV/Tyche_Logistics" target="_blank">Repositorio</a><br>
+- 📊 <a href="https://tu-usuario.github.io/repositorio-tyche" target="_blank">Demo Interactiva</a>
+
 
 <!-- Añadir los proyectos aquí según se vayan incorporando -->
