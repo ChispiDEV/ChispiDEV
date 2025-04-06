@@ -1,5 +1,5 @@
 # Welcome to Cristina's GitHub!! // ¡¡Bienvenido al GitHub de Cristina!!
-_Data Analyst | Python Enthusiast | Document Automation with LaTeX_
+_Data Analyst | Python Enthusiast | Document Automation with LaTeX and Google Scripts_
 
 Explore my portfolio and projects in detail on my [GitHub Pages website](https://chispidev.github.io/ChispiDEV/?lang=en).  
 Puedes ver mi portafolio y los proyectos en detalle en mi [Página de GitHub Pages](https://chispidev.github.io/ChispiDEV/?lang=es).
