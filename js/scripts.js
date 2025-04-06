@@ -214,6 +214,9 @@ window.addEventListener('DOMContentLoaded', event => {
     // Cargar README de Breaking Bad
     processReadme('https://raw.githubusercontent.com/ChispiDEV/Breaking_Bad_Evil_Analysis/main/README.md', 'readme-contentbb', 'nav-itemsbb');
 
+    // Cargar README de Tyche Logistics
+    processReadme('https://raw.githubusercontent.com/ChispiDEV/Tyche_Logistics/main/README.md', 'readme-content-tl', 'nav-items-tl');
+
     // Cargar README de Proyectos
     processReadme('https://raw.githubusercontent.com/ChispiDEV/ChispiDEV/main/data/README_Projects.md', 'readme-content-projects', 'nav-items-projects');
 
