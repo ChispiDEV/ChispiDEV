@@ -37,7 +37,7 @@ Siempre estoy abierta a colaboraciones e intercambio de ideas. ¡No dudes en con
 📂 <a href="https://github.com/ChispiDEV/Breaking_Bad_Evil_Analysis" target="_blank">Repositorio</a><br>
 📊 <a href="https://tu-usuario.github.io/repositorio-breaking-bad" target="_blank">Demo interactiva</a>
 
-## 🚑 Proyecto Logística Tyche (Currently only in spanish)
+## 🚑 Proyecto Logística Tyche
 🔍 Automatización y creación de un sistema digital de gestión de facturas y transporte</p>
  
 - 🔗 <a href="Tyche_Logistics_Project.html" target="_blank">Sitio Web</a><br>
