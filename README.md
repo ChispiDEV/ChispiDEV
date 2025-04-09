@@ -187,7 +187,7 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
  - Análisis NLP de la evolución del personaje Walter White usando Python y networkx.
  - <a href="Breaking_Bad_page.html" target="_blank">[Ver Proyecto]</a><br>
 
-### 🚑 **Proyecto Logística Tyche** (In Progress): 
+### 🚑 **Proyecto Logística Tyche** (En proceso): 
  - Automatización y creación de un sistema digital de gestión de facturas y transporte.
  - <a href="Tyche_Logistics_Project.html" target="_blank">[View Project]</a><br>
 
