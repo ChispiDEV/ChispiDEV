@@ -111,6 +111,7 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
 
 
 
+
 <!-- KAGGLE-STATS -->
 ## 📊 Kaggle Statistics
 - **Name**: Chispi
@@ -121,6 +122,7 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
 - **Competitions**: 20
 - **Medals**: 0
 <!-- /KAGGLE-STATS -->
+
 
 
 
@@ -261,6 +263,7 @@ Revisa mis [Proyectos Destacados](projects.html) para obtener más información 
 
 
 
+
 <!-- ESTADISTICAS-KAGGLE -->
 ## 📊 Estadísticas de Kaggle
 - **Nombre**: Chispi
@@ -271,6 +274,7 @@ Revisa mis [Proyectos Destacados](projects.html) para obtener más información 
 - **Competiciones**: 20
 - **Medallas**: 0
 <!-- /ESTADISTICAS-KAGGLE -->
+
 
 
 
