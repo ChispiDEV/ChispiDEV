@@ -63,6 +63,7 @@ Check out my [Featured Projects](projects.html) for more detailed insights into 
 ---
 ## 📞 Contact:
  - 🌐 **My Portfolio:** _(In Process)_ <a href="https://chispidev.github.io/ChispiDEV/?lang=en" target="_blank">chispidev.github.io/ChispiDEV</a>
+ - 🗒️ **My DevLog:** <a href="https://chispidev.github.io/Chispi-DevLog/" target="_blank">chispidev.github.io/Chispi-DevLog</a>
  - 📫 **Email:** <a href="mailto:cristinafg.it@gmail.com">cristinafg.it@gmail.com</a>
  - 💼 **LinkedIn:** <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">LinkedIn Profile</a>  
  - 📲 **Telegram:** <a href="https://telegram.me/DataChispi" target="_blank">Telegram</a> || @DataChispi  
@@ -242,6 +243,7 @@ Revisa mis [Proyectos Destacados](projects.html) para obtener más información 
 ---
 ## 📞 Contacto:
 - 🌐 **Mi Portafolio:** _(En Proceso)_ <a href="https://chispidev.github.io/ChispiDEV/?lang=es" target="_blank">chispidev.github.io/ChispiDEV</a>
+- 🗒️ **Mi DevLog:** <a href="https://chispidev.github.io/Chispi-DevLog/" target="_blank">chispidev.github.io/Chispi-DevLog</a>
 - 📫 **Correo Electrónico:** <a href="mailto:cristinafg.it@gmail.com">cristinafg.it@gmail.com</a>   
 - 💼 **LinkedIn:** <a href="https://www.linkedin.com/in/cristina-fuentes-gutiérrez-9467a7139/" target="_blank">LinkedIn Profile</a>  
 - 📲 **Telegram:** <a href="https://telegram.me/DataChispi" target="_blank">Telegram</a> || @DataChispi  
